@@ -1,0 +1,36 @@
+- Tailwind
+
+{ 'dartmouth_green': { DEFAULT: '#006633', 100: '#00140a', 200: '#002914', 300: '#003d1f', 400: '#005229', 500: '#006633', 600: '#00b85c', 700: '#0aff85', 800: '#5cffad', 900: '#adffd6' }, 'purple': { DEFAULT: '#800080', 100: '#1a0019', 200: '#330033', 300: '#4d004c', 400: '#660066', 500: '#800080', 600: '#cc00cc', 700: '#ff1aff', 800: '#ff66ff', 900: '#ffb3ff' }, 'mauve': { DEFAULT: '#c8a2ff', 100: '#230054', 200: '#4600a7', 300: '#6900fb', 400: '#9950ff', 500: '#c8a2ff', 600: '#d4b6ff', 700: '#dfc8ff', 800: '#eadaff', 900: '#f4edff' }, 'pale_azure': { DEFAULT: '#99ddff', 100: '#003652', 200: '#006da3', 300: '#00a3f5', 400: '#47c2ff', 500: '#99ddff', 600: '#ade4ff', 700: '#c2ebff', 800: '#d6f1ff', 900: '#ebf8ff' }, 'black': { DEFAULT: '#000000', 100: '#000000', 200: '#000000', 300: '#000000', 400: '#000000', 500: '#000000', 600: '#333333', 700: '#666666', 800: '#999999', 900: '#cccccc' }, 'jet': { DEFAULT: '#2c2c2c', 100: '#090909', 200: '#111111', 300: '#1a1a1a', 400: '#232323', 500: '#2c2c2c', 600: '#565656', 700: '#808080', 800: '#aaaaaa', 900: '#d5d5d5' }, 'isabelline': { DEFAULT: '#f2efea', 100: '#3b3224', 200: '#766548', 300: '#a99673', 400: '#cdc2ae', 500: '#f2efea', 600: '#f4f2ed', 700: '#f7f5f2', 800: '#faf8f6', 900: '#fcfcfb' }, 'white': { DEFAULT: '#ffffff', 100: '#333333', 200: '#666666', 300: '#999999', 400: '#cccccc', 500: '#ffffff', 600: '#ffffff', 700: '#ffffff', 800: '#ffffff', 900: '#ffffff' } }
+
+- CSV
+
+006633,800080,c8a2ff,99ddff,000000,2c2c2c,f2efea,ffffff
+
+- With #
+
+#006633, #800080, #c8a2ff, #99ddff, #000000, #2c2c2c, #f2efea, #ffffff
+
+- Array
+
+["006633","800080","c8a2ff","99ddff","000000","2c2c2c","f2efea","ffffff"]
+
+- Object
+
+{"Dartmouth green":"006633","Purple":"800080","Mauve":"c8a2ff","Pale azure":"99ddff","Black":"000000","Jet":"2c2c2c","Isabelline":"f2efea","White":"ffffff"}
+
+- Extended Array
+
+[{"name":"Dartmouth green","hex":"006633","rgb":[0,102,51],"cmyk":[100,0,50,60],"hsb":[150,100,40],"hsl":[150,100,20],"lab":[37,-38,22]},{"name":"Purple","hex":"800080","rgb":[128,0,128],"cmyk":[0,100,0,50],"hsb":[300,100,50],"hsl":[300,100,25],"lab":[30,59,-36]},{"name":"Mauve","hex":"c8a2ff","rgb":[200,162,255],"cmyk":[22,36,0,0],"hsb":[265,36,100],"hsl":[265,100,82],"lab":[73,32,-41]},{"name":"Pale azure","hex":"99ddff","rgb":[153,221,255],"cmyk":[40,13,0,0],"hsb":[200,40,100],"hsl":[200,100,80],"lab":[85,-13,-23]},{"name":"Black","hex":"000000","rgb":[0,0,0],"cmyk":[0,0,0,100],"hsb":[0,0,0],"hsl":[0,0,0],"lab":[0,0,0]},{"name":"Jet","hex":"2c2c2c","rgb":[44,44,44],"cmyk":[0,0,0,83],"hsb":[0,0,17],"hsl":[0,0,17],"lab":[18,0,0]},{"name":"Isabelline","hex":"f2efea","rgb":[242,239,234],"cmyk":[0,1,3,5],"hsb":[38,3,95],"hsl":[38,24,93],"lab":[95,0,3]},{"name":"White","hex":"ffffff","rgb":[255,255,255],"cmyk":[0,0,0,0],"hsb":[0,0,100],"hsl":[0,0,100],"lab":[100,0,0]}]
+
+- XML
+
+<palette>
+  <color name="Dartmouth green" hex="006633" r="0" g="102" b="51" />
+  <color name="Purple" hex="800080" r="128" g="0" b="128" />
+  <color name="Mauve" hex="c8a2ff" r="200" g="162" b="255" />
+  <color name="Pale azure" hex="99ddff" r="153" g="221" b="255" />
+  <color name="Black" hex="000000" r="0" g="0" b="0" />
+  <color name="Jet" hex="2c2c2c" r="44" g="44" b="44" />
+  <color name="Isabelline" hex="f2efea" r="242" g="239" b="234" />
+  <color name="White" hex="ffffff" r="255" g="255" b="255" />
+</palette>
