@@ -9,7 +9,8 @@
 - `Mono`: Jet Brains Mono [<https://fonts.google.com/specimen/JetBrains+Mono>]
 
 ## Design System
-- material 3 design system: [<https://m3.material.io/>]
+- material 3 design system: [<https://www.figma.com/community/file/1035203688168086460/material-3-design-kit>]
+    - official site: [<https://m3.material.io/>]
 
 ## Icons
 - material  symbols (light): [<https://icones.js.org/collection/material-symbols-light>] 
