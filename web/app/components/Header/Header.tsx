@@ -20,7 +20,7 @@ export function Header({ activeLink, hTopColor = 'bg-primary1B', hBottomColor = 
         <Image className='h-20' src={primaryLogo} alt="primary-logo" />
       </div>
       <nav id="navbar-default" className={'hidden  flex-1 w-full md:block md:w-auto'}>
-        <ul className="mx-10 font-headlines text-headline-large uppercase flex  justify-between flex-col p-4 md:p-0 mt-4 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 ">
+        <ul className="mx-14 font-headlines text-headline-large uppercase flex  justify-between flex-col p-4 md:p-0 mt-4 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 ">
           <li><Link href={'/'} className={[linkStyling, (activeLink === 'home' ? activeLinkStyling : '')].join(' ')}>Home</Link></li>
           <li><Link href={'/portfolio/'} className={[linkStyling, (activeLink === 'portfolio' ? activeLinkStyling : '')].join(' ')}>Portfolio</Link></li>
           <li><Link href={'/lets-work/'} className={[linkStyling, (activeLink === 'lets-work' ? activeLinkStyling : '')].join(' ')}>Let's Work</Link></li>
