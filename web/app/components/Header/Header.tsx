@@ -7,12 +7,12 @@ import Link from 'next/link';
 export interface HeaderProps {
   hTopColor?: string;
   hBottomColor?: string;
-  activeLink?: 'home' | 'portfolio' | 'lets-work' | 'contact' | 'about' | '404'
+  activeLink: 'home' | 'portfolio' | 'lets-work' | 'contact' | 'about' | '404'
 }
 
-export function Header({ hTopColor = 'bg-primary1B', hBottomColor = 'bg-primary', activeLink = '404' }: HeaderProps) {
+export function Header({ activeLink, hTopColor = 'bg-primary1B', hBottomColor = 'bg-primary' }: HeaderProps) {
   const activeLinkStyling: string = 'border-b-4 border-b-primary';
-  const linkStyling:string = 'hover:text-primary1B hover:duration-150';
+  const linkStyling: string = 'hover:text-primary1B hover:duration-150';
 
   return <header>
     <div className='h-32 px-36 bg-primary0 text-white dark:text-offWhite flex items-center'>
