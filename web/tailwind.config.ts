@@ -32,7 +32,8 @@ const config: Config = {
 				offWhite1B: '#F9F7F5',
 				white: '#FFFFFF',
 				gray2: '#36454F',
-				gray1: '#2C2C2C'
+				gray1: '#2C2C2C',
+				gray3: '#1E1E1E',
 
 			},
 			fontFamily: {
