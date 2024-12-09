@@ -7,20 +7,21 @@ import instagramIcon from '@/app/icons/social/instagram.svg'
 import behanceIcon from '@/app/icons/social/behance.svg'
 import dribbleIcon from '@/app/icons/social/dribble.svg'
 
-import styles from './Footer.css';
+// import styles from './Footer.css';
 
 
 export interface FooterProps {
-  prop?: string;
+  fTopColor?: string;
+  fBottomColor?: string;
 }
 
-export function Footer({ prop = 'default value' }: FooterProps) {
+export function Footer({ fTopColor = 'bg-secondary', fBottomColor = 'bg-secondaryRegal'}: FooterProps) {
   const linkStyling: string = ' hover:text-secondary hover:duration-150 ';
   const iconLinkStyling: string = 'hover:bg-secondary hover:p-1 hover:duration-200 hover:rounded-sm';
 
   return <footer className='bg-primary0 text-white dark:text-offWhite'>
-    <div id='fTop' className={['h-10 ', 'bg-secondary'].join(' ')}></div>
-    <div id='fBottom' className={['h-10 ', 'bg-secondaryRegal'].join(' ')}></div>
+    <div id='fTop' className={['h-10 ', fTopColor].join(' ')}></div>
+    <div id='fBottom' className={['h-10 ', fBottomColor].join(' ')}></div>
     <div className={'h-64 flex justify-evenly border-t-2 border-t-white dark:border-t-offWhite'}>
       <div className={'flex-1 flex items-center justify-center'}>
         <Image src={subMark} alt='logo mark' className='h-28 p-1' />

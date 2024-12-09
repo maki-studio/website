@@ -1,5 +1,5 @@
 'use client'
-import Image from "next/image";
+// import Image from "next/image";
 import { Footer, Header } from "./components";
 import Link from "next/link";
 import { Button } from "@carbon/react";
