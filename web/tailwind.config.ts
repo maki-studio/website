@@ -16,7 +16,23 @@ const config: Config = {
 			colors: {
 				background: 'var(--background)',
 				foreground: 'var(--foreground)',
-
+				// COLOURS
+				primary0: '#00000',
+				primary: '#006633',
+				primary1B: '#228B22',
+				secondary: '#800080',
+				secondaryRegal: '#4A0E4E',
+				accent2: '#C8A2FF',
+				accent1: '#99DDFF',
+				accent1B: '#00CED1',
+				accent3: '#D4AF37',
+				accent4: '#FF9966',
+				accent4B: '#FF6F61',
+				offWhite: '#D9D9D9',
+				offWhite1B: '#F9F7F5',
+				white: '#FFFFFF',
+				gray2: '#36454F',
+				gray1: '#2C2C2C'
 
 			},
 			fontFamily: {
