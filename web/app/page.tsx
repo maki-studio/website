@@ -24,7 +24,7 @@ export default function Home() {
                   </Link>
                   <div className="flex-1"></div>
                   <Link href={'/work'} >
-                    <Button className="bg-primary1B p-2.5 pl-4 pr-16 hover:bg-primary text-white dark:text-offWhite font-label text-label-large font-bold">Let's Create together
+                    <Button className="bg-primary1B p-2.5 pl-4 pr-16 hover:bg-primary text-white dark:text-offWhite font-label text-label-large font-bold">Let&apos;s Create together
                     </Button>
                   </Link>
                 </div>
@@ -32,11 +32,11 @@ export default function Home() {
             </div>
             <div className={"flex-1 border-t-2 border-t-black dark:border-t-offWhite"}>
               <p className={"p p-16 font-headlines text-headline-medium"}>
-                At Maki Studio, we're not just designers –
-                we're visual problem solvers. Whether you
+                At Maki Studio, we&apos;re not just designers –
+                we&apos;re visual problem solvers. Whether you
                 need a stunning brand identity, an intuitive
                 user interface, or scroll-stopping social
-                media graphics, we've got you covered.
+                media graphics, we&apos;ve got you covered.
                 <br />
                 <br />
                 Our team brings big ideas to life, one pixel
