@@ -16,8 +16,8 @@ export default function Home() {
               <div className={"p-10 ml-auto -mr-32"}>
                 <p className="font-display text-display-large">Welcome to <br />
                   Maki Creative Studio</p>
-                <p className="font-headlines text-headline-large uppercase  bg-white dark:bg-offWhite p-2 z-10 relative">Connecting you with your customers</p>
-                <div className="flex  bg-white dark:bg-offWhite p-2 z-10 relative">
+                <p className="font-headlines text-headline-large uppercase  bg-white dark:bg-gray3 p-2 z-10 relative">Connecting you with your customers</p>
+                <div className="flex  bg-white dark:bg-gray3 p-2 z-10 relative">
                   <Link href={'/portfolio'}>
                     <Button className="bg-secondary p-2.5 pl-4 pr-16 hover:bg-secondaryRegal text-white dark:text-offWhite font-label text-label-large font-bold">See Our Work
                     </Button>
