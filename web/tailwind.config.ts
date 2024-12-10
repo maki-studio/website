@@ -1,7 +1,7 @@
 import type { Config } from "tailwindcss";
 
 // utility constants 
-const remMulti = (0.0625/1.312)  // (1PT * 0.0625 -> REM) && reduced font size to match the figma scale
+const remMulti = (0.0625 / 1.312)  // (1PT * 0.0625 -> REM) && reduced font size to match the figma scale
 
 
 const config: Config = {
@@ -13,6 +13,16 @@ const config: Config = {
 	],
 	theme: {
 		extend: {
+
+			animation: {
+				'infinite-scroll': 'infinite-scroll 25s linear infinite',
+			},
+			keyframes: {
+				'infinite-scroll': {
+					from: { transform: 'translateX(0)' },
+					to: { transform: 'translateX(-100%)' },
+				},
+			},
 			colors: {
 				background: 'var(--background)',
 				foreground: 'var(--foreground)',
