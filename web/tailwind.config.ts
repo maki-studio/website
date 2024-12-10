@@ -1,7 +1,7 @@
 import type { Config } from "tailwindcss";
 
 // utility constants 
-const remMulti = 0.0625 // (1PT * 0.0625 -> REM)
+const remMulti = (0.0625/1.312)  // (1PT * 0.0625 -> REM) && reduced font size to match the figma scale
 
 
 const config: Config = {
