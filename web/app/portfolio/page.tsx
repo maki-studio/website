@@ -53,7 +53,7 @@ export default function Page() {
           <p className="hidden md:block font-display text-display-large m-auto md:-rotate-90 text-nowrap ">Our Creative Playground</p>
         </div>
 
-        <div className="md:h-16 w-16 md:w-auto border-x md:border-x-0 md:border-b-2 border-black dark:border-offWhite place-content-center ">
+        <div className="md:h-16 w-16 md:w-auto border-x md:border-x-0 md:border-t-2 border-black dark:border-offWhite place-content-center ">
           <button id="circleBtn" className="h-full w-full bg-white dark:bg-gray3 relative z-10 border-0 hover:bg-offWhite hover:p-4 duration-200 hover:invert">
             <Image src={circleIcon} alt="circle icon" className="h-8 dark:invert m-auto "></Image></button>
         </div>
