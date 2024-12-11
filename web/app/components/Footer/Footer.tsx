@@ -29,7 +29,7 @@ export function Footer({ fTopColor = 'bg-secondary', fBottomColor = 'bg-secondar
       <div className={'flex items-center justify-center p-4 md:p-1 px-8 border-t-2 md:border-t-0 md:border-l-2 border-l-white dark:border-l-offWhite font-headlines text-headline-large'}>
         <div className=''>
           <p><Link href={'tel:0000000000'} className={'underline' + linkStyling}>Phone +000000000</Link></p>
-          <p><Link href={'email:info@makistudio.online?subject=Hello%20MCS'} className={'underline' + linkStyling}>info@makistudio.online</Link></p>
+          <p><Link href={'mailto:info@makistudio.online?subject=Hello%20MCS'} className={'underline' + linkStyling}>info@makistudio.online</Link></p>
         </div>
       </div>
       <div className={'flex items-center justify-center p-4 md:p-1 px-8 border-t-2 md:border-t-0 md:border-l-2 border-l-white dark:border-l-offWhite'}>
