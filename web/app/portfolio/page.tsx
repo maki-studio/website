@@ -22,7 +22,7 @@ export default function Page() {
   projects.push([ProjectWrapper])
   return <>
     <Header activeLink="portfolio"></Header>
-    <div id="carouselContentTop" className={"hidden md:flex absolute h-14 md:h-16 border-b md:border-b-2 border-black dark:border-offWhite "}>
+    <div id="carouselContentTop" className={"hidden md:flex absolute w-screen h-14 md:h-16 border-b md:border-b-2 border-black dark:border-offWhite "}>
       <div id="" className="w-full inline-flex flex-nowrap overflow-hidden space-x-4 ">
         <div className="flex items-center justify-center md:justify-start animate-infinite-scroll">
 
@@ -38,14 +38,14 @@ export default function Page() {
     <main className="min-h-screen flex flex-col md:flex-row">
     <section id="leftBar" className="flex md:flex-col sticky top-0 z-10 bg-white dark:bg-gray3 h-14 md:h-screen md:w-16 border-y md:border-y-0 md:border-r-2  border-black dark:border-offWhite">
         <div className="hidden md:block h-16 border-b-2 border-black dark:border-offWhite place-content-center ">
-          <button id="triangleBtn" className="h-full w-full border-0 hover:bg-offWhite hover:p-4 duration-200 hover:invert">
+          <button id="triangleBtn" className="h-full w-full bg-white relative z-10 border-0 hover:bg-offWhite hover:p-4 duration-200 hover:invert">
             <Image src={dTriangleIcon} alt="circle icon" className="h-8 dark:invert m-auto "></Image></button>
         </div>
         <div className="flex-1 flex place-content-center">
           <p className="font-display text-display-large m-auto md:-rotate-90 text-nowrap ">Our Creative Playground</p>
         </div>
         <div className="hidden md:block h-16 border-t-2 border-black dark:border-offWhite place-content-center">
-          <button id="circleBtn" className="h-full w-full border-0 hover:bg-offWhite hover:p-4 duration-200 hover:invert">
+          <button id="circleBtn" className="h-full w-full bg-white relative z-10 border-0 hover:bg-offWhite hover:p-4 duration-200 hover:invert">
             <Image src={circleIcon} alt="circle icon" className="h-8 dark:invert m-auto "></Image></button>
         </div>
       </section>
