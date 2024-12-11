@@ -2,7 +2,7 @@
 The studio's main website 
 
 
-using remix boilerplate: https://vercel.com/templates/remix/remix-boilerplate
+using nextjs-cloudflare boilerplate:
 <!-- link to deploying with vercel: https://nextjs-vercel.payloadcms.com/ -->
 
 <br/>
