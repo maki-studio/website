@@ -46,7 +46,7 @@ export default function Page() {
         </div> */}
         <div className="flex-1 flex place-content-center">
           <div className="md:hidden w-full inline-flex flex-nowrap overflow-hidden">
-            <div className="flex items-center justify-center md:justify-start animate-infinite-scroll md:animate-none duration-1000">
+            <div className="flex items-center justify-center md:justify-start animate-infinite-scroll md:animate-none">
               <p className="font-display text-display-large m-auto md:-rotate-90 text-nowrap capitalize">Our Portfolio</p>
             </div>
           </div>
