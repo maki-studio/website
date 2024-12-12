@@ -23,7 +23,7 @@ export default function Home() {
                     </Button>
                   </Link>
                   <div className="flex-1"></div>
-                  <Link href={'/work'} >
+                  <Link href={'/lets-work'} >
                     <Button className="bg-primary1B p-2.5 pl-4 pr-16 hover:bg-primary text-white dark:text-offWhite font-label text-label-large font-bold">Let&apos;s Create together
                     </Button>
                   </Link>
