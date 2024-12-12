@@ -61,7 +61,7 @@ export default function Page() {
           <div id="emptyDiv" className="h-14 md:h-16 border-b md:border-b-2 border-black dark:border-offWhite">
           </div>
           <div id="servicesContent1" className="grid grid-cols-1 md:grid-cols-3">
-            <div className="p-8 border-b md:border-r-2 md:border-b-2 border-black dark:border-offWhite">
+            <div id="brandIdentity" className="p-8 border-b md:border-r-2 md:border-b-2 border-black dark:border-offWhite">
               <img src={"https://images.unsplash.com/photo-1626798801949-8ec7c7a43918?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"} alt="brand identity banner" className="object-cover h-64 w-full" />
 
               <h4 className='font-headlines text-headline-small uppercase my-2'>Brand Identity</h4>
@@ -87,11 +87,12 @@ export default function Page() {
               </span>
 
             </div>
-            <div className="p-8 border-b md:border-r-2 md:border-b-2 border-black dark:border-offWhite">
+            <div id="uixDesign" className="p-8 border-b md:border-r-2 md:border-b-2 border-black dark:border-offWhite">
               <img src={"https://images.unsplash.com/photo-1626798801949-8ec7c7a43918?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"} alt="brand identity banner" className="object-cover h-64 w-full" />
 
-              <h4 className='font-headlines text-headline-small uppercase my-2'>Brand Identity</h4>
-              <p className='mb-4 font-body text-body-large'> Let&apos;s give your business a face that turns heads.
+              <h4 className='font-headlines text-headline-small uppercase my-2'>Ui/Ux&nbsp;&nbsp;Design</h4>
+              <p className='mb-4 font-body text-body-large'>We&apos;ll make your digital products not just look good,
+                but feel good too.
               </p>
               <span className='flex flex-col lg:flex-row space-y-4 lg:space-y-0 justify-between'>
                 <div className='flex'>
@@ -113,11 +114,11 @@ export default function Page() {
               </span>
 
             </div>
-            <div className="p-8 border-b md:border-r-2 md:border-b-2 border-black dark:border-offWhite">
+            <div id="printDesign" className="p-8 border-b md:border-r-2 md:border-b-2 border-black dark:border-offWhite">
               <img src={"https://images.unsplash.com/photo-1626798801949-8ec7c7a43918?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"} alt="brand identity banner" className="object-cover h-64 w-full" />
 
-              <h4 className='font-headlines text-headline-small uppercase my-2'>Brand Identity</h4>
-              <p className='mb-4 font-body text-body-large'> Let&apos;s give your business a face that turns heads.
+              <h4 className='font-headlines text-headline-small uppercase my-2'>Print Design</h4>
+              <p className='mb-4 font-body text-body-large'> From business cards to billboards, we&apos;ve got you covered.
               </p>
               <span className='flex flex-col lg:flex-row space-y-4 lg:space-y-0 justify-between'>
                 <div className='flex'>
@@ -143,11 +144,11 @@ export default function Page() {
           <div id="emptyDiv" className="h-14 md:h-16 border-b md:border-b-2 border-black dark:border-offWhite">
           </div>
           <div id="servicesContent2" className="grid grid-cols-1 md:grid-cols-2">
-            <div className="p-8 border-b md:border-r-2 md:border-b-2 border-black dark:border-offWhite">
+            <div id="socialMedia" className="p-8 border-b md:border-r-2 md:border-b-2 border-black dark:border-offWhite">
               <img src={"https://images.unsplash.com/photo-1626798801949-8ec7c7a43918?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"} alt="brand identity banner" className="object-cover h-64 w-full" />
 
-              <h4 className='font-headlines text-headline-small uppercase my-2'>Brand Identity</h4>
-              <p className='mb-4 font-body text-body-large'> Let&apos;s give your business a face that turns heads.
+              <h4 className='font-headlines text-headline-small uppercase my-2'>Social Media Engagement</h4>
+              <p className='mb-4 font-body text-body-large'> Let&apos;s give your business a presence that gains reach.
               </p>
               <span className='flex flex-col lg:flex-row space-y-4 lg:space-y-0 justify-between'>
                 <div className='flex'>
@@ -169,11 +170,11 @@ export default function Page() {
               </span>
 
             </div>
-            <div className="p-8 border-b md:border-r-2 md:border-b-2 border-black dark:border-offWhite">
+            <div id="saas" className="p-8 border-b md:border-r-2 md:border-b-2 border-black dark:border-offWhite">
               <img src={"https://images.unsplash.com/photo-1626798801949-8ec7c7a43918?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"} alt="brand identity banner" className="object-cover h-64 w-full" />
 
-              <h4 className='font-headlines text-headline-small uppercase my-2'>Brand Identity</h4>
-              <p className='mb-4 font-body text-body-large'> Let&apos;s give your business a face that turns heads.
+              <h4 className='font-headlines text-headline-small uppercase my-2'>Software Solutions</h4>
+              <p className='mb-4 font-body text-body-large'> From consultations to full fledged SAAS solutions.
               </p>
               <span className='flex flex-col lg:flex-row space-y-4 lg:space-y-0 justify-between'>
                 <div className='flex'>
@@ -196,10 +197,10 @@ export default function Page() {
 
             </div>
           </div>
-          <div id="ctaContent" className="p-8">
-            <div>
-              <p>Not sure what you need? <br />No worries! <br />Let&apos;s chat and figure it out together.</p>
-              <Link href={'/form'} >
+          <div id="ctaContent" className="p-8 py-16 md:grid grid-cols-3">
+            <div className="col-span-2 lg:px-44">
+              <p className="font-display text-headline-medium mb-4">Not sure what you need? <br />No worries! <br />Let&apos;s chat and figure it out together.</p>
+              <Link href={'/chat'} >
                 <Button className="bg-secondary p-2.5 pl-4 pr-16 hover:bg-secondaryRegal text-white dark:text-offWhite font-label text-label-large font-bold">Let&apos;s Chat
                 </Button>
               </Link>
