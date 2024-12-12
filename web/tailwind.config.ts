@@ -1,8 +1,8 @@
 import type { Config } from "tailwindcss";
 
 // utility constants 
-const remMulti = (0.0625 / 1.312)  // (1PT * 0.0625 -> REM) && reduced font size to match the figma scale
-
+const remMulti = 0.0625  // (1PT * 0.0625 -> REM) && reduced font size to match the figma scale
+const remMultiScaled = (0.0625 / 1.312)
 
 const config: Config = {
 	darkMode: ["class"],
@@ -60,26 +60,26 @@ const config: Config = {
 			},
 			fontSize: {
 				// DISPLAY STYLES (1PT * 0.0625 -> REM)
-				'display-large': [(57 * remMulti) + 'rem', {
-					lineHeight: (64 * remMulti) + 'rem',
+				'display-large': [(57 * remMultiScaled) + 'rem', {
+					lineHeight: (64 * remMultiScaled) + 'rem',
 				}],
-				'display-medium': [(45 * remMulti) + 'rem', {
-					lineHeight: (52 * remMulti) + 'rem',
+				'display-medium': [(45 * remMultiScaled) + 'rem', {
+					lineHeight: (52 * remMultiScaled) + 'rem',
 				}],
-				'display-small': [(36 * remMulti) + 'rem', {
-					lineHeight: (44 * remMulti) + 'rem',
+				'display-small': [(36 * remMultiScaled) + 'rem', {
+					lineHeight: (44 * remMultiScaled) + 'rem',
 				}],
 				// HEADLINE STYLES
-				'headline-large': [(32 * remMulti) + 'rem', {
-					lineHeight: (40 * remMulti) + 'rem',
+				'headline-large': [(32 * remMultiScaled) + 'rem', {
+					lineHeight: (40 * remMultiScaled) + 'rem',
 					fontWeight: '500',
 				}],
-				'headline-medium': [(28 * remMulti) + 'rem', {
-					lineHeight: (36 * remMulti) + 'rem',
+				'headline-medium': [(28 * remMultiScaled) + 'rem', {
+					lineHeight: (36 * remMultiScaled) + 'rem',
 					fontWeight: '500',
 				}],
-				'headline-small': [(24 * remMulti) + 'rem', {
-					lineHeight: (32 * remMulti) + 'rem',
+				'headline-small': [(24 * remMultiScaled) + 'rem', {
+					lineHeight: (32 * remMultiScaled) + 'rem',
 				}],
 				// TITLE STYLES
 				'title-large': [(22 * remMulti) + 'rem', {
