@@ -8,6 +8,7 @@ import dTriangleIcon from '@/app/icons/ui/down-triangle.svg'
 import triangleIcon from '@/app/icons/ui/triangle.svg'
 import squareIcon from '@/app/icons/ui/square.svg'
 import starIcon from '@/app/icons/ui/star.svg'
+import React from 'react';
 
 
 
@@ -34,7 +35,15 @@ export default async function Page({ params }) {
     const projectData = designProjects.map((proj) => { if (proj.name.trim().replaceAll(/ /g, '-').toLowerCase() == slug) return proj });
 
 
-
+    const resultsLi = (): React.JSX.Element[] =>{
+                        
+        const item = <li className='flex space-x-4 px-4'><span className=''>Results</span><Image src={starIcon} alt="star icon" className="h-4 invert dark:no-invert-0 m-auto "></Image></li>;
+        const items: React.JSX.Element[] = [];
+        for (let i = 0;i < 13;i++){
+            items.push(item)
+        }
+        return items;
+    }
 
 
     const projects: [typeof ProjectWrapper][] = [];
@@ -143,7 +152,14 @@ export default async function Page({ params }) {
                     </div>
                 </div>
                 <div id='resultsContent' className='md:p-8 '>
-                    <h4 className='font-headlines text-headline-small uppercase mb-8 p-8 pb-0 md:hidden'>Results</h4>
+                    <h4 className='font-headlines text-headline-large flex uppercase place-content-center h-14  md:hidden border-y bg-black dark:bg-offWhite text-white dark:text-black overflow-x-clip'>
+                        <ul className='flex space-x-2 justify-center items-center animate-infinite-scroll'>
+                            {resultsLi()}
+                        </ul>
+                        <ul className='flex space-x-2 justify-center items-center animate-infinite-scroll'>
+                            {resultsLi()}
+                        </ul>
+                    </h4>
                     <img src={projectData[0]?.images.resultImages[0]} alt="results images" className='h-[50vh] w-full object-cover' />
                 </div>
             </section>
