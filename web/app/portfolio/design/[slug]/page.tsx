@@ -8,7 +8,6 @@ import dTriangleIcon from '@/app/icons/ui/down-triangle.svg'
 import triangleIcon from '@/app/icons/ui/triangle.svg'
 import squareIcon from '@/app/icons/ui/square.svg'
 import starIcon from '@/app/icons/ui/star.svg'
-import React from 'react';
 
 
 
@@ -29,17 +28,17 @@ const ProjectWrapper = <div className="border-b-2 border-r-2 border-black dark:b
 
 // Multiple versions of this page will be statically generated
 // using the `params` returned by `generateStaticParams`
-export default async function Page({ params }) {
+export default async function Page({ params, }: { params: Promise<{ slug: string }> }) {
     const { slug } = await params
 
     const projectData = designProjects.map((proj) => { if (proj.name.trim().replaceAll(/ /g, '-').toLowerCase() == slug) return proj });
 
 
-    const resultsLi = (): React.JSX.Element[] =>{
-                        
+    const resultsLi = (): React.JSX.Element[] => {
+
         const item = <li className='flex space-x-4 px-4'><span className=''>Results</span><Image src={starIcon} alt="star icon" className="h-4 invert dark:no-invert-0 m-auto "></Image></li>;
         const items: React.JSX.Element[] = [];
-        for (let i = 0;i < 13;i++){
+        for (let i = 0; i < 13; i++) {
             items.push(item)
         }
         return items;
