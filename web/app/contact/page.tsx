@@ -46,28 +46,30 @@ export default function Page() {
       <section id="midPanel" className="flex-1 flex flex-col">
         <div>
 
-          <div id="contactsContent" className="border-b md:border-b-2 border-black dark:border-offWhite border-dashed p-8">
+          <div id="contactsContent" className="border-b md:border-b-2 border-black dark:border-offWhite border-dashed p-8 lg:grid grid-cols-3">
+            <div className="">
             <p className="font-display text-display-large">Connect With Maki Creative Studio</p>
-            <p className="font-headlines text-headline-large">Transform your brand&apos;s potential into reality. We&apos;re ready to begin when you are.</p>
+            <p className="font-headlines text-headline-large">Transform your brand&apos;s potential into reality. We are ready to begin when you are.</p>
+            </div>
           </div>
           <div id="servicesContent" className="grid grid-cols-1 md:grid-cols-2 border-b md:border-b-2 border-black dark:border-offWhite border-dashed">
             <div className="border-b md:border-b-0 md:border-r-2 border-black dark:border-offWhite border-dashed p-8">
-              <h4 className="font-headlines text-headline-large uppercase">Direct Lines</h4>
+              <h4 className="font-headlines text-headline-large uppercase mb-5">Direct Lines</h4>
               <ul className="space-y-1">
                 <li className="flex">
-                  <Image src={mailIcon} alt="circle icon" className="h-6 dark:invert m-auto "></Image> <span>hello@makistudio.online</span>
+                  <Image src={mailIcon} alt="circle icon" className="h-6 w-6 dark:invert mr-4 "></Image> <span>hello@makistudio.online</span>
                 </li>
                 <li className="flex">
-                  <Image src={phoneIcon} alt="circle icon" className="h-6 dark:invert m-auto "></Image> <span>+000 0000 000</span>
+                  <Image src={phoneIcon} alt="circle icon" className="h-6 w-6 dark:invert mr-4 "></Image> <span>+000 0000 000</span>
                 </li>
                 <li className="flex">
-                  <Image src={locationIcon} alt="circle icon" className="h-6 dark:invert m-auto "></Image> <span>Remote Studio</span>
+                  <Image src={locationIcon} alt="circle icon" className="h-6 w-6 dark:invert mr-4 "></Image> <span>Remote Studio</span>
                 </li>
               </ul>
             </div>
             <div className="p-8">
-              <h4 className="font-headlines text-headline-large uppercase">Book a consultation</h4>
-              <p className="font-title text-title-large">Schedule a 30-minute discovery call to discuss your project and explore possibilities</p>
+              <h4 className="font-headlines text-headline-large uppercase mb-5">Book a consultation</h4>
+              <p className="font-title text-title-large mb-3">Schedule a 30-minute discovery call to discuss your project and explore possibilities</p>
               <Link href={'/lets-work'} >
                 <Button className="bg-primary1B p-2.5 pl-4 pr-16 hover:bg-primary text-white dark:text-offWhite font-label text-label-large font-bold">Book Now
                 </Button>
@@ -75,17 +77,18 @@ export default function Page() {
             </div>
 
           </div>
-          <div id="ctaContent" className="flex justify-center p-8">
+          <div id="ctaContent" className="flex justify-center p-8 ">
             <div className="">
-              <h3 className="uppercase font-headlines text-headline-large">Have a project in mind? <br />Share the basics</h3>
-              <Form>
-                <TextInput id={""} labelText={'Your Name'}></TextInput>
-                <TextInput id={""} labelText={'Email Address'}></TextInput>
-                <TextInput id={""} labelText={'Subject'}></TextInput>
+              <h3 className="uppercase font-headlines text-headline-large mb-8">Have a project in mind? <br />Share the basics</h3>
+              <Form className="font-body">
+                <TextInput id={"name"} name="name" labelText={'Your Name'} className=""></TextInput>
+                <TextInput id={"email"} name="email" labelText={'Email Address'}></TextInput>
+                <TextInput id={"emailSubject"} name="emailSubject" labelText={'Email Subject'}></TextInput>
                 <TextArea
                   enableCounter
                   // helperText="TextArea helper text"
-                  id="text-area-1"
+                  id="message"
+                  name="message"
                   invalidText="Error message that is really long can wrap to more lines but should not be excessively long."
                   labelText="Brief Message"
                   maxCount={500}
