@@ -2,7 +2,7 @@
 
 export default function TermsSection() {
     return <>
-        <main className="p-8">
+        <main className="p-8 space-y-4">
             <p>Last updated: January 20, 2025</p>
             <p>Please read these terms and conditions carefully before using Our Service.</p>
             <h2>Interpretation and Definitions</h2>
@@ -27,13 +27,13 @@ export default function TermsSection() {
                     <p><strong>Service</strong> refers to the Website.</p>
                 </li>
                 <li>
-                    <p><strong>Terms and Conditions</strong> (also referred as &quot;Terms&quot;) mean these Terms and Conditions that form the entire agreement between You and the Company regarding the use of the Service. This Terms and Conditions agreement has been created with the help of the <a href="https://www.termsfeed.com/terms-conditions-generator/" target="_blank">Terms and Conditions Generator</a>.</p>
+                    <p><strong>Terms and Conditions</strong> (also referred as &quot;Terms&quot;) mean these Terms and Conditions that form the entire agreement between You and the Company regarding the use of the Service. This Terms and Conditions agreement has been created with the help of the <a className="underline text-primary" href="https://www.termsfeed.com/terms-conditions-generator/" target="_blank">Terms and Conditions Generator</a>.</p>
                 </li>
                 <li>
                     <p><strong>Third-party Social Media Service</strong> means any services or content (including data, information, products or services) provided by a third-party that may be displayed, included or made available by the Service.</p>
                 </li>
                 <li>
-                    <p><strong>Website</strong> refers to Maki Creative Studio, accessible from <a href="https://www.makistudio.online/" rel="external nofollow noopener" target="_blank">https://www.makistudio.online/</a></p>
+                    <p><strong>Website</strong> refers to Maki Creative Studio, accessible from <a className="underline text-primary" href="https://www.makistudio.online/" rel="external nofollow noopener" target="_blank">https://www.makistudio.online/</a></p>
                 </li>
                 <li>
                     <p><strong>You</strong> means the individual accessing or using the Service, or the company, or other legal entity on behalf of which such individual is accessing or using the Service, as applicable.</p>
@@ -86,7 +86,7 @@ export default function TermsSection() {
                     <p>By email: info@makistudio.online</p>
                 </li>
                 <li>
-                    <p>By visiting this page on our website: <a href="https://www.makistudio.online/contact" rel="external nofollow noopener" target="_blank">https://www.makistudio.online/contact</a></p>
+                    <p>By visiting this page on our website: <a className="underline text-primary" href="https://www.makistudio.online/contact" rel="external nofollow noopener" target="_blank">https://www.makistudio.online/contact</a></p>
                 </li>
             </ul>
         </main>
