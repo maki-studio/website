@@ -44,7 +44,7 @@ export function Footer({ fTopColor = 'bg-secondary', fBottomColor = 'bg-secondar
 
     </div>
     <div className={'p-4 md:p-1.5 px-8 flex flex-wrap border-t-2 border-t-white dark:border-t-offWhite align-middle'}>
-      <p className={'uppercase font-headlines text-headline-large mb-2 md:mb-0 md:mr-8'}>&copy; 2024 <br className='md:hidden'/>Maki Creative Studio</p>
+      <p className={'uppercase font-headlines text-headline-large mb-2 md:mb-0 md:mr-8'}>&copy; 2024 — {(new Date().getFullYear())+''} <br className='md:hidden'/>Maki Creative Studio</p>
       <ul className={'flex justify-between flex-row space-x-8 rtl:space-x-reverse items-center'}>
         {/*TODO: use personal instagram account*/}
         <li><Link href={'https://www.instagram.com/'} target='_blank'><Image src={instagramIcon} alt='instagram icon' className={'h-8 ' + iconLinkStyling} /></Link></li>
