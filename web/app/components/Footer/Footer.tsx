@@ -4,6 +4,9 @@ import Image from 'next/image'
 
 import subMark from '@/app/icons/submark.svg'
 import instagramIcon from '@/app/icons/social/instagram.svg'
+import xIcon from '@/app/icons/social/x.svg'
+import linkedinIcon from '@/app/icons/social/linkedin.svg'
+import facebookIcon from '@/app/icons/social/facebook.svg'
 import behanceIcon from '@/app/icons/social/behance.svg'
 import dribbleIcon from '@/app/icons/social/dribble.svg'
 
@@ -48,8 +51,11 @@ export function Footer({ fTopColor = 'bg-secondary', fBottomColor = 'bg-secondar
       <ul className={'flex justify-between flex-row space-x-8 rtl:space-x-reverse items-center'}>
         {/*TODO: use personal instagram account*/}
         <li><Link href={'https://www.instagram.com/'} target='_blank'><Image src={instagramIcon} alt='instagram icon' className={'h-8 ' + iconLinkStyling} /></Link></li>
-        <li><Link href={'https://www.behance.net/mcsamuelshoko'} target='_blank'><Image src={behanceIcon} alt='behance icon' className={'h-8 ' + iconLinkStyling} /></Link></li>
-        <li><Link href={'https://dribbble.com/McSamuel'} target='_blank'><Image src={dribbleIcon} alt='dribble icon' className={'h-8 ' + iconLinkStyling} /></Link></li>
+        <li><Link href={'https://www.facebook.com/hellostudiomaki'} target='_blank'><Image src={facebookIcon} alt='facebook icon' className={'h-8 ' + iconLinkStyling} /></Link></li>
+        <li><Link href={'https://x.com/hellostudiomaki'} target='_blank'><Image src={xIcon} alt='X or twitter icon' className={'h-8 ' + iconLinkStyling} /></Link></li>
+        <li><Link href={'https://www.linkedin.com/company/maki-creative-studio'} target='_blank'><Image src={linkedinIcon} alt='linkedin icon' className={'h-8 ' + iconLinkStyling} /></Link></li>
+        <li><Link href={'https://dribbble.com/hellostudiomaki'} target='_blank'><Image src={dribbleIcon} alt='dribble icon' className={'h-8 ' + iconLinkStyling} /></Link></li>
+        <li><Link href={'https://www.behance.net/hellostudiomaki'} target='_blank'><Image src={behanceIcon} alt='behance icon' className={'h-8 ' + iconLinkStyling} /></Link></li>
       </ul>
     </div>
     <div className={' border-t border-y-white dark:border-y-offWhite flex justify-center'}>
