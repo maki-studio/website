@@ -36,7 +36,7 @@ export function Footer({ fTopColor = 'bg-secondary', fBottomColor = 'bg-secondar
         </div>
       </div>
       <div className={'flex items-center justify-center p-4 md:p-1 px-8 border-t md:border-t-0 md:border-l border-l-white dark:border-l-offWhite'}>
-        <ul className={'font-headlines text-headline-large uppercase'}>
+        <ul className={'font-headlines text-headline-large uppercase space-y-1'}>
           <li><Link href={'/privacy'} className={'' + linkStyling}>Privacy Policy</Link></li>
           <li><Link href={'/terms'} className={'' + linkStyling}>Terms and Conditions</Link></li>
           <li><Link href={'/affiliates'} className={'' + linkStyling}>Affiliate Program</Link></li>
@@ -50,10 +50,10 @@ export function Footer({ fTopColor = 'bg-secondary', fBottomColor = 'bg-secondar
       <p className={'uppercase font-headlines text-headline-large mb md:mb-0 md:mr-8'}>&copy; 2024 — {(new Date().getFullYear())+''}&nbsp;&nbsp; <br className='md:hidden'/>Maki Creative Studio</p>
       <ul className={'flex justify-between flex-row space-x-8 rtl:space-x-reverse items-center'}>
         {/*TODO: use personal instagram account*/}
+        <li><Link href={'https://www.linkedin.com/company/maki-creative-studio'} target='_blank'><Image src={linkedinIcon} alt='linkedin icon' className={'h-8 ' + iconLinkStyling} /></Link></li>
         <li><Link href={'https://www.instagram.com/'} target='_blank'><Image src={instagramIcon} alt='instagram icon' className={'h-8 ' + iconLinkStyling} /></Link></li>
         <li><Link href={'https://www.facebook.com/hellostudiomaki'} target='_blank'><Image src={facebookIcon} alt='facebook icon' className={'h-8 ' + iconLinkStyling} /></Link></li>
-        <li><Link href={'https://x.com/hellostudiomaki'} target='_blank'><Image src={xIcon} alt='X or twitter icon' className={'h-8 ' + iconLinkStyling} /></Link></li>
-        <li><Link href={'https://www.linkedin.com/company/maki-creative-studio'} target='_blank'><Image src={linkedinIcon} alt='linkedin icon' className={'h-8 ' + iconLinkStyling} /></Link></li>
+        <li><Link href={'https://x.com/hellostudiomaki'} target='_blank'><Image src={xIcon} alt='X or twitter icon' className={'h-8 ' + iconLinkStyling} /></Link></li>        
         <li><Link href={'https://dribbble.com/hellostudiomaki'} target='_blank'><Image src={dribbleIcon} alt='dribble icon' className={'h-8 ' + iconLinkStyling} /></Link></li>
         <li><Link href={'https://www.behance.net/hellostudiomaki'} target='_blank'><Image src={behanceIcon} alt='behance icon' className={'h-8 ' + iconLinkStyling} /></Link></li>
       </ul>
