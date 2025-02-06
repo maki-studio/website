@@ -48,12 +48,12 @@ const faqs: FAQ[] = [
 
 export default function FAQSection() {
     return <>
-        <main className="p-8 bg-accent1 bg-opacity-40 ">
+        <main className="p-8 bg-accent1/40 ">
             <h2 className="h2 font-display font-medium text-5xl mb-4 md:mb-8">Frequently Asked Questions</h2>
-            <section className="bg-offWhite1B text-black p-8 border-dashed border-2 border border-black ">
+            <section className="bg-off-white1B text-black p-8 border-dashed border-2 border border-black ">
                 <ul className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                     {faqs.map(
-                        (faq,index) => <li key={"f-"+index} className="p-8 bg-accent2 bg-opacity-40 hover:bg-opacity-80 hover:shadow hover:transition-700">
+                        (faq,index) => <li key={"f-"+index} className="p-8 bg-sec bg-accent2/40 hover:bg-accent2/80 hover:shadow-sm hover:transition-700">
                             <p className="font-bold"><b>Q:</b>&nbsp; {faq.question} </p>
                             <br />
                             <p><b>A:—</b>&nbsp; {faq.answer} </p>

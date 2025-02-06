@@ -24,9 +24,9 @@ export default function Page() {
     <Header activeLink="contact"></Header>
 
     <main className="min-h-screen flex flex-col md:flex-row">
-      <section id="leftBar" className="flex md:flex-col sticky top-0 z-10 bg-white dark:bg-gray3 h-14 md:h-screen md:w-16 border-y md:border-y-0 md:border-r-2  border-black dark:border-offWhite">
-        <div className="md:h-16 w-16 md:w-auto border-x md:border-x-0 md:border-b-0 border-black dark:border-offWhite place-content-center ">
-          {/* <button id="triangleBtn" className="h-full w-full bg-white dark:bg-gray3 relative z-10 border-0 hover:bg-offWhite hover:p-4 duration-200 hover:invert">
+      <section id="leftBar" className="flex md:flex-col sticky top-0 z-10 bg-white dark:bg-gray3 h-14 md:h-screen md:w-16 border-y md:border-y-0 md:border-r-2  border-black dark:border-off-white">
+        <div className="md:h-16 w-16 md:w-auto border-x md:border-x-0 md:border-b-0 border-black dark:border-off-white place-content-center ">
+          {/* <button id="triangleBtn" className="h-full w-full bg-white dark:bg-gray3 relative z-10 border-0 hover:bg-off-white hover:p-4 duration-200 hover:invert">
             <Image src={dTriangleIcon} alt="circle icon" className="h-8 dark:invert m-auto "></Image></button> */}
         </div>
         <div className="flex-1 flex place-content-center">
@@ -38,22 +38,22 @@ export default function Page() {
           <p className="hidden md:block font-display text-display-large m-auto md:-rotate-90 text-nowrap capitalize">We&apos;re ready to begin when you are.</p>
         </div>
 
-        <div className="md:h-16 w-16 md:w-auto border-x md:border-x-0 md:border-t-0 border-black dark:border-offWhite place-content-center ">
-          {/* <button id="circleBtn" className="h-full w-full bg-white dark:bg-gray3 relative z-10 border-0 hover:bg-offWhite hover:p-4 duration-200 hover:invert">
+        <div className="md:h-16 w-16 md:w-auto border-x md:border-x-0 md:border-t-0 border-black dark:border-off-white place-content-center ">
+          {/* <button id="circleBtn" className="h-full w-full bg-white dark:bg-gray3 relative z-10 border-0 hover:bg-off-white hover:p-4 duration-200 hover:invert">
             <Image src={circleIcon} alt="circle icon" className="h-8 dark:invert m-auto "></Image></button> */}
         </div>
       </section>
       <section id="midPanel" className="flex-1 flex flex-col">
         <div>
 
-          <div id="contactsContent" className="border-b md:border-b-2 border-black dark:border-offWhite border-dashed p-8 lg:grid grid-cols-3">
+          <div id="contactsContent" className="border-b md:border-b-2 border-black dark:border-off-white border-dashed p-8 lg:grid grid-cols-3">
             <div className="">
             <p className="font-display text-display-large">Connect With Maki Creative Studio</p>
             <p className="font-headlines text-headline-large">Transform your brand&apos;s potential into reality. We are ready to begin when you are.</p>
             </div>
           </div>
-          <div id="servicesContent" className="grid grid-cols-1 md:grid-cols-2 border-b md:border-b-2 border-black dark:border-offWhite border-dashed">
-            <div className="border-b md:border-b-0 md:border-r-2 border-black dark:border-offWhite border-dashed p-8">
+          <div id="servicesContent" className="grid grid-cols-1 md:grid-cols-2 border-b md:border-b-2 border-black dark:border-off-white border-dashed">
+            <div className="border-b md:border-b-0 md:border-r-2 border-black dark:border-off-white border-dashed p-8">
               <h4 className="font-headlines text-headline-large uppercase mb-5">Direct Lines</h4>
               <ul className="space-y-1">
                 <li className="flex">
@@ -71,7 +71,7 @@ export default function Page() {
               <h4 className="font-headlines text-headline-large uppercase mb-5">Book a consultation</h4>
               <p className="font-title text-title-large mb-3">Schedule a 30-minute discovery call to discuss your project and explore possibilities</p>
               <Link href={'/lets-work'} >
-                <Button className="bg-primary1B p-2.5 pl-4 pr-16 hover:bg-primary text-white dark:text-offWhite font-label text-label-large font-bold">Book Now
+                <Button className="bg-primary1B p-2.5 pl-4 pr-16 hover:bg-primary text-white dark:text-off-white font-label text-label-large font-bold">Book Now
                 </Button>
               </Link>
             </div>
@@ -97,7 +97,7 @@ export default function Page() {
                   warnText="This is a warning message."
                 />
                 <Link href={'/form'} >
-                  <Button className="bg-primary1B p-2.5 pl-4 pr-16 hover:bg-primary text-white dark:text-offWhite font-label text-label-large font-bold">Send
+                  <Button className="bg-primary1B p-2.5 pl-4 pr-16 hover:bg-primary text-white dark:text-off-white font-label text-label-large font-bold">Send
                   </Button>
                 </Link>
               </Form>
@@ -107,9 +107,9 @@ export default function Page() {
 
         </div>
       </section>
-      <section id="rightBar" className="flex md:flex-col sticky top-0 z-10 bg-white dark:bg-gray3 h-14 md:h-screen md:w-16 border-y md:border-y-0 md:border-l-2  border-black dark:border-offWhite">
-        <div className="md:h-16 w-16 md:w-auto border-x md:border-x-0 md:border-b-0 border-black dark:border-offWhite place-content-center ">
-          {/* <button id="triangleBtn" className="h-full w-full bg-white dark:bg-gray3 relative z-10 border-0 hover:bg-offWhite hover:p-4 duration-200 hover:invert">
+      <section id="rightBar" className="flex md:flex-col sticky top-0 z-10 bg-white dark:bg-gray3 h-14 md:h-screen md:w-16 border-y md:border-y-0 md:border-l-2  border-black dark:border-off-white">
+        <div className="md:h-16 w-16 md:w-auto border-x md:border-x-0 md:border-b-0 border-black dark:border-off-white place-content-center ">
+          {/* <button id="triangleBtn" className="h-full w-full bg-white dark:bg-gray3 relative z-10 border-0 hover:bg-off-white hover:p-4 duration-200 hover:invert">
             <Image src={starIcon} alt="star icon" className="h-8 dark:invert m-auto "></Image></button> */}
         </div>
         <div className="flex-1 flex place-content-center">
@@ -121,8 +121,8 @@ export default function Page() {
           <p className="hidden md:block font-display text-display-large m-auto md:rotate-90 text-nowrap capitalize">We&apos;re ready to begin when you are.</p>
         </div>
 
-        <div className="md:h-16 w-16 md:w-auto border-x md:border-x-0 md:border-t-0 border-black dark:border-offWhite place-content-center ">
-          {/* <button id="circleBtn" className="h-full w-full bg-white dark:bg-gray3 relative z-10 border-0 hover:bg-offWhite hover:p-4 duration-200 hover:invert">
+        <div className="md:h-16 w-16 md:w-auto border-x md:border-x-0 md:border-t-0 border-black dark:border-off-white place-content-center ">
+          {/* <button id="circleBtn" className="h-full w-full bg-white dark:bg-gray3 relative z-10 border-0 hover:bg-off-white hover:p-4 duration-200 hover:invert">
             <Image src={starIcon} alt="star icon" className="h-8 dark:invert m-auto "></Image></button> */}
         </div>
       </section>

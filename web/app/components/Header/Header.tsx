@@ -15,7 +15,7 @@ export function Header({ activeLink, hTopColor = 'bg-primary1B', hBottomColor = 
   const linkStyling: string = 'hover:text-primary1B hover:duration-150';
 
   return <header>
-    <div className='min-h-32 items-center md:h-32 md:px-16 bg-primary0 text-white dark:text-offWhite '>
+    <div className='min-h-32 items-center md:h-32 md:px-16 bg-primary0 text-white dark:text-off-white '>
       <nav id="navbar-default" className={'p-4'}>
         <ul className="font-headlines text-headline-small font-bold uppercase p-4 md:p-0 flex flex-col md:flex-row space-y-4 md:space-y-0 md:w-min  md:mx-auto items-center md:space-x-8 rtl:space-x-reverse md:mt-0 ">
           <li className='w-36'><Link href={'/'} className={"w-10"}><Image className='h-20' src={primaryLogo} alt="primary-logo" /></Link></li>
