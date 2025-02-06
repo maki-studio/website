@@ -25,10 +25,10 @@ export default function Home() {
           </section>
           <section id="features" className={"p-12 border-t border-t-black dark:border-t-off-white bg-[#228B22]/20"}>
             <h2 className="h2 font-display text-5xl text-primary mb-4 md:mb-8 p-8">Design services that grow —<br /> with your business</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 p-8">
+            <div className="grid grid-cols-1 gap-6 md:grid-cols-3 lg:grid-cols-5 lg:gap-2 p-8">
               <div className="bg-off-white1B p-8 flex flex-col justify-between">
                 <div>
-                  <p className="text-title-large mb-2 uppercase">Web design</p>
+                  <p className="text-title-large font-bold mb-2 uppercase">Web design</p>
                   <p className="text-label-medium text-primary font-body mb-4 ">Websites that work as hard as you do.</p>
                   <p className="text-body-medium font-body mb-4">From engaging homepages to conversion-focused layouts that turn visitors into customers.</p>
                 </div>
@@ -41,7 +41,7 @@ export default function Home() {
 
               <div className="bg-off-white1B p-8 flex flex-col justify-between">
                 <div>
-                  <p className="text-title-large mb-2 uppercase">UI/UX design</p>
+                  <p className="text-title-large font-bold mb-2 uppercase">UI/UX design</p>
                   <p className="text-label-medium text-primary font-body mb-4 ">Make every interaction count.</p>
                   <p className="text-body-medium font-body mb-4">User-friendly interfaces that keep your customers coming back for more.</p>
                 </div>
@@ -54,7 +54,7 @@ export default function Home() {
 
               <div className="bg-off-white1B p-8 flex flex-col justify-between">
                 <div>
-                  <p className="text-title-large mb-2 uppercase">SEO</p>
+                  <p className="text-title-large font-bold mb-2 uppercase">SEO</p>
                   <p className="text-label-medium text-primary font-body mb-4 ">Get found by the right people.</p>
                   <p className="text-body-medium font-body mb-4">We build SEO right into your design, helping your business climb search rankings naturally.</p>
                 </div>
@@ -67,7 +67,7 @@ export default function Home() {
 
               <div className="bg-off-white1B p-8 flex flex-col justify-between">
                 <div>
-                  <p className="text-title-large mb-2 uppercase">Landing Pages</p>
+                  <p className="text-title-large mb-2 font-bold uppercase">Landing Pages</p>
                   <p className="text-label-medium text-primary font-body mb-4 ">Turn clicks into customers with landing pages that convert.</p>
                   <p className="text-body-medium font-body mb-4">Clear, compelling, and crafted for your specific audience.</p>
                 </div>
@@ -80,7 +80,7 @@ export default function Home() {
 
               <div className="bg-off-white1B p-8 flex flex-col justify-between">
                 <div>
-                  <p className="text-title-large mb-2 uppercase">Additional Services</p>
+                  <p className="text-title-large font-bold mb-2 uppercase">Additional Services</p>
                   <p className="text-label-medium text-primary font-body mb-4 ">All your design needs under one roof,
                     minus the complexity</p>
                   <p className="text-body-medium font-body mb-4">
