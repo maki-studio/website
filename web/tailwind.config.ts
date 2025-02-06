@@ -2,7 +2,7 @@ import type { Config } from "tailwindcss";
 
 // utility constants 
 const remMulti = 0.0625  // (1PT * 0.0625 -> REM) && reduced font size to match the figma scale
-const remMultiScaled = (0.0625 / 1.312)
+const remMultiScaled = (0.0625 / 1.4)//1.312)
 
 const config: Config = {
 	darkMode: ["class"],
