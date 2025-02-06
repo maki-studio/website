@@ -4,6 +4,10 @@ import FAQSection from "./about/sections/faq";
 import Link from "next/link";
 import Image from 'next/image';
 export const runtime = "edge";
+import shareKnowledgeIcon from '@/app/icons/ui/share-knowledge.svg'
+import partnershipIcon from '@/app/icons/ui/partnership.svg'
+import turnaroundIcon from '@/app/icons/ui/turnaround.svg'
+import futureDesignsIcon from '@/app/icons/ui/future-designs.svg'
 
 export default function Home() {
   return (
@@ -28,41 +32,59 @@ export default function Home() {
 
           </section>
           <section id="benefits" className={"pt-12"}>
-            <div className="p-8 ">
+            <div className="p-8 pb-16 bg-radial-[at_25%_25%] from-sky-200 via-accent3/50 to-accent2/50 to-90%">
               <h2 className="h2 font-display text-secondary font-bold text-5xl mb-4 md:mb-8 mt-12">Why choose us?</h2>
-              <div id="gradients p-8 bg-black">
-
-                <div className="border-off-white p-4 bg-linear-to-r from-cyan-500 to-blue-500">I</div>
-                <div className="border-off-white p-4 bg-linear-to-t from-sky-500 to-indigo-500">II</div>
-                <div className="border-off-white p-4 bg-linear-to-bl from-violet-500 to-fuchsia-500">III</div>
-                <div className="border-off-white p-4 bg-linear-65 from-purple-500 to-pink-500">IV</div>
-                <br />
-                <br />
-                <div className="border-off-white p-4 size-18 rounded-full bg-radial from-pink-400 from-40% to-fuchsia-700"></div>
-                <div className="border-off-white p-4 size-18 rounded-full bg-radial-[at_50%_75%] from-sky-200 via-blue-400 to-indigo-900 to-90%"></div>
-                <div className="border-off-white p-4 size-18 rounded-full bg-radial-[at_25%_25%] from-white to-zinc-900 to-75%"></div>
-                <br />
-                <br />
-                <div className="size-24 rounded-full bg-conic from-blue-600 to-sky-400 to-50%"></div>
-                <div className="size-24 rounded-full bg-conic-180 from-indigo-600 via-indigo-50 to-indigo-600"></div>
-                <div className="size-24 rounded-full bg-conic/decreasing from-violet-700 via-lime-300 to-violet-700"></div>
-                <br />
-                <br />
-                <div className="bg-linear-to-r/srgb from-indigo-500 to-teal-400"></div>
-                <div className="bg-linear-to-r/hsl from-indigo-500 to-teal-400"></div>
-                <div className="bg-linear-to-r/oklab from-indigo-500 to-teal-400"></div>
-                <div className="bg-linear-to-r/oklch from-indigo-500 to-teal-400"></div>
-                <div className="bg-linear-to-r/longer from-indigo-500 to-teal-400"></div>
-                <div className="bg-linear-to-r/shorter from-indigo-500 to-teal-400"></div>
-                <div className="bg-linear-to-r/increasing from-indigo-500 to-teal-400"></div>
-                <div className="bg-linear-to-r/decreasing from-indigo-500 to-teal-400"></div>
-
+              <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+                <div className="bg-off-white1B p-8 flex flex-col justify-between">
+                  <div>
+                    <p className="text-title-large mb-6">Flexible Collaboration</p>
+                    <p className="text-body-large font-body mb-4">Work with us from anywhere, anytime. Our remote setup means we&apos;re always just a message away.</p>
+                  </div>
+                  <div className="relative h-80 w-64 mx-auto ">
+                    <div className="bg-gray-300 rounded-[180px] bg-cover bg-[url(/images/site/collaboration-abstract.png)] flex items-center justify-center h-full w-full">
+                      <Image src={shareKnowledgeIcon} width={320} alt='share knowledge icon' className={'h-24 opacity-80'} />
+                    </div>
+                  </div>
+                </div>
+                <div className="bg-off-white1B p-8  flex flex-col justify-between">
+                  <div>
+                    <p className="text-title-large mb-6">Partnership Approach</p>
+                    <p className="text-body-large font-body mb-4">We grow together. Get a dedicated design partner who understands your business goals and vision.</p>
+                  </div>
+                  <div className="relative h-80 w-64 mx-auto ">
+                    <div className="bg-gray-300 rounded-[180px] bg-cover bg-[url(/images/site/partnership-abstract.png)] flex items-center justify-center h-full w-full">
+                      <Image src={partnershipIcon} width={320} alt='partnership icon' className={'h-24 opacity-80'} />
+                    </div>
+                  </div>
+                </div>
+                <div className="bg-off-white1B p-8 flex flex-col justify-between">
+                  <div>
+                    <p className="text-title-large mb-6">Quick Turnaround</p>
+                    <p className="text-body-large font-body mb-4">We understand your speed. Get your designs when you need them, not weeks later.</p>
+                  </div>
+                  <div className="relative h-80 w-64 mx-auto ">
+                    <div className="bg-gray-300 rounded-[180px] bg-cover bg-[url(/images/site/turnaround-abstract.png)] flex items-center justify-center h-full w-full">
+                      <Image src={turnaroundIcon} width={320} alt='turnaround icon' className={'h-24 opacity-80'} />
+                    </div>
+                  </div>
+                </div>
+                <div className="bg-off-white1B p-8 flex flex-col justify-between">
+                  <div>
+                    <p className="text-title-large mb-6">Future Proof designs</p>
+                    <p className="text-body-large font-body mb-4">Scalable solutions that grow with your business. No need to start from scratch as you expand.</p>
+                  </div>
+                  <div className="relative h-80 w-64 mx-auto ">
+                    <div className="bg-gray-300 rounded-[180px] bg-cover bg-[url(/images/site/future-designs-abstract.png)] flex items-center justify-center h-full w-full">
+                      <Image src={futureDesignsIcon} width={320} alt='future designs icon' className={'h-24 opacity-80'} />
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
 
             <hr className="border-black dark:border-off-white1B" />
             <div className={"flex justify-center my-12"}>
-              <div className="flex items-center">
+              <div className="flex flex-wrap justify-center items-center">
                 <span className="relative h-28 w-24 ">
                   <Image src={"/images/site/paul-rand.png"} alt={"paul rand portrait"} layout="fill" className="bg-gray-300 bg-opacity-40 object-cover rounded-[180px]"></Image>
                 </span>
@@ -80,7 +102,7 @@ export default function Home() {
           <section id="testimonials" className={"pt-12"}>
             <h2 className="h2 font-display text-secondary-regal font-bold text-5xl px-8 mb-4 md:mb-8 mt-12">Here’s what others are saying
               <br />about us</h2>
-            <div className={"grid grid-cols-2 md:grid-cols-6 border-y border-y-black dark:border-y-off-white1B"}>
+            <div className={"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 border-y border-y-black dark:border-y-off-white1B"}>
               <div className={"border-r border-r-black dark:border-r-off-white1B"}></div>
               <div className={"border-r border-r-black dark:border-r-off-white1B relative"}>
                 <Image src={"/images/site/telephone.png"} alt={"max pete portrait"} layout="fill" className="bg-gray-300 bg-opacity-40 object-cover"></Image>
