@@ -1,97 +1,98 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
 
+@config '../tailwind.config.ts';
 
-/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;500;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,300;0,400;0,700;1,100;1,500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;800&family=Raleway:ital,wght@0,200;0,300;0,400;0,700;0,900;1,100;1,500&display=swap'); */
-
-/* SANS: PLUS JAKARTA SANS */
-@font-face {
-  font-family: 'Plus Jakarta Sans';
-  src: url('./fonts/PlusJakartaSansVF.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Plus Jakarta Sans';
-  src: url('./fonts/PlusJakartaSansItalicVF.ttf') format('truetype');
-  font-weight: normal;
-  font-style: italic;
-}
-/* SERIF: MERRIWEATHER */
-@font-face {
-  font-family: 'Merriweather';
-  src: url('./fonts/Merriweather/Merriweather-Black.ttf') format('truetype');
-  font-weight: bolder;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Merriweather';
-  src: url('./fonts/Merriweather/Merriweather-Bold.ttf') format('truetype');
-  font-weight: bold;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Merriweather';
-  src: url('./fonts/Merriweather/Merriweather-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Merriweather';
-  src: url('./fonts/Merriweather/Merriweather-Light.ttf') format('truetype');
-  font-weight: lighter;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Merriweather';
-  src: url('./fonts/Merriweather/Merriweather-BlackItalic.ttf') format('truetype');
-  font-weight: bolder;
-  font-style: italic;
-}
-@font-face {
-  font-family: 'Merriweather';
-  src: url('./fonts/Merriweather/Merriweather-BoldItalic.ttf') format('truetype');
-  font-weight: bold;
-  font-style: italic;
-}
-@font-face {
-  font-family: 'Merriweather';
-  src: url('./fonts/Merriweather/Merriweather-Italic.ttf') format('truetype');
-  font-weight: normal;
-  font-style: italic;
-}
-@font-face {
-  font-family: 'Merriweather';
-  src: url('./fonts/Merriweather/Merriweather-LightItalic.ttf') format('truetype');
-  font-weight: lighter;
-  font-style: italic;
-}
-/* MONO: JET BRAINS MONO */
-@font-face {
-  font-family: 'JetBrains Mono';
-  src: url('./fonts/JetBrainsMonoVF.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'JetBrains Mono';
-  src: url('./fonts/JetBrainsMonoItalicVF.ttf') format('truetype');
-  font-weight: normal;
-  font-style: italic;
-}
-
-
-body {
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  scroll-behavior: smooth;
+@utility text-balance {
+  text-wrap: balance;
 }
 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  /* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,300;0,400;0,700;1,100;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;800&family=Raleway:ital,wght@0,200;0,300;0,400;0,700;0,900;1,100;1,500&display=swap'); */
+
+  /* SANS: PLUS JAKARTA SANS */
+  @font-face {
+    font-family: 'Plus Jakarta Sans';
+    src: url('./fonts/PlusJakartaSansVF.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Plus Jakarta Sans';
+    src: url('./fonts/PlusJakartaSansItalicVF.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+  }
+  /* SERIF: MERRIWEATHER */
+  @font-face {
+    font-family: 'Merriweather';
+    src: url('./fonts/Merriweather/Merriweather-Black.ttf') format('truetype');
+    font-weight: bolder;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Merriweather';
+    src: url('./fonts/Merriweather/Merriweather-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Merriweather';
+    src: url('./fonts/Merriweather/Merriweather-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Merriweather';
+    src: url('./fonts/Merriweather/Merriweather-Light.ttf') format('truetype');
+    font-weight: lighter;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Merriweather';
+    src: url('./fonts/Merriweather/Merriweather-BlackItalic.ttf')
+      format('truetype');
+    font-weight: bolder;
+    font-style: italic;
+  }
+  @font-face {
+    font-family: 'Merriweather';
+    src: url('./fonts/Merriweather/Merriweather-BoldItalic.ttf')
+      format('truetype');
+    font-weight: bold;
+    font-style: italic;
+  }
+  @font-face {
+    font-family: 'Merriweather';
+    src: url('./fonts/Merriweather/Merriweather-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+  }
+  @font-face {
+    font-family: 'Merriweather';
+    src: url('./fonts/Merriweather/Merriweather-LightItalic.ttf')
+      format('truetype');
+    font-weight: lighter;
+    font-style: italic;
+  }
+  /* MONO: JET BRAINS MONO */
+  @font-face {
+    font-family: 'JetBrains Mono';
+    src: url('./fonts/JetBrainsMonoVF.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'JetBrains Mono';
+    src: url('./fonts/JetBrainsMonoItalicVF.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    scroll-behavior: smooth;
   }
 }
 
