@@ -22,7 +22,23 @@ export default function Home() {
             <h2 className="h2 font-display text-5xl mb-4 md:mb-8">Design services that grow —<br /> with your business</h2>
           </section>
           <section id="process" className={""}>
-            <h2 className="h2 font-display text-5xl mb-4 md:mb-8">Simple steps to a stunning design</h2>
+            <div className="grid grid-cols-2 border-y border-y-black  mb-4 md:mb-8 ">
+              <h2 className="h2 font-display text-5xl p-8 border-r border-r-black">Simple steps to a stunning design</h2>
+              <div>
+                <div className="h-48 mx-auto overflow-hidden relative bg-[#D5DCE4] ">
+                  <div
+                    className="w-full h-97 absolute animate-[scroll_13s_linear_infinite] ease-in-out bg-cover bg-center"
+                    style={{
+                      backgroundImage: `url('/images/site/waves abstract.png')`,
+                    }}
+                  />
+                </div>
+                <div>
+
+                </div>
+              </div>
+            </div>
+
             <div className={"bg-black flex justify-center my-12"}>
               <Link href={"/form"} className="p-3 px-20 uppercase font-headlines font-bold text-headline-large bg-linear-to-r bg-opacity-[26] from-[#e79ae7] via-[#ecd179]  to-[#80e8ec] border border-black hover:text-gray1 hover:transition-500 hover:bg-linear-to-r bg-opacity-[26] hover:from-[#7fecf0] hover:via-[#ecd179]  hover:to-[#85eca6] hover:shadow-sm">
                 lets discuss your vision
