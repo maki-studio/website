@@ -37,6 +37,7 @@ export function Footer({ fTopColor = 'bg-secondary', fBottomColor = 'bg-secondar
       </div>
       <div className={'flex items-center justify-center p-4 md:p-1 px-8 border-t md:border-t-0 md:border-l border-l-white dark:border-l-offWhite'}>
         <ul className={'font-headlines text-headline-large uppercase space-y-1'}>
+        <li><Link href={'/'} className={'' + linkStyling}>Home</Link></li>
           <li><Link href={'/privacy'} className={'' + linkStyling}>Privacy Policy</Link></li>
           <li><Link href={'/terms'} className={'' + linkStyling}>Terms and Conditions</Link></li>
           <li><Link href={'/affiliates'} className={'' + linkStyling}>Affiliate Program</Link></li>
