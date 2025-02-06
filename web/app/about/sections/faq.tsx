@@ -53,7 +53,7 @@ export default function FAQSection() {
             <section className="bg-offWhite1B text-black p-8 border-dashed border-2 border border-black ">
                 <ul className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                     {faqs.map(
-                        (faq,index) => <li key={"f-"+index} className="p-8 bg-accent2 bg-opacity-40 hover:bg-opacity-80 hover:shadow hover:rounded-3xl hover:transition-700">
+                        (faq,index) => <li key={"f-"+index} className="p-8 bg-accent2 bg-opacity-40 hover:bg-opacity-80 hover:shadow hover:transition-700">
                             <p className="font-bold"><b>Q:</b>&nbsp; {faq.question} </p>
                             <br />
                             <p><b>A:—</b>&nbsp; {faq.answer} </p>
