@@ -296,7 +296,7 @@ export default function Home() {
             <div className={"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 border-y border-y-black dark:border-y-off-white1B"}>
               <div className={"border-r border-r-black dark:border-r-off-white1B"}></div>
               <div className={"border-r border-r-black dark:border-r-off-white1B relative"}>
-                <Image src={"/images/site/telephone.png"} alt={"max pete portrait"} layout="fill" className="bg-gray-300 bg-opacity-40 object-cover"></Image>
+                <Image src={"/images/site/hero-banner.png"} alt={"max pete portrait"} layout="fill" className="bg-gray-300 bg-opacity-40 object-cover"></Image>
               </div>
 
               <div className={"border-r border-r-black dark:border-r-off-white1B"}>
@@ -304,20 +304,20 @@ export default function Home() {
                   <span className=" font-normal font-body leading-tight">&ldquo;Finally, a design studio that understands what startups need. Their work consistently shows that good design isn&apos;t about fancy tricks - it&apos;s about <b>solving real business problems.</b>&rdquo;
                     <br /><br />
                   </span>
-                  <span className="text-title-medium font-medium font-title">— Max Pete, Head of Design at LaunchLab
+                  <span className="text-title-medium font-medium font-title">— Pete, <br/>Marketing Manager
                   </span>
                 </div>
               </div>
 
               <div className={"border-r border-r-black dark:border-r-off-white1B relative"}>
-                <Image src={"/images/site/telephone.png"} alt={"lisa chen portrait"} layout="fill" className="bg-gray-300 bg-opacity-40 object-cover"></Image>
+                <Image src={"/images/site/hero-banner.png"} alt={"lisa chen portrait"} layout="fill" className="bg-gray-300 bg-opacity-40 object-cover"></Image>
               </div>
               <div className={"border-r border-r-black dark:border-r-off-white1B"}>
                 <div className=" p-8">
                   <span className=" font-normal font-body leading-tight">&ldquo;What sets them apart is their ability to translate business goals into <b>designs that actually work.</b>&rdquo;
                     <br /><br />
                   </span>
-                  <span className="text-title-medium font-medium font-title">— Sarah Chen, Digital Product Lead at StartupScale
+                  <span className="text-title-medium font-medium font-title">— Sarah, <br />Digital Product Lead
                   </span>
                 </div>
               </div>
