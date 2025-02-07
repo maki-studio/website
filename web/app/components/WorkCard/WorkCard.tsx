@@ -15,9 +15,9 @@ export interface WorkCardProps {
 }
 
 export function WorkCard({ imageUrl, title, description, startLink, exploreLink,hasBorder = false }: Readonly<WorkCardProps>) {
-  return <div id="brandIdentity" className={"p-8 border-b md:border-r md:border-b border-black dark:border-off-white"+ (hasBorder ? "" : " border-0")}>
-    <div className='flex flex-col justify-between'>
-      <div className='relative h-64 w-full'>
+  return <div id="brandIdentity" className={"flex flex-col justify-between p-8 border-b md:border-r md:border-b border-black dark:border-off-white"+ (hasBorder ? "" : " border-0")}>
+    <div className=''>
+      <div className='relative h-64 w-full bg-gray-300'>
         <Image src={imageUrl} alt={title + " banner"} className="object-cover" layout='fill' />
       </div>
 
