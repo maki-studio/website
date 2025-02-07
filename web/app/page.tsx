@@ -3,7 +3,10 @@ import { Footer, Header } from "./components";
 import FAQSection from "./about/sections/faq";
 import Link from "next/link";
 import Image from 'next/image';
+import { Button } from "@carbon/react";
 export const runtime = "edge";
+
+
 import shareKnowledgeIcon from '@/app/icons/ui/share-knowledge.svg'
 import partnershipIcon from '@/app/icons/ui/partnership.svg'
 import turnaroundIcon from '@/app/icons/ui/turnaround.svg'
@@ -21,10 +24,56 @@ export default function Home() {
       <div className="">
         <main className="min-h-screen">
           <section id="hero" className={""}>
-            <h1 className="h2 font-headline font-bold text-5xl mb-4 md:mb-8 uppercase">Maki Creative Studio</h1>
+            <div className="md:p-8">
+              <div className="relative h-[70vh] md:h-[90vh] w-full ">
+                <div className="bg-black md:bg-gray-300 md:rounded-[90px] bg-cover bg-[url(/images/site/perfect-hero.png)] h-full w-full overflow-hidden">
+                  <div className="w-full h-full bg-black/50  flex items-center justify-center md:justify-normal p-4 md:p-12 lg:p-[10rem]">
+                    <div className=" text-off-white1B">
+                      <p className="text-body-medium mb-2 hidden">Trusted by brands who love what they do</p>
+                      <h2 className="font-display text-display-small md:text-display-large mb-12 lg:w-[40vw]">A Design studio for designs that give you 
+                        confidence with your customers</h2>
+                      <p className="mb-4 hidden">
+                        Connect more with your customers
+                      </p>
+                      <div className="mb-2 flex flex-wrap space-x-12 space-y-6">
+                        <Link href={'/portfolio'}>
+                          <Button className="bg-secondary p-2.5 pl-4 pr-16 hover:bg-secondary-regal text-white dark:text-off-white font-label text-label-large font-bold">See our work
+                          </Button>
+                        </Link>
+                        <Link href={'/lets-work'} >
+                          <Button className="bg-primary1B p-2.5 pl-4 pr-16 hover:bg-primary text-white dark:text-off-white font-label text-label-large font-bold">Let&apos;s work
+                          </Button>
+                        </Link>
+                      </div>
+                      <p className="text-body-medium">
+                        <b className="font-display font-bold text-title-medium animate-[ping_7s_infinite] ease-in">*</b>&nbsp;Empowering brands worldwide
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr className="border-black dark:border-off-white1B" />
+            <h1 className="h2 font-headline font-bold text-5xl my-4 md:my-8 pl-8 uppercase mx-auto">Maki Creative Studio</h1>
+            <hr className="border-black dark:border-off-white1B" />
+            <div className={"flex justify-center my-12"}>
+              <div className="flex flex-wrap justify-center items-center px-8">
+                <span className="relative h-28 w-24 ">
+                  <Image src={"/images/site/thomas-watson-ibm.png"} alt={"thomas watson portrait"} layout="fill" className="bg-gray-300 bg-opacity-40 object-cover rounded-[180px]"></Image>
+                </span>
+                <div className=" p-8">
+                  <span className=" font-normal font-body leading-tight">&ldquo;<b>Good design is good business.</b>&rdquo;
+                    <br />
+                  </span>
+                  <span className="text-title-medium font-medium font-title">— Thomas Watson Jr., Former CEO of IBM
+                  </span>
+                </div>
+              </div>
+            </div>
+            <hr className="border-black dark:border-off-white1B mb-12" />
           </section>
-          <section id="features" className={"p-12 border-t border-t-black dark:border-t-off-white bg-[#228B22]/20"}>
-            <h2 className="h2 font-display text-5xl text-primary mb-4 md:mb-8 p-8">Design services that grow —<br /> with your business</h2>
+          <section id="features" className={"border-t border-t-black dark:border-t-off-white bg-[#228B22]/20"}>
+            <h2 className="h2 font-display text-5xl text-primary mb-4 md:mb-8 p-8">It&apos;s the design services that grow —<br /> with your business</h2>
             <div className="grid grid-cols-1 gap-6 md:grid-cols-3 lg:grid-cols-5 lg:gap-2 p-8">
               <div className="bg-off-white1B p-8 flex flex-col justify-between">
                 <div>
@@ -89,7 +138,7 @@ export default function Home() {
                     — Email Templates <br />
                     — Digital Marketing Assets <br />
                     — Print-Ready Designs <br />
-                    </p>
+                  </p>
                 </div>
                 <div className="relative h-80 w-full mx-auto ">
                   <div className="bg-gray-300 rounded-[180px] bg-cover bg-[url(/images/site/extra-services-abstract.png)] flex items-center justify-center h-full w-full">
@@ -103,7 +152,7 @@ export default function Home() {
           <section id="process" className={""}>
             <div className="border-y border-y-black dark:border-y-off-white  mb-4 md:mb-8 ">
               <div className="grid grid-cols-1 md:grid-cols-2 ">
-                <h2 className="h2 font-display text-5xl p-8 border-r border-r-black dark:border-r-off-white">Simple steps to a stunning design</h2>
+                <h2 className="h2 font-display text-5xl p-8 border-r border-r-black dark:border-r-off-white">Using simple steps to a stunning design</h2>
                 <div>
                   <div className="h-48 mx-auto overflow-hidden relative bg-[#D5DCE4] ">
                     <div
@@ -226,7 +275,7 @@ export default function Home() {
 
             <hr className="border-black dark:border-off-white1B" />
             <div className={"flex justify-center my-12"}>
-              <div className="flex flex-wrap justify-center items-center">
+              <div className="flex flex-wrap justify-center items-center px-8">
                 <span className="relative h-28 w-24 ">
                   <Image src={"/images/site/paul-rand.png"} alt={"paul rand portrait"} layout="fill" className="bg-gray-300 bg-opacity-40 object-cover rounded-[180px]"></Image>
                 </span>
