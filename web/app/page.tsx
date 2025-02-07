@@ -27,7 +27,7 @@ export default function Home() {
             <div className="md:p-8">
               <div className="relative h-[70vh] md:h-[90vh] w-full ">
                 <div className="bg-black md:bg-gray-300 md:rounded-[90px] bg-cover bg-[url(/images/site/perfect-hero.png)] h-full w-full overflow-hidden">
-                  <div className="w-full h-full bg-black/50  flex items-center justify-center md:justify-normal p-4 md:p-12 lg:p-[10rem]">
+                  <div className="w-full h-full bg-black/40  flex items-center justify-center md:justify-normal p-4 md:p-12 lg:p-[10rem]">
                     <div className=" text-off-white1B">
                       <p className="text-body-medium mb-2 hidden">Trusted by brands who love what they do</p>
                       <h2 className="font-display text-display-small md:text-display-large mb-12 lg:w-[40vw]">A Design studio for designs that give you 
@@ -41,7 +41,7 @@ export default function Home() {
                           </Button>
                         </Link>
                         <Link href={'/lets-work'} >
-                          <Button className="bg-primary1B p-2.5 pl-4 pr-16 hover:bg-primary text-white dark:text-off-white font-label text-label-large font-bold">Let&apos;s work
+                          <Button className="bg-primary1B p-2.5 pl-4 pr-16 hover:bg-primary text-white dark:text-off-white font-label text-label-large font-bold">Let&apos;s work on your vision
                           </Button>
                         </Link>
                       </div>
