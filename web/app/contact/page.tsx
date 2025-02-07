@@ -48,8 +48,9 @@ export default function Page() {
 
           <div id="contactsContent" className="border-b md:border-b-2 border-black dark:border-off-white border-dashed p-8 lg:grid grid-cols-3">
             <div className="">
-            <p className="font-display text-display-large">Connect With Maki Creative Studio</p>
-            <p className="font-headlines text-headline-large">Transform your brand&apos;s potential into reality. We are ready to begin when you are.</p>
+              <p className="font-display text-display-medium">Connect with <br /></p>
+              <h2 className="h2 font-headline font-bold text-primary text-5xl my-4 md:my-8 pl-8 uppercase mx-auto">Maki Creative Studio</h2>
+              <p className="font-headlines text-headline-medium">Transform your brand&apos;s vision into reality. We are ready to begin when you are.</p>
             </div>
           </div>
           <div id="servicesContent" className="grid grid-cols-1 md:grid-cols-2 border-b md:border-b-2 border-black dark:border-off-white border-dashed">
@@ -59,8 +60,8 @@ export default function Page() {
                 <li className="flex">
                   <Image src={mailIcon} alt="circle icon" className="h-6 w-6 dark:invert mr-4 "></Image> <span>info@makistudio.online</span>
                 </li>
-                <li className="flex">
-                  <Image src={phoneIcon} alt="circle icon" className="h-6 w-6 dark:invert mr-4 "></Image> <span>+000 0000 000</span>
+                <li className="flex hidden">
+                  <Image src={phoneIcon} alt="circle icon" className="h-6 w-6 dark:invert mr-4 "></Image> <span className="">+000 0000 000</span>
                 </li>
                 <li className="flex">
                   <Image src={locationIcon} alt="circle icon" className="h-6 w-6 dark:invert mr-4 "></Image> <span>Remote Studio</span>
@@ -69,8 +70,8 @@ export default function Page() {
             </div>
             <div className="p-8">
               <h4 className="font-headlines text-headline-large uppercase mb-5">Book a consultation</h4>
-              <p className="font-title text-title-large mb-3">Schedule a 30-minute discovery call to discuss your project and explore possibilities</p>
-              <Link href={'/lets-work'} >
+              <p className="font-title text-title-large mb-3">Schedule a 15-minute discovery call to discuss your project and explore possibilities</p>
+              <Link href={'/form'} >
                 <Button className="bg-primary1B p-2.5 pl-4 pr-16 hover:bg-primary text-white dark:text-off-white font-label text-label-large font-bold">Book Now
                 </Button>
               </Link>
@@ -79,8 +80,8 @@ export default function Page() {
           </div>
           <div id="ctaContent" className="flex justify-center p-8 ">
             <div className="">
-              <h3 className="uppercase font-headlines text-headline-large mb-8">Have a project in mind? <br />Share the basics</h3>
-              <Form className="font-body">
+              <h3 className="uppercase font-headlines font-bold text-headline-large text-secondary-regal mb-8">Have a project in mind? <br />Share the basics</h3>
+              <Form className="font-headlines">
                 <TextInput id={"name"} name="name" labelText={'Your Name'} className=""></TextInput>
                 <TextInput id={"email"} name="email" labelText={'Email Address'}></TextInput>
                 <TextInput id={"emailSubject"} name="emailSubject" labelText={'Email Subject'}></TextInput>
@@ -96,8 +97,8 @@ export default function Page() {
                   rows={4}
                   warnText="This is a warning message."
                 />
-                <Link href={'/form'} >
-                  <Button className="bg-primary1B p-2.5 pl-4 pr-16 hover:bg-primary text-white dark:text-off-white font-label text-label-large font-bold">Send
+                <Link className="mt-4" href={'/send-form'} >
+                  <Button className="bg-primary1B p-2.5 pl-4 pr-16 hover:bg-primary text-white dark:text-off-white font-label text-label-large font-bold">Send email
                   </Button>
                 </Link>
               </Form>
