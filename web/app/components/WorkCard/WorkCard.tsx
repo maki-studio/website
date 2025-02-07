@@ -21,7 +21,7 @@ export function WorkCard({ imageUrl, title, description, startLink, exploreLink,
         <Image src={imageUrl} alt={title + " banner"} className="object-cover" layout='fill' />
       </div>
 
-      <h4 className='font-headlines text-headline-small uppercase my-2'>{title}</h4>
+      <h4 className='font-headlines text-headline-small uppercase my-2 font-bold'>{title}</h4>
       <p className='mb-4 font-body text-body-large'>{description}
       </p>
     </div>
