@@ -72,7 +72,7 @@ export default function Page() {
               <h4 className="font-headlines text-headline-large uppercase mb-5">Book a consultation</h4>
               <p className="font-title text-title-large mb-3">Schedule a 15-minute discovery call to discuss your project and explore possibilities</p>
               <Link href={'#!'} >
-                <Button className="bg-primary1B p-2.5 pl-4 pr-16 hover:bg-primary text-white dark:text-off-white font-label text-label-large font-bold" data-tally-open="3x47B5" data-tally-layout="modal" data-tally-overlay="1" data-tally-emoji-text="👋" data-tally-emoji-animation="wave" >Book Now
+                <Button className="bg-primary1B p-2.5 pl-4 pr-16 hover:cursor-pointer hover:bg-primary text-white dark:text-off-white font-label text-label-large font-bold" data-tally-open="3x47B5" data-tally-layout="modal" data-tally-overlay="1" data-tally-emoji-text="👋" data-tally-emoji-animation="wave" >Book Now
                 </Button>
               </Link>
             </div>
@@ -98,7 +98,7 @@ export default function Page() {
                   warnText="This is a warning message."
                 />
                 <Link className="mt-4" href={'/send-form'} >
-                  <Button className="bg-primary1B p-2.5 pl-4 pr-16 hover:bg-primary text-white dark:text-off-white font-label text-label-large font-bold">Send email
+                  <Button className="bg-primary1B p-2.5 pl-4 pr-16 hover:cursor-pointer hover:bg-primary text-white dark:text-off-white font-label text-label-large font-bold">Send email
                   </Button>
                 </Link>
               </Form>

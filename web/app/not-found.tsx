@@ -27,7 +27,7 @@ export default function NotFound() {
           </div>
           <div className="flex-1  p-8 border-t md:border-t-2 border-t-black dark:border-t-off-white border-dashed">
             <Link href={'/'} >
-              <Button className="bg-primary1B p-2.5 pl-4 pr-16 hover:bg-primary text-white dark:text-off-white font-label text-label-large font-bold">Take me to the Home Page
+              <Button className="bg-primary1B p-2.5 pl-4 pr-16 hover:cursor-pointer hover:bg-primary text-white dark:text-off-white font-label text-label-large font-bold">Take me to the Home Page
               </Button>
             </Link>
           </div>

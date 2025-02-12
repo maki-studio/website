@@ -126,7 +126,7 @@ export default function Page() {
               <h1 className="font-display text-display-medium mb-4">Ready to Bring <br /> Your Vision to Life ?</h1>
               <h3 className="font-headlines text-headline-medium mb-8">Great design is a journey, and we are excited to embark on it with you.</h3>
               <Link href={'#!'}  >
-                <Button className="bg-primary1B p-2.5 pl-4 pr-16 hover:bg-primary text-white dark:text-off-white font-label text-label-large hover:font-bold" data-tally-open="3x47B5" data-tally-layout="modal" data-tally-overlay="1" data-tally-emoji-text="👋" data-tally-emoji-animation="wave" >Book a 15 minute call
+                <Button className="bg-primary1B p-2.5 pl-4 pr-16 hover:cursor-pointer hover:bg-primary text-white dark:text-off-white font-label text-label-large hover:font-bold" data-tally-open="3x47B5" data-tally-layout="modal" data-tally-overlay="1" data-tally-emoji-text="👋" data-tally-emoji-animation="wave" >Book a 15 minute call
                 </Button>
               </Link>
 
@@ -156,7 +156,7 @@ export default function Page() {
               <h2 className="font-display text-display-medium mb-4">Not sure what you need? <br />No worries! <br /></h2>
               <h3 className="font-headlines text-headline-medium mb-8">Tell us and we can figure it out together.</h3>
               <Link href={'/contact'} >
-                <Button className="bg-secondary p-2.5 pl-4 pr-16 hover:bg-secondary-regal text-white dark:text-off-white font-label text-label-large font-bold">Send an email
+                <Button className="bg-secondary p-2.5 pl-4 pr-16 hover:cursor-pointer hover:bg-secondary-regal text-white dark:text-off-white font-label text-label-large font-bold">Send an email
                 </Button>
               </Link>
             </div>

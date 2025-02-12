@@ -37,11 +37,11 @@ export default function Home() {
                       </p>
                       <div className="mb-2 flex flex-wrap space-x-12 space-y-6">
                         <Link href={'/portfolio'}>
-                          <Button className="bg-secondary p-2.5 pl-4 pr-16 hover:bg-secondary-regal text-white dark:text-off-white font-label text-label-large font-bold">See our work
+                          <Button className="bg-secondary p-2.5 pl-4 pr-16 hover:cursor-pointer hover:bg-secondary-regal text-white dark:text-off-white font-label text-label-large font-bold">See our work
                           </Button>
                         </Link>
                         <Link href={'/lets-work'} >
-                          <Button className="bg-primary1B p-2.5 pl-4 pr-16 hover:bg-primary text-white dark:text-off-white font-label text-label-large font-bold">Let&apos;s work on your vision
+                          <Button className="bg-primary1B p-2.5 pl-4 pr-16 hover:cursor-pointer hover:bg-primary text-white dark:text-off-white font-label text-label-large font-bold">Let&apos;s work on your vision
                           </Button>
                         </Link>
                       </div>
