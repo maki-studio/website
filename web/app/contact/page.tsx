@@ -49,7 +49,7 @@ export default function Page() {
           <div id="contactsContent" className="border-b md:border-b-2 border-black dark:border-off-white border-dashed p-8 lg:grid grid-cols-3">
             <div className="">
               <p className="font-display text-display-medium">Connect with <br /></p>
-              <h2 className="h2 font-headline font-bold text-primary text-5xl my-4 md:my-8 pl-8 uppercase mx-auto">Maki Creative Studio</h2>
+              <h2 className="h2 font-headline font-bold text-primary text-5xl my-4 md:my-8 uppercase mx-auto">Maki Creative Studio</h2>
               <p className="font-headlines text-headline-medium">Transform your brand&apos;s vision into reality. We are ready to begin when you are.</p>
             </div>
           </div>
