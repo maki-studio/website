@@ -3,7 +3,7 @@
 export default function GoodSection() {
     return <>
         <main>
-            The Faces Behind the Pixels
+        David Berman: &ldquo;to do good rather than just do good design&rdquo;
         </main>
     </>
 }
