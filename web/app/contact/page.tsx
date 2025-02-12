@@ -54,7 +54,17 @@ export default function Page() {
             </div>
           </div>
           <div id="servicesContent" className="grid grid-cols-1 md:grid-cols-2 border-b md:border-b-2 border-black dark:border-off-white border-dashed">
-            <div className="border-b md:border-b-0 md:border-r-2 border-black dark:border-off-white border-dashed p-8">
+            
+            <div className="p-8 border-b md:border-b-0 md:border-r-2 border-black dark:border-off-white border-dashed">
+              <h4 className="font-headlines text-headline-large uppercase mb-5">Book a consultation</h4>
+              <p className="font-title text-title-large mb-3">Schedule a 15-minute discovery call to discuss your project and explore possibilities</p>
+              <Link href={'#!'} >
+                <Button className="bg-primary1B p-2.5 pl-4 pr-16 hover:bg-primary text-white dark:text-off-white font-label text-label-large font-bold" data-tally-open="3x47B5" data-tally-layout="modal" data-tally-overlay="1" data-tally-emoji-text="👋" data-tally-emoji-animation="wave" >Book Now
+                </Button>
+              </Link>
+            </div>
+
+            <div className="p-8">
               <h4 className="font-headlines text-headline-large uppercase mb-5">Direct Lines</h4>
               <ul className="space-y-1">
                 <li className="flex">
@@ -68,18 +78,10 @@ export default function Page() {
                 </li>
               </ul>
             </div>
-            <div className="p-8">
-              <h4 className="font-headlines text-headline-large uppercase mb-5">Book a consultation</h4>
-              <p className="font-title text-title-large mb-3">Schedule a 15-minute discovery call to discuss your project and explore possibilities</p>
-              <Link href={'#!'} >
-                <Button className="bg-primary1B p-2.5 pl-4 pr-16 hover:bg-primary text-white dark:text-off-white font-label text-label-large font-bold" data-tally-open="3x47B5" data-tally-layout="modal" data-tally-overlay="1" data-tally-emoji-text="👋" data-tally-emoji-animation="wave" >Book Now
-                </Button>
-              </Link>
-            </div>
 
           </div>
           <div id="ctaContent" className="flex justify-center p-8 ">
-            <div className="">
+            <div className="hidden">
               <h3 className="uppercase font-headlines font-bold text-headline-large text-secondary-regal mb-8">Have a project in mind? <br />Share the basics</h3>
               <Form className="font-headlines">
                 <TextInput id={"name"} name="name" labelText={'Your Name'} className=""></TextInput>
