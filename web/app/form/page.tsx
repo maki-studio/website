@@ -6,6 +6,7 @@ import { Header, Footer } from "@/app/components";
 import React from 'react';
 import FAQSection from "../about/sections/faq";
 
+import { useSearchParams } from 'next/navigation'
 
 
 
@@ -13,7 +14,36 @@ import FAQSection from "../about/sections/faq";
 // Multiple versions of this page will be statically generated
 // using the `params` returned by `generateStaticParams`
 export default function FormPage() {
+  const searchParams = useSearchParams();
+  const search = searchParams.get('q')
 
+  const getTitle = (s: string | null): string => {
+    const startProject = (s: string | null) => "Start your " + s + (s ? " ": "") + "project";
+
+
+    switch (s) {
+      case "seo":
+        return startProject("SEO (website search ranking)");
+      case "web":
+        return startProject("Website Design");
+      case "landing-page":
+        return startProject("Landing Page");
+      case "ui_ux":
+        return startProject("UI/UX Design");
+      case "branding":
+        return startProject("Brand Identity");
+      case "marketing":
+        return startProject("Marketing Media Assets");
+      case "social":
+        return startProject("Social Media Templates");
+      case "print":
+        return startProject("Print Design");
+      case "Stationery":
+        return startProject("Stationery Design");
+      default:
+        return startProject("");
+    }
+  };
 
   return <>
     <Header activeLink="contact"></Header>
@@ -41,6 +71,9 @@ export default function FormPage() {
 
       <section id="midPanel" className="flex-1 flex flex-col">
         <div>
+          <div id="emptyDiv" className="bg-off-white1B text-gray3 border-b md:border-b border-black dark:border-off-white p-8 flex justify-center">
+            <h1 className="mx-auto h2 font-display font-medium text-5xl ">{getTitle(search)}</h1>
+          </div>
           <div id="emptyDiv" className="h-12 md:h-16 border-b md:border-b border-black dark:border-off-white"></div>
           <iframe title="booking form" src="https://tally.so/embed/3x47B5?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" className="min-h-screen w-full md:w-[70vw] lg:w-[50vw] p-8 mx-auto bg-off-white1B border-x-2 border-dashed border-x-black/40 dark:border-off-white" allowFullScreen />
           <hr className="border-black dark:border-off-white1B" />
