@@ -67,7 +67,7 @@ using nextjs-cloudflare boilerplate:
         |
         +----/social
         |
-        +----/copywriting
+        +----/copywriting [❌] for now
         |
         +----/print
         |
