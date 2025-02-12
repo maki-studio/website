@@ -25,8 +25,8 @@ export function Footer({ fTopColor = 'bg-secondary', fBottomColor = 'bg-secondar
   return <footer className='bg-primary0 text-white dark:text-off-white'>
     <div id='fTop' className={['h-10 ', fTopColor].join(' ')}></div>
     <div id='fBottom' className={['h-10 ', fBottomColor].join(' ')}></div>
-    <div className={'min-h-64 md:h-64 grid grid-cols-1 md:grid-cols-2  lg:grid-cols-4 justify-evenly border-t border-t-white dark:border-t-off-white'}>
-      <div className={'flex p-4 md:p-0 items-center justify-center'}>
+    <div className={'min-h-64 grid grid-cols-1 md:grid-cols-2  lg:grid-cols-4 justify-evenly border-t border-t-white dark:border-t-off-white'}>
+      <div className={'flex p-4 lg:p-0 items-center justify-center'}>
         <Image src={subMark} alt='logo mark' className='h-28 p-1' />
       </div>
       <div className={'flex items-center justify-center p-4 md:p-1 px-8 border-t md:border-t-0 md:border-l border-l-white dark:border-l-off-white font-headlines text-headline-large'}>
@@ -35,7 +35,7 @@ export function Footer({ fTopColor = 'bg-secondary', fBottomColor = 'bg-secondar
           <p><Link href={'mailto:info@makistudio.online?subject=Hello%20MCS'} className={'underline' + linkStyling}>info@makistudio.online</Link></p>
         </div>
       </div>
-      <div className={'flex items-center justify-center p-4 md:p-1 px-8 border-t md:border-t-0 md:border-l border-l-white dark:border-l-off-white'}>
+      <div className={'flex items-center justify-center p-4 lg:p-1 px-8 border-t md:border-t-0 lg:border-l border-l-white dark:border-l-off-white'}>
         <ul className={'font-headlines text-headline-large uppercase space-y-1'}>
         <li><Link href={'/'} className={'' + linkStyling}>Home</Link></li>
           <li><Link href={'/privacy'} className={'' + linkStyling}>Privacy Policy</Link></li>
