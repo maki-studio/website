@@ -23,7 +23,7 @@ export default function FormPage() {
 
     switch (s) {
       case "seo":
-        return startProject("SEO (website search ranking)");
+        return startProject("SEO");
       case "web":
         return startProject("Website Design");
       case "landing-page":
@@ -72,7 +72,7 @@ export default function FormPage() {
       <section id="midPanel" className="flex-1 flex flex-col">
         <div>
           <div id="emptyDiv" className="bg-off-white1B text-gray3 border-b md:border-b border-black dark:border-off-white p-8 flex justify-center">
-            <h1 className="mx-auto h2 font-display font-medium text-5xl ">{getTitle(search)}</h1>
+            <h1 className="mx-auto h2 font-display text-display-medium font-medium ">{getTitle(search)}</h1>
           </div>
           <div id="emptyDiv" className="h-12 md:h-16 border-b md:border-b border-black dark:border-off-white"></div>
           <iframe title="booking form" src="https://tally.so/embed/3x47B5?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" className="min-h-screen w-full md:w-[70vw] lg:w-[50vw] p-8 mx-auto bg-off-white1B border-x-2 border-dashed border-x-black/40 dark:border-off-white" allowFullScreen />
