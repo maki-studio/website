@@ -105,7 +105,7 @@ export default async function Page({ params, }: { params: Promise<{ slug: string
                             <p className='mb-4 font-body text-body-medium'>{projectData[0]?.description}</p>
                             <span className='flex flex-col lg:flex-row space-y-4 lg:space-y-0 justify-between'>
                                 <div className='flex'>
-                                    <Link href={projectData[0]?.link ?? ''} target='_blank' className='pl-2 flex text-primary border-b-2 border-b-primary sm:border-b-primary1B font-headlines text-headline-small uppercase  hover:text-white hover:bg-primary1B hover:shadow-sm hover:duration-150'>
+                                    <Link href={projectData[0]?.link ?? ''} target='_blank' className='pl-2 flex text-secondary-regal border-b-2 border-b-secondary-regal sm:border-b-secondary font-headlines text-headline-small uppercase  hover:text-white hover:bg-secondary hover:shadow-sm hover:duration-150'>
                                         <span>Visit Project</span>
                                         <span>
                                             <svg className='h-4' xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path fill="currentColor" d="M10 6v2h12.59L6 24.59L7.41 26L24 9.41V22h2V6z" /></svg>
@@ -113,7 +113,7 @@ export default async function Page({ params, }: { params: Promise<{ slug: string
                                     </Link>
                                 </div>
                                 <div className='flex'>
-                                    <Link href={'/lets-work'} className='pl-2 flex text-secondary-regal border-b-2 border-b-secondary-regal sm:border-b-secondary font-headlines text-headline-small uppercase  hover:text-white hover:bg-secondary hover:shadow-sm hover:duration-150'>
+                                    <Link href={'/lets-work'} className='pl-2 flex text-primary border-b-2 border-b-primary sm:border-b-primary1B font-headlines text-headline-small uppercase  hover:text-white hover:bg-primary1B hover:shadow-sm hover:duration-150'>
                                         <span>Start Your Project</span>
                                         <span>
                                             <svg className='h-4' xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path fill="currentColor" d="m18 6l-1.43 1.393L24.15 15H4v2h20.15l-7.58 7.573L18 26l10-10z" /></svg>
