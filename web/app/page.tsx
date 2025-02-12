@@ -158,7 +158,7 @@ export default function Home() {
                     <div
                       className="w-full h-97 absolute animate-[scroll_13s_linear_infinite] ease-in-out bg-cover bg-center"
                       style={{
-                        backgroundImage: `url('/images/site/waves abstract.png')`,
+                        backgroundImage: `url('/images/site/waves-abstract.png')`,
                       }}
                     />
                   </div>

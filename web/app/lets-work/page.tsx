@@ -79,7 +79,7 @@ export default function Page() {
       exploreLink: "/portfolio/copywriting"
     },
     {
-      imageUrl: "/images/site/waves abstract.png",
+      imageUrl: "/images/site/waves-abstract.png",
       title: "Print Designs",
       description: "T-shirts, caps, merchandise, vinyl designs. Having a uniform brand makes sure everyone recognizes you",
       startLink: "/form/print",
