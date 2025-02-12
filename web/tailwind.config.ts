@@ -22,6 +22,10 @@ const config: Config = {
 					from: { transform: 'translateX(0)' },
 					to: { transform: 'translateX(-100%)' },
 				},
+				'reverse-infinite-scroll': {
+					from: { transform: 'translateX(0)' },
+					to: { transform: 'translateX(100%)' },
+				},
 			},
 			colors: {
 				background: 'var(--background)',
