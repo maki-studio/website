@@ -23,42 +23,42 @@ export default function Page() {
       imageUrl: "/images/site/web-design-abstract.png",
       title: "Web design",
       description: "From engaging homepages to conversion-focused layouts that turn visitors into customers.",
-      startLink: "/form/web",
+      startLink: "/form?q=web",
       exploreLink: "/portfolio/design/web"
     },
     {
       imageUrl: "/images/site/landing-pages-abstract.png",
       title: "Landing pages",
       description: "Turn clicks into customers with landing pages that convert.Clear, compelling, and crafted for your specific audience.",
-      startLink: "/form/landing-page",
+      startLink: "/form?q=landing-page",
       exploreLink: "/portfolio/design/web?q=landing"
     },
     {
       imageUrl: "/images/site/uiux-design-abstract.png",
       title: "UI/UX design",
       description: "User-friendly interfaces that keep your customers coming back for more.Make every interaction count.",
-      startLink: "/form/ui_ux",
+      startLink: "/form?q=ui_ux",
       exploreLink: "/portfolio/design/web?q=ui_ux"
     },
     {
       imageUrl: "/images/site/seo-abstract.png",
       title: "SEO",
       description: "We build SEO right into your website, helping your business climb search rankings the right way.Get found by the right people.",
-      startLink: "/form/seo",
+      startLink: "/form?q=seo",
       exploreLink: "/portfolio/design/seo"
     },
     {
       imageUrl: "/images/site/turnaround-abstract.png",
       title: "Brand Identity design",
       description: "Let's give your business a face that truly gives to your customers",
-      startLink: "/form/branding",
+      startLink: "/form?q=branding",
       exploreLink: "/portfolio/design/branding"
     },
     {
       imageUrl: "/images/site/collaboration-abstract.png",
       title: "Digital marketing assets",
       description: "Set the right assets in place for your marketing message",
-      startLink: "/form/marketing",
+      startLink: "/form?q=marketing",
       exploreLink: "/portfolio/design/marketing"
     },
   ];
@@ -68,28 +68,28 @@ export default function Page() {
       imageUrl: "/images/site/extra-services-abstract.png",
       title: "Social Media Assets",
       description: "Let's give your business a presence that gains reach.",
-      startLink: "/form/social",
+      startLink: "/form?q=social",
       exploreLink: "/portfolio/design/social"
     },
     {
       imageUrl: "/images/site/landing-pages-abstract.png",
       title: "Copywriting",
       description: "our copy makes sure you get the message to the right people with the right tone.",
-      startLink: "/form/copywriting",
+      startLink: "/form?q=copywriting",
       exploreLink: "/portfolio/copywriting"
     },
     {
       imageUrl: "/images/site/waves-abstract.png",
       title: "Print Designs",
       description: "T-shirts, caps, merchandise, vinyl designs. Having a uniform brand makes sure everyone recognizes you",
-      startLink: "/form/print",
+      startLink: "/form?q=print",
       exploreLink: "/portfolio/print"
     },
     {
       imageUrl: "/images/site/future-designs-abstract.png",
       title: "Stationery design",
       description: "Calenders, office stationery, envelopes, pens etc.",
-      startLink: "/form/stationery",
+      startLink: "/form?q=stationery",
       exploreLink: "/portfolio/stationery"
     },
 
@@ -125,8 +125,8 @@ export default function Page() {
             <div className="col-span-2 lg:px-44">
               <h1 className="font-display text-display-medium mb-4">Ready to Bring <br /> Your Vision to Life ?</h1>
               <h3 className="font-headlines text-headline-medium mb-8">Great design is a journey, and we are excited to embark on it with you.</h3>
-              <Link href={'/form'}  >
-                <Button className="bg-primary1B p-2.5 pl-4 pr-16 hover:bg-primary text-white dark:text-off-white font-label text-label-large hover:font-bold">Book a 15 minute meeting
+              <Link href={'#!'}  >
+                <Button className="bg-primary1B p-2.5 pl-4 pr-16 hover:bg-primary text-white dark:text-off-white font-label text-label-large hover:font-bold" data-tally-open="3x47B5" data-tally-layout="modal" data-tally-overlay="1" data-tally-emoji-text="👋" data-tally-emoji-animation="wave" >Book a 15 minute call
                 </Button>
               </Link>
 
