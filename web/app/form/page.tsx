@@ -1,14 +1,8 @@
 'use client'
 import { Header, Footer } from "@/app/components";
-import { Button, Form, TextArea, TextInput } from "@carbon/react";
-import Image from 'next/image';
-import Link from "next/link";
 
 // import circleIcon from '@/app/icons/ui/circle.svg'
 // import dTriangleIcon from '@/app/icons/ui/down-triangle.svg'
-import locationIcon from '@/app/icons/ui/location.svg'
-import phoneIcon from '@/app/icons/ui/phone.svg'
-import mailIcon from '@/app/icons/ui/mail.svg'
 import React from 'react';
 
 
@@ -46,13 +40,10 @@ export default function FormPage() {
 
       <section id="midPanel" className="flex-1 flex flex-col">
         <div>
-          {/* <iframe data-tally-src="https://tally.so/embed/3x47B5?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="576" frameBorder={0} marginHeight={0} marginWidth={0} title="Contact form">
-          </iframe> */}
 
-          {/* <iframe src="https://www.youtube.com/embed/19g66ezsKAg" allowFullScreen /> */}
-          <iframe src="https://tally.so/embed/3x47B5?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" className="min-h-screen w-full md:w-[70vw] lg:w-[50vw] p-8 pt-0 mx-auto" allowFullScreen />
+          <iframe title="booking form" src="https://tally.so/embed/3x47B5?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" className="min-h-screen w-full md:w-[70vw] lg:w-[50vw] p-8 pt-0 mx-auto" allowFullScreen />
 
-          
+
         </div>
       </section>
 
@@ -77,7 +68,5 @@ export default function FormPage() {
       </section>
     </main>
     <Footer></Footer>
-
-    {/* <script>{`var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined" != typeof Tally ? Tally.loadEmbeds() : d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function (e) { e.src = e.dataset.tallySrc }))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}`}</script> */}
   </>;
 }
