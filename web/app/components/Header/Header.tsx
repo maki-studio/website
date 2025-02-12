@@ -27,7 +27,7 @@ export function Header({ activeLink, hTopColor = 'bg-primary1B', hBottomColor = 
         </ul>
       </nav>
     </div>
-    <div id='hTop' className={['h-10 ', hTopColor].join(' ')}></div>
-    <div id='hBottom' className={['h-10 ', hBottomColor].join(' ')}></div>
+    <div id='hTop' className={['h-8 ', hTopColor].join(' ')}></div>
+    <div id='hBottom' className={['h-8 ', hBottomColor].join(' ')}></div>
   </header>;
 }
