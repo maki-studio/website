@@ -15,7 +15,10 @@ import Script from "next/script";
 // });
 
 export const metadata: Metadata = {
-  title: "Maki Creative Studio | Home",
+  title: {
+    template: '%s | Maki Creative Studio',
+    default: 'Maki Creative Studio',
+  },
   description: "Online design studio and software agency",
 };
 
