@@ -1,4 +1,4 @@
-'use client'
+// 'use client'
 import { Footer, Header } from "./components";
 import FAQSection from "./about/sections/faq";
 import Link from "next/link";
@@ -16,6 +16,11 @@ import devicesAppsIcon from '@/app/icons/ui/devices-apps.svg'
 import docSentimentIcon from '@/app/icons/ui/doc-sentiment.svg'
 import searchAdvIcon from '@/app/icons/ui/search-advanced.svg'
 import taskAddIcon from '@/app/icons/ui/task-add.svg'
+
+import type { Metadata } from 'next';
+export const metadata: Metadata = {
+  title: 'Home',
+};
 
 export default function Home() {
   return (
