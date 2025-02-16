@@ -17,7 +17,7 @@ export interface ProjectCardProps {
 export function ProjectCard({ link = 'default value', imgSrc, title,alt="" }: ProjectCardProps) {
   return <div className={''}>
     <div className='mb-2'>
-      <img src={imgSrc} className='w-auto h-64' alt={alt} />
+      <img src={imgSrc} className='w-full h-64' alt={alt} />
     </div>
     <p className='mb-1 font-medium font-headlines text-headline-large uppercase'>
       {title}
