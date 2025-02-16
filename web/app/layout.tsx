@@ -33,7 +33,7 @@ export default function RootLayout({
         <script async src="https://tally.so/widgets/embed.js"></script>
       </head>
       <body
-        className={'antialiased bg-white dark:bg-gray3 text-primary0 dark:text-off-white'}
+        className={'antialiased bg-white dark:bg-gray3 text-primary0 dark:text-off-white overflow-x-hidden'}
       >
         {children}
 
