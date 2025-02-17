@@ -6,10 +6,10 @@ import Image from 'next/image';
 import circleIcon from '@/app/icons/ui/circle.svg'
 import dTriangleIcon from '@/app/icons/ui/down-triangle.svg'
 import triangleIcon from '@/app/icons/ui/triangle.svg'
-import closeTabIcon from '@/app/icons/ui/closeTab.svg'
 import squareIcon from '@/app/icons/ui/square.svg'
 import Search from "@carbon/react/lib/components/Search";
 import Link from "next/link";
+import { CreativityNiches } from "@/app/components/CreativityNiches";
 
 const ProjectWrapper = <div className="border-b-2 border-r-2 border-black dark:border-off-white place-content-center  p-8">
   <ProjectCard imgSrc={"https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2560&q=80"} title={"THE ONE"} link={'/portfolio/design/the-one'}></ProjectCard>
@@ -51,13 +51,15 @@ export default function Page() {
             <p className="text-body-medium font-technical uppercase pl-4 ltr:pr-8 rtl:pl-8 ">Creativity&nbsp;niches</p>
           </div>
         </div>
-        <div className="flex-1 flex place-content-center">
+        <div className="flex-1">
           <div className="md:hidden w-full inline-flex flex-nowrap overflow-hidden">
             <div className="flex items-center justify-center md:justify-start animate-infinite-scroll md:animate-none">
               <p className="font-display text-display-large m-auto md:-rotate-90 text-nowrap capitalize">Our Portfolio</p>
             </div>
           </div>
-          <div className="hidden md:block font-display text-display-large m-auto md:-rotate-90 text-nowrap ">Our Creative Playground</div>
+          <div className="hidden md:block overflow-y-scroll h-[80vh]">
+            <CreativityNiches main="design" softwareTags={[]} designTags={[]} ></CreativityNiches>
+          </div>
         </div>
 
         <div className="md:h-16 w-16 md:w-auto border-x md:border-x-0 md:border-t-2 border-black dark:border-off-white place-content-center ">
