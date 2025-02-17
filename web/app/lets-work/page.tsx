@@ -138,7 +138,7 @@ export default function Page() {
 
           </div>
           <div id="emptyDiv" className="h-14 md:h-16 border-b md:border-b border-black dark:border-off-white"></div>
-          <h2 className="bg-primary1B/20 text-primary h2 font-display font-medium text-5xl pt-4 md:pt-12 pl-8">Here&apos;s how we will help you</h2>
+          <h2 className="bg-primary1B/20 text-primary h2 font-display font-medium text-display-medium pt-4 md:pt-12 pl-8">Here&apos;s <i className="font-bold">how</i> we will help you</h2>
           <div id="emptyDiv" className="bg-primary1B/20 h-14 md:h-16 border-b md:border-b border-black dark:border-off-white">
           </div>
           <div id="servicesContent1" className="grid grid-cols-1 md:grid-cols-3">
