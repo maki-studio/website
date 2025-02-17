@@ -5,17 +5,89 @@ import React from 'react';
 
 export interface CreativityNichesProps {
   main: "design" | "software";
-  softwareNiches: string[];
-  designNiches: string[];
+  softwareTags: string[];
+  designTags: string[];
 }
 
-export function CreativityNiches({ main }: Readonly<CreativityNichesProps>) {
+const designProjectsNicheTags = {
+  "ui_ux_design": ["ui", "ux","website_design", "app_icon_design", "landing_page_design", "email_template", "hero_design", "prototyping"].toSorted((a, b) => a.localeCompare(b)),
+  "web_design": ["one_page"].toSorted((a, b) => a.localeCompare(b)),
+  "landing_pages": ["course"].toSorted((a, b) => a.localeCompare(b)),
+  "seo_design": ["seo"].toSorted((a, b) => a.localeCompare(b)),
+  "brand_identity_design": ["logo", "branding", "brand_guidelines", "brand_strategy", "color_palette", "typography", "stationery"].toSorted((a, b) => a.localeCompare(b)),
+  "marketing_design": ["advert"].toSorted((a, b) => a.localeCompare(b)),
+  "packaging_design": ["packaging_concept", "sustainable_packaging", "label_design", "pos_display", "bag_design", "special_editions"].toSorted((a, b) => a.localeCompare(b)),
+  "social_design": ["youtube"].toSorted((a, b) => a.localeCompare(b)),
+  "print_design": ["calender"].toSorted((a, b) => a.localeCompare(b)),
+  "stationery_design": ["business_cards"].toSorted((a, b) => a.localeCompare(b)),
+}
+const softwareProjectsNicheTags = {
+
+  // software niches
+  "point_of_sale": ["retail", "restaurant", "hospitality", "fuel_and_energy", "technology", "education"].toSorted((a, b) => a.localeCompare(b)),
+}
+
+
+interface NicheItem {
+  tag: string;
+  niche: string;
+};
+
+const explodedNiches: NicheItem[] = [];
+
+for (const [niche, list] of Object.entries(designProjectsNicheTags)) {
+  list.forEach(item => explodedNiches.push({ tag: niche, niche: item }))
+}
+
+export function CreativityNiches({ main, designTags, softwareTags }: Readonly<CreativityNichesProps>) {
+
   const extraStyling = (main === "design" ? '' : 'flex-col-reverse');
+
+  // const sortedNiches: string[] = [...Object.keys(projectNicheTags)];
+
+  const getDesignNiches = (dNt: string[]) => {
+    // get niches for the tags
+    const currentNiches: NicheItem[] = [];
+    dNt.forEach(item => currentNiches.push(explodedNiches.filter(ni => ni.tag === item)[0]));
+
+    // produce list of niches
+    const niches: Set<string> = new Set();
+    currentNiches.forEach(item => niches.add(item.niche));
+
+    const availableDesignNiches: React.JSX.Element[] = [];
+
+    // produce list
+    niches.forEach((item) => {
+      const listItems: string[] = dNt.filter(tag => {
+        return currentNiches.filter(i => i.tag === tag)[0]
+      })
+
+      availableDesignNiches.push(
+        <>
+          <h3 className='uppercase font-headlines text-secondary'>{item.replace(/_/g, " ")}</h3>
+          <ul className='mb-8 font-body space-y-1 text-body-medium'>
+            {listItems.map((item, index) => <li key={item + index} className='capitalize underline hover:bg-black hover:text-white'><Link href={'/portfolio/design/' + item} >{item.replace(/_/g, " ")}</Link></li>)}
+          </ul>
+        </>
+      )
+    });
+
+
+
+    // done
+    return <div id='designNiches' className='p-4 px-8'>{availableDesignNiches}</div>;
+  }
+
   return <div className={['flex flex-col ', extraStyling].join(" ")}>
+    {getDesignNiches(designTags)}
+    <br />
+    <hr className='border-0 border-dashed border-b-2 border-black dark:border-off-white1B' />
+    <br />
+    <hr className='border-0 border-dashed border-b-2 border-black dark:border-off-white1B' />
     <div id='designNiches' className='p-4 px-8'>
-      <h3 className='uppercase text-secondary'>Identity design</h3>
-      <ul className='mb-8 font-body space-y-1'>
-        <li className='capitalize underline'><Link href={''} >Logo identity</Link></li>
+      <h3 className='uppercase font-headlines text-secondary'>Identity design</h3>
+      <ul className='mb-8 font-body space-y-1 text-body-medium'>
+        <li className='capitalize underline '><Link href={''} >Logo identity</Link></li>
         <li className='capitalize underline'><Link href={''} >Brand guidelines</Link></li>
         <li className='capitalize underline'><Link href={''} >Brand Strategy</Link></li>
         <li className='capitalize underline'><Link href={''} >Color palette</Link></li>
@@ -23,34 +95,34 @@ export function CreativityNiches({ main }: Readonly<CreativityNichesProps>) {
         <li className='capitalize underline'><Link href={''} >Business stationery</Link></li>
       </ul>
 
-      <h3 className='uppercase text-secondary'>Packaging design</h3>
-      <ul className='mb-8 font-body space-y-1'>
-      <li className='capitalize underline'><Link href={''} >Product packaging concepts</Link></li>
-      <li className='capitalize underline'><Link href={''} >Sustainable packaging</Link></li>
-      <li className='capitalize underline'><Link href={''} >label design</Link></li>
-      <li className='capitalize underline'><Link href={''} >Point of sale display</Link></li>
-      <li className='capitalize underline'><Link href={''} >Box and bag design</Link></li>
-      <li className='capitalize underline'><Link href={''} >Special editions</Link></li>
+      <h3 className='uppercase font-headlines text-secondary'>Packaging design</h3>
+      <ul className='mb-8 font-body space-y-1 text-body-medium'>
+        <li className='capitalize underline'><Link href={''} >Product packaging concepts</Link></li>
+        <li className='capitalize underline'><Link href={''} >Sustainable packaging</Link></li>
+        <li className='capitalize underline'><Link href={''} >label design</Link></li>
+        <li className='capitalize underline'><Link href={''} >Point of sale display</Link></li>
+        <li className='capitalize underline'><Link href={''} >Box and bag design</Link></li>
+        <li className='capitalize underline'><Link href={''} >Special editions</Link></li>
       </ul>
 
-      <h3 className='uppercase text-secondary'>UI/UX design</h3>
-      <ul className='mb-8'>
-      <li className='capitalize underline'><Link href={''} >Website visual design</Link></li>
-      <li className='capitalize underline'><Link href={''} >App icon design</Link></li>
-      <li className='capitalize underline'><Link href={''} >Landing page design</Link></li>
-      <li className='capitalize underline'><Link href={''} >Email newsletter template</Link></li>
-      <li className='capitalize underline'><Link href={''} >Banner Ad design</Link></li>
-      <li className='capitalize underline'><Link href={''} >Wireframe & Prototyping</Link></li>
+      <h3 className='uppercase font-headlines text-secondary'>UI/UX design</h3>
+      <ul className='mb-8 font-body space-y-1 text-body-medium'>
+        <li className='capitalize underline'><Link href={''} >Website visual design</Link></li>
+        <li className='capitalize underline'><Link href={''} >App icon design</Link></li>
+        <li className='capitalize underline'><Link href={''} >Landing page design</Link></li>
+        <li className='capitalize underline'><Link href={''} >Email newsletter template</Link></li>
+        <li className='capitalize underline'><Link href={''} >Banner Ad design</Link></li>
+        <li className='capitalize underline'><Link href={''} >Wireframe & Prototyping</Link></li>
       </ul>
     </div>
     <hr className='border-0 border-dashed border-b-2 border-black dark:border-off-white1B' />
-    <div id='softwareNiches' className='p-4 px-8'>
-      <h3 className='uppercase text-secondary'>Point of sale</h3>
-      <ul className='mb-8'>
-      <li className='capitalize underline'><Link href={''} >Retail</Link></li>
-      <li className='capitalize underline'><Link href={''} >Restaurant</Link></li>
-      <li className='capitalize underline'><Link href={''} >Hospitality</Link></li>
-      <li className='capitalize underline'><Link href={''} >Fuel & Energy</Link></li>
+    <div id='softwareTags' className='p-4 px-8'>
+      <h3 className='uppercase font-headlines text-secondary'>Point of sale</h3>
+      <ul className='mb-8 space-y-1 text-body-medium'>
+        <li className='capitalize underline'><Link href={''} >Retail</Link></li>
+        <li className='capitalize underline'><Link href={''} >Restaurant</Link></li>
+        <li className='capitalize underline'><Link href={''} >Hospitality</Link></li>
+        <li className='capitalize underline'><Link href={''} >Fuel & Energy</Link></li>
       </ul>
     </div>
   </div>;
