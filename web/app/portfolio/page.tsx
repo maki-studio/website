@@ -7,6 +7,7 @@ import circleIcon from '@/app/icons/ui/circle.svg'
 import dTriangleIcon from '@/app/icons/ui/down-triangle.svg'
 import triangleIcon from '@/app/icons/ui/triangle.svg'
 import squareIcon from '@/app/icons/ui/square.svg'
+import Link from "next/link";
 
 const ProjectWrapper = <div className="border-b-2 border-r-2 border-black dark:border-off-white place-content-center  p-8">
   <ProjectCard imgSrc={"https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2560&q=80"} title={"THE ONE"} link={'/portfolio/design/the-one'}></ProjectCard>
@@ -37,9 +38,11 @@ export default function Page() {
     </div>
     <main className="min-h-screen flex flex-col md:flex-row">
       <section id="leftBar" className="flex md:flex-col sticky top-0 z-10 bg-white dark:bg-gray3 h-14 md:h-screen md:w-16 border-y md:border-y-0 md:border-r-2  border-black dark:border-off-white">
-      <div className="md:h-16 w-16 md:w-auto border-x md:border-x-0 md:border-b-2 border-black dark:border-off-white place-content-center ">
-          <button id="triangleBtn" className="h-full w-full bg-white dark:bg-gray3 relative z-10 border-0 hover:cursor-pointer hover:bg-off-white hover:p-4 duration-200 hover:invert">
-            <Image src={dTriangleIcon} alt="circle icon" className="h-8 dark:invert m-auto "></Image></button>
+        <div className="md:h-16 w-16 md:w-auto border-x md:border-x-0 md:border-b-2 border-black dark:border-off-white place-content-center ">
+          <Link href={"/portfolio/design"} title="open panel Menu">
+            <button id="triangleBtn" className="h-full w-full bg-white dark:bg-gray3 relative z-10 border-0 hover:cursor-pointer hover:bg-off-white hover:p-4 duration-200 hover:invert">
+              <Image src={dTriangleIcon} alt="circle icon" className="h-8 dark:invert m-auto "></Image></button>
+          </Link>
         </div>
         {/* <div className="flex-1 flex place-content-center">
           <p className="font-display text-display-large m-auto md:-rotate-90 text-nowrap ">Our Creative Playground</p>
@@ -54,8 +57,11 @@ export default function Page() {
         </div>
 
         <div className="md:h-16 w-16 md:w-auto border-x md:border-x-0 md:border-t-2 border-black dark:border-off-white place-content-center ">
-          <button id="circleBtn" className="h-full w-full bg-white dark:bg-gray3 relative z-10 border-0 hover:cursor-pointer hover:bg-off-white hover:p-4 duration-200 hover:invert">
-            <Image src={circleIcon} alt="circle icon" className="h-8 dark:invert m-auto "></Image></button>
+          <Link href={"/portfolio/software"} title="switch to Software portfolio">
+            <button id="circleBtn" className="h-full w-full bg-white dark:bg-gray3 relative z-10 border-0 hover:cursor-pointer hover:bg-off-white hover:p-4 duration-200 hover:invert">
+              <Image src={circleIcon} alt="circle icon" className="h-8 dark:invert m-auto "></Image>
+            </button>
+          </Link>
         </div>
       </section>
       <section id="rightPanel" className="flex-1 flex flex-col">
