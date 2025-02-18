@@ -68,7 +68,7 @@ export default function Page() {
               <p className="font-display text-display-large m-auto md:-rotate-90 text-nowrap capitalize">Our Portfolio</p>
             </div>
           </div>
-          <div className="hidden md:block overflow-y-scroll h-[80vh]">
+          <div className="hidden md:block overflow-y-auto h-[80vh]">
             <CreativityNiches main="design" softwareTags={[]} designTags={designProjectsTags} ></CreativityNiches>
           </div>
         </div>
