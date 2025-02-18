@@ -1,5 +1,5 @@
 import designProjects from '@/app/projects/design.json'
-import { Header, Footer, ProjectCard } from "@/app/components";
+import { Header, Footer } from "@/app/components";
 import Image from 'next/image';
 import Link from "next/link";
 
@@ -20,15 +20,13 @@ export async function generateStaticParams() {
 }
 
 
-const ProjectWrapper = <div className="border-b-2 border-r-2 border-black dark:border-off-white place-content-center  p-8">
-    <ProjectCard imgSrc={"https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2560&q=80"} title={"THE ONE"}></ProjectCard>
-</div>;
+
 
 
 
 // Multiple versions of this page will be statically generated
 // using the `params` returned by `generateStaticParams`
-export default async function Page({ params, }: { params: Promise<{ slug: string }> }) {
+export default async function Page({ params, }: Readonly<{ params: Promise<{ slug: string }> }>) {
     const { slug } = await params
 
     const projectData = designProjects.map((proj) => { if (proj.name.trim().replaceAll(/ /g, '-').toLowerCase() == slug) return proj });
@@ -45,13 +43,6 @@ export default async function Page({ params, }: { params: Promise<{ slug: string
     }
 
 
-    const projects: [typeof ProjectWrapper][] = [];
-    // add items to array
-    for (let i = 0; i < 2; i++) {
-        projects.push([ProjectWrapper])
-
-    }
-    // projects.push([ProjectWrapper])
     return <>
         <Header activeLink="portfolio"></Header>
         <div id="carouselContentTop" className={"hidden md:flex absolute w-screen h-14 md:h-16 border-b md:border-b-2 border-black dark:border-off-white "}>
