@@ -42,6 +42,10 @@ for (const [niche, list] of Object.entries(softwareProjectsNicheTags)) {
   list.forEach(tag => explodedSoftwareNiches.push({ name: niche, tag: tag }))
 }
 
+// beautify niche title
+// const beautifyNicheTitle = function (title: string) {
+//   return title;
+// }
 
 export function CreativityNiches({ main, designTags, softwareTags }: Readonly<CreativityNichesProps>) {
 
@@ -119,7 +123,7 @@ export function CreativityNiches({ main, designTags, softwareTags }: Readonly<Cr
     {getDesignNiches(allNicheTags)}
     <hr className={'border-0 border-dashed border-b-2 border-black dark:border-off-white1B' + (
       // hide rule when there are no entries
-      (softwareTags.length > 0 && main==="design" || softwareTags.length > 0 && main==="software") ? '' : ' hidden')} />
+      (softwareTags.length > 0 && main === "design" || softwareTags.length > 0 && main === "software") ? '' : ' hidden')} />
     {getSoftwareNiches(allNicheTags)}
   </div>;
 }
