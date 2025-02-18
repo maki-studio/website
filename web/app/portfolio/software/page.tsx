@@ -5,11 +5,10 @@ import Image from 'next/image';
 import designProjects from '@/app/projects/design.json';
 import softwareProjects from '@/app/projects/software.json';
 
-import circleIcon from '@/app/icons/ui/circle.svg'
-import dTriangleIcon from '@/app/icons/ui/down-triangle.svg'
-import triangleIcon from '@/app/icons/ui/triangle.svg'
-import squareIcon from '@/app/icons/ui/square.svg'
-import Search from "@carbon/react/lib/components/Search";
+import circleIcon from '@/app/icons/ui/circle.svg';
+import dTriangleIcon from '@/app/icons/ui/down-triangle.svg';
+import triangleIcon from '@/app/icons/ui/triangle.svg';
+import squareIcon from '@/app/icons/ui/square.svg';
 import Link from "next/link";
 import { CreativityNiches } from "@/app/components/CreativityNiches";
 
