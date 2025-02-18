@@ -105,25 +105,11 @@ export function CreativityNiches({ main, designTags, softwareTags }: Readonly<Cr
         <li className='capitalize underline'><Link href={''} >Special editions</Link></li>
       </ul>
 
-      <h3 className='uppercase font-headlines text-secondary'>UI/UX design</h3>
-      <ul className='mb-8 font-body space-y-1 text-body-medium'>
-        <li className='capitalize underline'><Link href={''} >Website visual design</Link></li>
-        <li className='capitalize underline'><Link href={''} >App icon design</Link></li>
-        <li className='capitalize underline'><Link href={''} >Landing page design</Link></li>
-        <li className='capitalize underline'><Link href={''} >Email newsletter template</Link></li>
-        <li className='capitalize underline'><Link href={''} >Banner Ad design</Link></li>
-        <li className='capitalize underline'><Link href={''} >Wireframe & Prototyping</Link></li>
-      </ul>
-    </div>
-    <hr className='border-0 border-dashed border-b-2 border-black dark:border-off-white1B' />
-    <div id='softwareTags' className='p-4 px-8'>
-      <h3 className='uppercase font-headlines text-secondary'>Point of sale</h3>
-      <ul className='mb-8 space-y-1 text-body-medium'>
-        <li className='capitalize underline'><Link href={''} >Retail</Link></li>
-        <li className='capitalize underline'><Link href={''} >Restaurant</Link></li>
-        <li className='capitalize underline'><Link href={''} >Hospitality</Link></li>
-        <li className='capitalize underline'><Link href={''} >Fuel & Energy</Link></li>
-      </ul>
-    </div>
+  return <div className={['flex flex-col py-2', extraStyling].join(" ")}>
+    {getDesignNiches(designTags)}
+    <hr className={'border-0 border-dashed border-b-2 border-black dark:border-off-white1B' + (
+      // hide rule when there are no entries
+      (softwareTags.length > 0 && main==="design" || softwareTags.length > 0 && main==="software") ? '' : ' hidden')} />
+    {getSoftwareNiches(softwareTags)}
   </div>;
 }
