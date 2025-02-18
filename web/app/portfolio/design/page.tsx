@@ -16,6 +16,9 @@ import { CreativityNiches } from "@/app/components/CreativityNiches";
 
 export default function Page() {
   const projects: JSX.Element[] = [];
+  const designProjectsTags: string[] = [];
+  const designTags: Set<string> = new Set();
+
   // add items to array
   for (let i = 0; i < 16; i++) {
     const ProjectWrapper = <div className="border-b-2 border-r-2 border-black dark:border-off-white place-content-center  p-8">
@@ -23,8 +26,13 @@ export default function Page() {
     </div>;
 
     projects.push(ProjectWrapper)
+    //load unique tags
+    designProjects[0].tags.forEach(tag => designTags.add(tag))
 
   }
+
+  //add items to tag arrays
+  designTags.forEach(tag => designProjectsTags.push(tag));
 
   return <>
     <Header activeLink="portfolio"></Header>
@@ -61,7 +69,7 @@ export default function Page() {
             </div>
           </div>
           <div className="hidden md:block overflow-y-scroll h-[80vh]">
-            <CreativityNiches main="design" softwareTags={[]} designTags={[]} ></CreativityNiches>
+            <CreativityNiches main="design" softwareTags={[]} designTags={designProjectsTags} ></CreativityNiches>
           </div>
         </div>
 
