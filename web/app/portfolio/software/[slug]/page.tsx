@@ -1,5 +1,5 @@
-import designProjects from '@/app/projects/design.json'
-import { Header, Footer, ProjectCard } from "@/app/components";
+import softwareProjects from '@/app/projects/software.json';
+import { Header, Footer } from "@/app/components";
 import Image from 'next/image';
 import Link from "next/link";
 
@@ -8,11 +8,12 @@ import dTriangleIcon from '@/app/icons/ui/down-triangle.svg'
 import triangleIcon from '@/app/icons/ui/triangle.svg'
 import squareIcon from '@/app/icons/ui/square.svg'
 import starIcon from '@/app/icons/ui/star.svg'
+import { notFound } from 'next/navigation';
 
 
 
 export async function generateStaticParams() {
-    const posts = designProjects;
+    const posts = softwareProjects;
 
     return posts.map((post) => ({
         slug: post.name.trim().replaceAll(/ /g, '-').toLowerCase(),
@@ -20,18 +21,16 @@ export async function generateStaticParams() {
 }
 
 
-const ProjectWrapper = <div className="border-b-2 border-r-2 border-black dark:border-off-white place-content-center  p-8">
-    <ProjectCard imgSrc={"https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2560&q=80"} title={"THE ONE"}></ProjectCard>
-</div>;
+
 
 
 
 // Multiple versions of this page will be statically generated
 // using the `params` returned by `generateStaticParams`
-export default async function Page({ params, }: { params: Promise<{ slug: string }> }) {
+export default async function Page({ params, }: Readonly<{ params: Promise<{ slug: string }> }>) {
     const { slug } = await params
 
-    const projectData = designProjects.map((proj) => { if (proj.name.trim().replaceAll(/ /g, '-').toLowerCase() == slug) return proj });
+    const projectData = softwareProjects.map((proj) => { if (proj.name.trim().replaceAll(/ /g, '-').toLowerCase() == slug) { return proj; } else notFound() });
 
 
     const resultsLi = (): React.JSX.Element[] => {
@@ -45,19 +44,13 @@ export default async function Page({ params, }: { params: Promise<{ slug: string
     }
 
 
-    const projects: [typeof ProjectWrapper][] = [];
-    // add items to array
-    for (let i = 0; i < 2; i++) {
-        projects.push([ProjectWrapper])
-
-    }
-    // projects.push([ProjectWrapper])
     return <>
-        <Header activeLink="portfolio"></Header>
+        <Header activeLink="portfolio"
+        // hTopColor="bg-[#22478C]" hBottomColor="bg-[#002466]"
+        ></Header>
         <div id="carouselContentTop" className={"hidden md:flex absolute w-screen h-14 md:h-16 border-b md:border-b-2 border-black dark:border-off-white "}>
             <div id="" className="w-full inline-flex flex-nowrap overflow-hidden space-x-4 ">
                 <div className="flex items-center justify-center md:justify-start animate-infinite-scroll">
-
                     <Image src={triangleIcon} alt="triangle icon" className="h-8 mx-4 dark:invert m-auto "></Image>
                     <p className="font-display text-display-large m-auto text-nowrap ">Here&apos;s a taste of what happens when passion meets pixels</p>
                     <Image src={circleIcon} alt="circle icon" className="h-8 mx-4 dark:invert m-auto "></Image>
@@ -70,8 +63,11 @@ export default async function Page({ params, }: { params: Promise<{ slug: string
         <main className="min-h-screen flex flex-col md:flex-row">
             <section id="leftBar" className="flex md:flex-col sticky top-0 z-10 bg-white dark:bg-gray3 h-14 md:h-screen md:w-16 border-y md:border-y-0 md:border-r-2  border-black dark:border-off-white">
                 <div className="md:h-16 w-16 md:w-auto border-x md:border-x-0 md:border-b-2 border-black dark:border-off-white place-content-center ">
-                    <button id="triangleBtn" className="h-full w-full bg-white dark:bg-gray3 relative z-10 border-0 hover:bg-off-white hover:p-4 duration-200 hover:invert">
-                        <Image src={dTriangleIcon} alt="circle icon" className="h-8 dark:invert m-auto "></Image></button>
+                    <Link href={"/portfolio/software/"} title="back to view all">
+                        <button id="triangleBtn" className="h-full w-full bg-white dark:bg-gray3 relative z-10 border-0 hover:cursor-pointer hover:bg-off-white hover:p-4 duration-200 hover:invert">
+                            <Image src={dTriangleIcon} alt="triangle icon" className="h-8 dark:invert m-auto rotate-90"></Image>
+                        </button>
+                    </Link>
                 </div>
                 <div className="flex-1 flex place-content-center">
                     <div className="md:hidden w-full inline-flex flex-nowrap overflow-hidden">
@@ -83,8 +79,11 @@ export default async function Page({ params, }: { params: Promise<{ slug: string
                 </div>
 
                 <div className="md:h-16 w-16 md:w-auto border-x md:border-x-0 md:border-t-2 border-black dark:border-off-white place-content-center ">
-                    <button id="circleBtn" className="h-full w-full bg-white dark:bg-gray3 relative z-10 border-0 hover:bg-off-white hover:p-4 duration-200 hover:invert">
-                        <Image src={circleIcon} alt="circle icon" className="h-8 dark:invert m-auto "></Image></button>
+                    <Link href={"/portfolio"} title="back to view all">
+                        <button id="circleBtn" className="h-full w-full bg-white dark:bg-gray3 relative z-10 border-0 hover:cursor-pointer hover:bg-off-white hover:p-4 duration-200 hover:invert">
+                            <Image src={circleIcon} alt="triangle icon" className="h-8 dark:invert m-auto rotate-90"></Image>
+                        </button>
+                    </Link>
                 </div>
             </section>
             <section id="midPanel" className="flex-1 flex flex-col">
@@ -182,6 +181,8 @@ export default async function Page({ params, }: { params: Promise<{ slug: string
                 </div>
             </section>
         </main>
-        <Footer></Footer>
+        <Footer
+        // fTopColor="bg-[#22228C]" fBottomColor="bg-[#000066]"
+        ></Footer>
     </>;
 }
