@@ -53,7 +53,7 @@ export default function Page() {
 
   return <>
     <Header activeLink="portfolio"
-      // hTopColor="bg-[#22478C]" hBottomColor="bg-[#002466]"
+    // hTopColor="bg-[#22478C]" hBottomColor="bg-[#002466]"
     ></Header>
     <div id="carouselContentTop" className={"hidden md:flex absolute w-screen h-14 md:h-16 border-b md:border-b-2 border-black dark:border-off-white "}>
       <div id="" className="w-full inline-flex flex-nowrap overflow-hidden space-x-4 ">
@@ -113,9 +113,22 @@ export default function Page() {
 
         <div id="panelWrapper">
           <div id="searchBar" className={"hidden md:flex sticky top-0 bg-white dark:bg-gray3 min-h-14 md:min-h-16 border-b md:border-b-2 border-black dark:border-off-white "}>
-            <div className=" grid-cols-1 md:grid-cols-5 p-1 px-8">
-              <div className="bg-accent1">
-                <Search labelText={''} className="font-body text-0-body-large flex text-gray-2 space-x-2 text-gray2"></Search>
+            <div className=" grid-cols-1 md:grid-cols-2 p-1 px-8">
+              <div className=" py-1 min-w-[25vw]">
+
+                <form >
+                  <label htmlFor="search" className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
+                  <div className="relative">
+                    <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                      <svg className="w-5 h-5 text-gray1 dark:text-off-white1B" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                        <path fill="currentColor" d="m29 27.586l-7.552-7.552a11.018 11.018 0 1 0-1.414 1.414L27.586 29ZM4 13a9 9 0 1 1 9 9a9.01 9.01 0 0 1-9-9" />
+                      </svg>
+                    </div>
+                    <input type="search" id="search" className="block w-full p-2.5 ps-10 text-technical-medium font-technical text-gray-900 border border-gray-300 bg-gray-50 focus:ring-primary1B focus:border-primary1B dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary1B dark:focus:border-primary1B" placeholder="Search" required />
+                    <button type="submit" className="text-white absolute -end-24 bottom-0 bg-primary duration-100 hover:bg-primary1B hover:cursor-pointer focus:ring-4 focus:outline-none focus:ring-primary/50 font-medium text-technical-medium h-full px-4 dark:bg-primary dark:hover:bg-primary1B dark:focus:ring-primary">Search</button>
+                  </div>
+                </form>
+
               </div>
             </div>
 
