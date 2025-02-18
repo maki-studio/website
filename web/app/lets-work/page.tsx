@@ -24,42 +24,42 @@ export default function Page() {
       title: "Web design",
       description: "From engaging homepages to conversion-focused layouts that turn visitors into customers.",
       startLink: "/form?q=web",
-      exploreLink: "/portfolio/design/web"
+      exploreLink: "/portfolio/design?q=web"
     },
     {
       imageUrl: "/images/site/landing-pages-abstract.png",
       title: "Landing pages",
       description: "Turn clicks into customers with landing pages that convert.Clear, compelling, and crafted for your specific audience.",
       startLink: "/form?q=landing-page",
-      exploreLink: "/portfolio/design/web?q=landing"
+      exploreLink: "/portfolio/design?q=landing"
     },
     {
       imageUrl: "/images/site/uiux-design-abstract.png",
       title: "UI/UX design",
       description: "User-friendly interfaces that keep your customers coming back for more.Make every interaction count.",
       startLink: "/form?q=ui_ux",
-      exploreLink: "/portfolio/design/web?q=ui_ux"
+      exploreLink: "/portfolio/design?q=ui_ux"
     },
     {
       imageUrl: "/images/site/seo-abstract.png",
       title: "SEO",
       description: "We build SEO right into your website, helping your business climb search rankings the right way.Get found by the right people.",
       startLink: "/form?q=seo",
-      exploreLink: "/portfolio/design/seo"
+      exploreLink: "/portfolio/design?q=seo"
     },
     {
       imageUrl: "/images/site/turnaround-abstract.png",
       title: "Brand Identity design",
       description: "Let's give your business a face that truly gives to your customers",
       startLink: "/form?q=branding",
-      exploreLink: "/portfolio/design/branding"
+      exploreLink: "/portfolio/design?q=branding"
     },
     {
       imageUrl: "/images/site/collaboration-abstract.png",
       title: "Digital marketing assets",
       description: "Set the right assets in place for your marketing message",
       startLink: "/form?q=marketing",
-      exploreLink: "/portfolio/design/marketing"
+      exploreLink: "/portfolio/design?q=marketing"
     },
   ];
   const availableServicesB: WorkCardProps[] = [
@@ -69,7 +69,7 @@ export default function Page() {
       title: "Social Media Assets",
       description: "Let's give your business a presence that gains reach.",
       startLink: "/form?q=social",
-      exploreLink: "/portfolio/design/social"
+      exploreLink: "/portfolio/design?q=social"
     },
     // {
     //   imageUrl: "/images/site/landing-pages-abstract.png",
@@ -83,14 +83,14 @@ export default function Page() {
       title: "Print Designs",
       description: "T-shirts, caps, merchandise, vinyl designs. Having a uniform brand makes sure everyone recognizes you",
       startLink: "/form?q=print",
-      exploreLink: "/portfolio/print"
+      exploreLink: "/portfolio/design?q=print"
     },
     {
       imageUrl: "/images/site/future-designs-abstract.png",
       title: "Stationery design",
       description: "Calenders, office stationery, envelopes, pens etc.",
       startLink: "/form?q=stationery",
-      exploreLink: "/portfolio/stationery"
+      exploreLink: "/portfolio/design?q=stationery"
     },
 
   ];
