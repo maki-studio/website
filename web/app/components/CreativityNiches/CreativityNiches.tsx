@@ -66,7 +66,7 @@ export function CreativityNiches({ main, designTags, softwareTags }: Readonly<Cr
         <>
           <h3 className='uppercase font-headlines text-secondary'>{item.replace(/_/g, " ")}</h3>
           <ul className='mb-8 font-body space-y-1 text-body-medium'>
-            {listItems.map((item, index) => <li key={item + index} className='capitalize underline hover:bg-black hover:text-white'><Link href={'/portfolio/design/' + item} >{item.replace(/_/g, " ")}</Link></li>)}
+            {listItems.map((item, index) => <li key={item + index} className='capitalize underline hover:bg-black hover:text-white dark:hover:text-black dark:hover:bg-white hover:px-2 duration-150 flex'><Link href={'/portfolio/design?search=' + item} className='w-full ' >{item.replace(/_/g, " ")}</Link></li>)}
           </ul>
         </>
       )
