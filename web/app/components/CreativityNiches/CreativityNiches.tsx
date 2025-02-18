@@ -29,28 +29,32 @@ interface NicheItem {
   name: string;
 };
 
-const explodedNiches: NicheItem[] = [];
+const explodedDesignNiches: NicheItem[] = [];
+const explodedSoftwareNiches: NicheItem[] = [];
+
 
 // populate for design
 for (const [niche, list] of Object.entries(designProjectsNicheTags)) {
-  list.forEach(tag => explodedNiches.push({ name: niche, tag: tag }))
+  list.forEach(tag => explodedDesignNiches.push({ name: niche, tag: tag }))
 }
 // populate for software
 for (const [niche, list] of Object.entries(softwareProjectsNicheTags)) {
-  list.forEach(tag => explodedNiches.push({ name: niche, tag: tag }))
+  list.forEach(tag => explodedSoftwareNiches.push({ name: niche, tag: tag }))
 }
 
 
 export function CreativityNiches({ main, designTags, softwareTags }: Readonly<CreativityNichesProps>) {
 
   const extraStyling = (main === "design" ? '' : 'flex-col-reverse');
-
+  const allNicheTags: string[] = [];
+  //remove duplicates
+  new Set<string>([...designTags, ...softwareTags]).forEach(n => allNicheTags.push(n));
 
   const getDesignNiches = (dNt: string[]) => {
     // get niches for the tags
     const currentNiches: NicheItem[] = [];
     dNt.forEach(tag => {
-      const niche = explodedNiches.filter(expN => { return expN.tag === tag })[0];
+      const niche = explodedDesignNiches.filter(expN => { return expN.tag === tag })[0];
       if (niche != null) currentNiches.push(niche);
     });
 
@@ -82,7 +86,7 @@ export function CreativityNiches({ main, designTags, softwareTags }: Readonly<Cr
     // get niches for the tags
     const currentNiches: NicheItem[] = [];
     sNt.forEach(tag => {
-      const niche = explodedNiches.filter(expN => { return expN.tag === tag })[0];
+      const niche = explodedSoftwareNiches.filter(expN => { return expN.tag === tag })[0];
       if (niche != null) currentNiches.push(niche);
     });
 
@@ -112,10 +116,10 @@ export function CreativityNiches({ main, designTags, softwareTags }: Readonly<Cr
 
 
   return <div className={['flex flex-col py-2', extraStyling].join(" ")}>
-    {getDesignNiches(designTags)}
+    {getDesignNiches(allNicheTags)}
     <hr className={'border-0 border-dashed border-b-2 border-black dark:border-off-white1B' + (
       // hide rule when there are no entries
       (softwareTags.length > 0 && main==="design" || softwareTags.length > 0 && main==="software") ? '' : ' hidden')} />
-    {getSoftwareNiches(softwareTags)}
+    {getSoftwareNiches(allNicheTags)}
   </div>;
 }
