@@ -14,7 +14,6 @@ import Link from "next/link";
 import { CreativityNiches } from "@/app/components/CreativityNiches";
 
 
-
 export default function Page() {
   //design
   const projects: JSX.Element[] = [];
@@ -27,25 +26,25 @@ export default function Page() {
 
 
   // add items to array---software--1️⃣
-  for (let i = 0; i < 16; i++) {
+  for (const softwareProject of softwareProjects) {
     const ProjectWrapper = <div className="border-b-2 border-r-2 border-black dark:border-off-white place-content-center  p-8">
-      <ProjectCard imgSrc={softwareProjects[0].images.mainImage} title={softwareProjects[0].name} link={'/portfolio/software/' + softwareProjects[0].name.trim().replaceAll(/ /g, '-').toLowerCase()}></ProjectCard>
+      <ProjectCard imgSrc={softwareProject.images.mainImage} title={softwareProject.name} link={'/portfolio/software/' + softwareProject.name.trim().replaceAll(/ /g, '-').toLowerCase()}></ProjectCard>
     </div>;
 
     projects.push(ProjectWrapper)
     //load unique tags
-    softwareProjects[0].tags.forEach(tag => softwareTags.add(tag));
+    softwareProject.tags.forEach(tag => softwareTags.add(tag));
 
   }
   // add items to array---design--2️⃣
-  for (let i = 0; i < 16; i++) {
+  for (const designProject of designProjects) {
     const ProjectWrapper = <div className="border-b-2 border-r-2 border-black dark:border-off-white place-content-center  p-8">
-      <ProjectCard imgSrc={designProjects[0].images.mainImage} title={designProjects[0].name} link={'/portfolio/design/' + designProjects[0].name.trim().replaceAll(/ /g, '-').toLowerCase()}></ProjectCard>
+      <ProjectCard imgSrc={designProject.images.mainImage} title={designProject.name} link={'/portfolio/design/' + designProject.name.trim().replaceAll(/ /g, '-').toLowerCase()}></ProjectCard>
     </div>;
 
     projects.push(ProjectWrapper)
     //load unique tags
-    designProjects[0].tags.forEach(tag => designTags.add(tag));
+    designProject.tags.forEach(tag => designTags.add(tag));
   }
 
   //add items to tag arrays
@@ -53,7 +52,9 @@ export default function Page() {
   softwareTags.forEach(tag => softwareProjectsTags.push(tag));
 
   return <>
-    <Header activeLink="portfolio" hTopColor="bg-accent1B/50" hBottomColor="bg-accent1B"></Header>
+    <Header activeLink="portfolio"
+      // hTopColor="bg-[#22478C]" hBottomColor="bg-[#002466]"
+    ></Header>
     <div id="carouselContentTop" className={"hidden md:flex absolute w-screen h-14 md:h-16 border-b md:border-b-2 border-black dark:border-off-white "}>
       <div id="" className="w-full inline-flex flex-nowrap overflow-hidden space-x-4 ">
         <div className="flex items-center justify-center md:justify-start animate-infinite-scroll">
@@ -92,7 +93,7 @@ export default function Page() {
         </div>
 
         <div className="md:h-16 w-16 md:w-auto border-x md:border-x-0 md:border-t-2 border-black dark:border-off-white place-content-center ">
-          <Link href={"/portfolio/software"} title="switch to Software portfolio">
+          <Link href={"/portfolio/design"} title="switch to design portfolio">
             <button id="circleBtn" className="h-full w-full bg-white dark:bg-gray3 relative z-10 border-0 hover:cursor-pointer hover:bg-off-white hover:p-4 duration-200 hover:invert">
               <Image src={circleIcon} alt="circle icon" className="h-8 dark:invert m-auto "></Image>
             </button>
@@ -125,6 +126,8 @@ export default function Page() {
         </div>
       </section>
     </main>
-    <Footer></Footer>
+    <Footer
+    // fTopColor="bg-[#22228C]" fBottomColor="bg-[#000066]"
+    ></Footer>
   </>;
 }
