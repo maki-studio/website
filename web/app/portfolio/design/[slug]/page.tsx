@@ -8,6 +8,7 @@ import dTriangleIcon from '@/app/icons/ui/down-triangle.svg'
 import triangleIcon from '@/app/icons/ui/triangle.svg'
 import squareIcon from '@/app/icons/ui/square.svg'
 import starIcon from '@/app/icons/ui/star.svg'
+import { notFound } from 'next/navigation';
 
 
 
