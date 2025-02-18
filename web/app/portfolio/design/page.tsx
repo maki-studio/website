@@ -2,7 +2,8 @@
 
 import { Header, Footer, ProjectCard } from "@/app/components";
 import Image from 'next/image';
-import designProjects from '@/app/projects/design.json'
+import designProjects from '@/app/projects/design.json';
+import softwareProjects from '@/app/projects/software.json';
 
 import circleIcon from '@/app/icons/ui/circle.svg'
 import dTriangleIcon from '@/app/icons/ui/down-triangle.svg'
@@ -15,24 +16,40 @@ import { CreativityNiches } from "@/app/components/CreativityNiches";
 
 
 export default function Page() {
+  //design
   const projects: JSX.Element[] = [];
   const designProjectsTags: string[] = [];
   const designTags: Set<string> = new Set();
+  //software
+  const softwareProjectsTags: string[] = [];
+  const softwareTags: Set<string> = new Set();
 
-  // add items to array
-  for (let i = 0; i < 16; i++) {
+
+  // add items to array---design
+  for (const designProject of designProjects) {
     const ProjectWrapper = <div className="border-b-2 border-r-2 border-black dark:border-off-white place-content-center  p-8">
-      <ProjectCard imgSrc={designProjects[0].images.mainImage} title={designProjects[0].name} link={'/portfolio/design/'+designProjects[0].name.trim().replaceAll(/ /g, '-').toLowerCase()}></ProjectCard>
+      <ProjectCard imgSrc={designProject.images.mainImage} title={designProject.name} link={'/portfolio/design/' + designProject.name.trim().replaceAll(/ /g, '-').toLowerCase()}></ProjectCard>
     </div>;
 
     projects.push(ProjectWrapper)
     //load unique tags
-    designProjects[0].tags.forEach(tag => designTags.add(tag))
+    designProject.tags.forEach(tag => designTags.add(tag));
+  }
+  // add items to array---software
+  for (const softwareProject of softwareProjects) {
+    const ProjectWrapper = <div className="border-b-2 border-r-2 border-black dark:border-off-white place-content-center  p-8">
+      <ProjectCard imgSrc={softwareProject.images.mainImage} title={softwareProject.name} link={'/portfolio/software/' + softwareProject.name.trim().replaceAll(/ /g, '-').toLowerCase()}></ProjectCard>
+    </div>;
+
+    projects.push(ProjectWrapper)
+    //load unique tags
+    softwareProject.tags.forEach(tag => softwareTags.add(tag));
 
   }
 
   //add items to tag arrays
   designTags.forEach(tag => designProjectsTags.push(tag));
+  softwareTags.forEach(tag => softwareProjectsTags.push(tag));
 
   return <>
     <Header activeLink="portfolio"></Header>
@@ -69,7 +86,7 @@ export default function Page() {
             </div>
           </div>
           <div className="hidden md:block overflow-y-auto h-[80vh]">
-            <CreativityNiches main="design" softwareTags={[]} designTags={designProjectsTags} ></CreativityNiches>
+            <CreativityNiches main="design" softwareTags={softwareProjectsTags} designTags={designProjectsTags} ></CreativityNiches>
           </div>
         </div>
 

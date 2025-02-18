@@ -30,7 +30,7 @@ export async function generateStaticParams() {
 export default async function Page({ params, }: Readonly<{ params: Promise<{ slug: string }> }>) {
     const { slug } = await params
 
-    const projectData = designProjects.map((proj) => { if (proj.name.trim().replaceAll(/ /g, '-').toLowerCase() == slug){return proj;} else notFound() });
+    const projectData = designProjects.map((proj) => { if (proj.name.trim().replaceAll(/ /g, '-').toLowerCase() == slug) { return proj; } else notFound() });
 
 
     const resultsLi = (): React.JSX.Element[] => {
@@ -78,8 +78,11 @@ export default async function Page({ params, }: Readonly<{ params: Promise<{ slu
                 </div>
 
                 <div className="md:h-16 w-16 md:w-auto border-x md:border-x-0 md:border-t-2 border-black dark:border-off-white place-content-center ">
-                    <button id="circleBtn" className="h-full w-full bg-white dark:bg-gray3 relative z-10 border-0 hover:bg-off-white hover:p-4 duration-200 hover:invert">
-                        <Image src={circleIcon} alt="circle icon" className="h-8 dark:invert m-auto "></Image></button>
+                    <Link href={"/portfolio"} title="back to view all">
+                        <button id="circleBtn" className="h-full w-full bg-white dark:bg-gray3 relative z-10 border-0 hover:cursor-pointer hover:bg-off-white hover:p-4 duration-200 hover:invert">
+                            <Image src={circleIcon} alt="triangle icon" className="h-8 dark:invert m-auto rotate-90"></Image>
+                        </button>
+                    </Link>
                 </div>
             </section>
             <section id="midPanel" className="flex-1 flex flex-col">
