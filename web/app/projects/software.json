@@ -1,1 +1,21 @@
-[]
+[
+    {
+        "name": "great code",
+        "description": "Lorem ipsum dolor sit amet consectetur. A arcu egestas diam non leo nulla sapien mi. Ultrices elit tortor nulla rhoncus habitasse viverra proin neque sit. Pellentesque amet tortor eu pretium. Est ut ac sit netus risus eget enim. Suspendisse mi sit adipiscing diam mi quis vitae faucibus.",
+        "link": "https://mcsamuelshoko.github.io/readme/",
+        "type":"saas platform",
+        "tags": ["branding","product_branding","logo","ui","retail","technology", "app_icon_design"],
+        "challengesFaced": "Lorem ipsum dolor sit amet consectetur. A arcu egestas diam non leo nulla sapien mi. Ultrices elit tortor nulla rhoncus habitasse viverra proin neque sit. Pellentesque amet tortor eu pretium. Est ut ac sit netus risus eget enim. Suspendisse mi sit adipiscing diam mi quis vitae faucibus. Lorem ipsum dolor sit amet consectetur. A arcu egestas diam non leo nulla sapien mi. Ultrices elit tortor nulla rhoncus habitasse viverra proin neque sit. Pellentesque amet tortor eu pretium. Est ut ac sit netus risus eget enim. Suspendisse mi sit adipiscing diam mi quis vitae faucibus.",
+        "solutionsProvided": "Lorem ipsum dolor sit amet consectetur. A arcu egestas diam non leo nulla sapien mi. Ultrices elit tortor nulla rhoncus habitasse viverra proin neque sit. Pellentesque amet tortor eu pretium. Est ut ac sit netus risus eget enim. Suspendisse mi sit adipiscing diam mi quis vitae faucibus. Lorem ipsum dolor sit amet consectetur. A arcu egestas diam non leo nulla sapien mi. Ultrices elit tortor nulla rhoncus habitasse viverra proin neque sit. Pellentesque amet tortor eu pretium. Est ut ac sit netus risus eget enim. Suspendisse mi sit adipiscing diam mi quis vitae faucibus.",
+        "images": {
+            
+            "mainImage": "https://images.unsplash.com/photo-1597244508835-605298ca838b?q=80&w=2074&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "wideImage":"https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "projectImages": [""],            
+            "challengesFacedImages":["https://images.unsplash.com/photo-1494625927555-6ec4433b1571?q=80&w=2074&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D","https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D","https://images.unsplash.com/photo-1470240731273-7821a6eeb6bd?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"],
+            "solutionsImages":["https://images.unsplash.com/photo-1470240731273-7821a6eeb6bd?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"],
+            "resultImages": ["https://images.unsplash.com/photo-1568801838106-43cc2000b704?q=80&w=1888&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"]
+            
+        }
+    }
+]
