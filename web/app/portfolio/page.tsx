@@ -1,5 +1,7 @@
 'use client'
 
+import softwareProjects from '@/app/projects/software.json';
+import designProjects from '@/app/projects/design.json';
 import { Header, Footer, ProjectCard } from "@/app/components";
 import Image from 'next/image';
 
@@ -9,18 +11,32 @@ import triangleIcon from '@/app/icons/ui/triangle.svg'
 import squareIcon from '@/app/icons/ui/square.svg'
 import Link from "next/link";
 
-const ProjectWrapper = <div className="border-b-2 border-r-2 border-black dark:border-off-white place-content-center  p-8">
-  <ProjectCard imgSrc={"https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2560&q=80"} title={"THE ONE"} link={'/portfolio/design/the-one'}></ProjectCard>
-</div>;
 
 export default function Page() {
-  const projects: [typeof ProjectWrapper][] = [];
-  // add items to array
+
+  //design
+  const projects: JSX.Element[] = [];
+
+
+  // add items to array---design
   for (let i = 0; i < 16; i++) {
-    projects.push([ProjectWrapper])
+    const ProjectWrapper = <div className="border-b-2 border-r-2 border-black dark:border-off-white place-content-center  p-8">
+      <ProjectCard imgSrc={designProjects[0].images.mainImage} title={designProjects[0].name} link={'/portfolio/design/' + designProjects[0].name.trim().replaceAll(/ /g, '-').toLowerCase()}></ProjectCard>
+    </div>;
+
+    projects.push(ProjectWrapper);
+  }
+  // add items to array---software
+  for (let i = 0; i < 16; i++) {
+    const ProjectWrapper = <div className="border-b-2 border-r-2 border-black dark:border-off-white place-content-center  p-8">
+      <ProjectCard imgSrc={softwareProjects[0].images.mainImage} title={softwareProjects[0].name} link={'/portfolio/software/' + softwareProjects[0].name.trim().replaceAll(/ /g, '-').toLowerCase()}></ProjectCard>
+    </div>;
+
+    projects.push(ProjectWrapper);
 
   }
-  projects.push([ProjectWrapper])
+
+
   return <>
     <Header activeLink="portfolio"></Header>
     <div id="carouselContentTop" className={"hidden md:flex absolute w-screen h-14 md:h-16 border-b md:border-b-2 border-black dark:border-off-white "}>
