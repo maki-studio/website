@@ -19,7 +19,7 @@ export default function Page() {
 
 
   // add items to array---design
-  for (let i = 0; i < 16; i++) {
+  for (let i = 0; i < 5; i++) {
     const ProjectWrapper = <div className="border-b-2 border-r-2 border-black dark:border-off-white place-content-center  p-8">
       <ProjectCard imgSrc={designProjects[0].images.mainImage} title={designProjects[0].name} link={'/portfolio/design/' + designProjects[0].name.trim().replaceAll(/ /g, '-').toLowerCase()}></ProjectCard>
     </div>;
@@ -27,7 +27,7 @@ export default function Page() {
     projects.push(ProjectWrapper);
   }
   // add items to array---software
-  for (let i = 0; i < 16; i++) {
+  for (let i = 0; i < 4; i++) {
     const ProjectWrapper = <div className="border-b-2 border-r-2 border-black dark:border-off-white place-content-center  p-8">
       <ProjectCard imgSrc={softwareProjects[0].images.mainImage} title={softwareProjects[0].name} link={'/portfolio/software/' + softwareProjects[0].name.trim().replaceAll(/ /g, '-').toLowerCase()}></ProjectCard>
     </div>;
