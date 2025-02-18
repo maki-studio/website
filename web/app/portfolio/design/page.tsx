@@ -2,6 +2,7 @@
 
 import { Header, Footer, ProjectCard } from "@/app/components";
 import Image from 'next/image';
+import designProjects from '@/app/projects/design.json'
 
 import circleIcon from '@/app/icons/ui/circle.svg'
 import dTriangleIcon from '@/app/icons/ui/down-triangle.svg'
@@ -11,18 +12,20 @@ import Search from "@carbon/react/lib/components/Search";
 import Link from "next/link";
 import { CreativityNiches } from "@/app/components/CreativityNiches";
 
-const ProjectWrapper = <div className="border-b-2 border-r-2 border-black dark:border-off-white place-content-center  p-8">
-  <ProjectCard imgSrc={"https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2560&q=80"} title={"THE ONE"} link={'/portfolio/design/the-one'}></ProjectCard>
-</div>;
+
 
 export default function Page() {
-  const projects: [typeof ProjectWrapper][] = [];
+  const projects: JSX.Element[] = [];
   // add items to array
   for (let i = 0; i < 16; i++) {
-    projects.push([ProjectWrapper])
+    const ProjectWrapper = <div className="border-b-2 border-r-2 border-black dark:border-off-white place-content-center  p-8">
+      <ProjectCard imgSrc={designProjects[0].images.mainImage} title={designProjects[0].name} link={'/portfolio/design/'+designProjects[0].name.trim().replaceAll(/ /g, '-').toLowerCase()}></ProjectCard>
+    </div>;
+
+    projects.push(ProjectWrapper)
 
   }
-  projects.push([ProjectWrapper])
+
   return <>
     <Header activeLink="portfolio"></Header>
     <div id="carouselContentTop" className={"hidden md:flex absolute w-screen h-14 md:h-16 border-b md:border-b-2 border-black dark:border-off-white "}>
@@ -42,11 +45,11 @@ export default function Page() {
       <section id="leftBar" className="flex md:flex-col sticky top-0 z-10 bg-white dark:bg-gray3 h-14 md:h-screen md:w-64 border-y md:border-y-0 md:border-r-2  border-black dark:border-off-white">
         <div className="md:h-16 w-16 md:w-auto border-x md:border-x-0 md:border-b-2 md:border-dashed border-black dark:border-off-white place-content-center flex">
 
-        <Link href={"/portfolio/"} title="back to view all">
-          <button id="triangleBtn" className="h-full w-full bg-white dark:bg-gray3 relative z-10 border-0 hover:cursor-pointer hover:bg-off-white hover:p-4 duration-200 hover:invert">
-            <Image src={dTriangleIcon} alt="triangle icon" className="h-8 dark:invert m-auto rotate-90"></Image>
-          </button>
-        </Link>
+          <Link href={"/portfolio/"} title="back to view all">
+            <button id="triangleBtn" className="h-full w-full bg-white dark:bg-gray3 relative z-10 border-0 hover:cursor-pointer hover:bg-off-white hover:p-4 duration-200 hover:invert">
+              <Image src={dTriangleIcon} alt="triangle icon" className="h-8 dark:invert m-auto rotate-90"></Image>
+            </button>
+          </Link>
           <div className="flex-1 hidden md:flex items-center justify-center">
             <p className="text-body-medium font-technical uppercase pl-4 ltr:pr-8 rtl:pl-8 ">Creativity&nbsp;niches</p>
           </div>
