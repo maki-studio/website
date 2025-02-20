@@ -18,6 +18,7 @@ import TeamSection from "./sections/team";
 import TermsSection from "./sections/terms";
 import PrivacySection from "./sections/privacy";
 import AffiliateSection from "./sections/affiliates";
+import { useSearchParams } from "next/navigation";
 
 const contentTabs: VerticalTab[] = [
   {
@@ -53,10 +54,12 @@ const contentTabs: VerticalTab[] = [
 
 export default function Page() {
 
+  const searchParams = useSearchParams();
+  const search = searchParams.get('active')
 
   return <>
     <Header activeLink='about'></Header>
-    <VerticalTabs tabs={contentTabs}></VerticalTabs>
+    <VerticalTabs tabs={contentTabs} activeTabTitle={search ?? ''}></VerticalTabs>
     <Footer></Footer>
   </>;
 }
