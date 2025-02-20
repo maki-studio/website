@@ -11,6 +11,7 @@ import triangleIcon from '@/app/icons/ui/triangle.svg';
 import squareIcon from '@/app/icons/ui/square.svg';
 import Link from "next/link";
 import { CreativityNiches } from "@/app/components/CreativityNiches";
+import { Button } from "@carbon/react";
 
 
 export default function Page() {
@@ -121,8 +122,9 @@ export default function Page() {
                         <path fill="currentColor" d="m29 27.586l-7.552-7.552a11.018 11.018 0 1 0-1.414 1.414L27.586 29ZM4 13a9 9 0 1 1 9 9a9.01 9.01 0 0 1-9-9" />
                       </svg>
                     </div>
-                    <input type="search" id="search" className="block w-full p-2.5 ps-10 text-technical-medium font-technical text-gray-900 border border-gray-300 bg-gray-50 focus:ring-primary1B focus:border-primary1B dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary1B dark:focus:border-primary1B" placeholder="Search" required />
-                    <button type="submit" className="text-white absolute -end-24 bottom-0 bg-primary duration-100 hover:bg-primary1B hover:cursor-pointer focus:ring-4 focus:outline-none focus:ring-primary/50 font-medium text-technical-medium h-full px-4 dark:bg-primary dark:hover:bg-primary1B dark:focus:ring-primary">Search</button>
+                    <input type="search" id="search" className="block w-full p-2.5 ps-10 text-technical-medium font-technical text-gray-900 border border-primary0/50 bg-off-white1B focus:ring-primary1B focus:border-primary1B dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary1B dark:focus:border-primary1B" placeholder="Search project" required />
+                    <Button type="submit" className="bg-primary1B p-2.5 pl-4 pr-16 hover:cursor-pointer hover:bg-primary text-white dark:text-off-white font-label text-label-large font-bold absolute -end-34 bottom-0">Search
+                    </Button>
                   </div>
                 </form>
 
