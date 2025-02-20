@@ -16,7 +16,7 @@ export interface VerticalTabsProps {
 export function VerticalTabs({ tabs, activeTabTitle = '' }: Readonly<VerticalTabsProps>) {
 
   // get the index of the active tab
-  const activeTabIndex = tabs.findIndex(tab => tab.title.trim().replace(/ /g, "_").toLowerCase() === activeTabTitle);
+  const activeTabIndex = tabs.findIndex(tab => tab.title.trim().replace(/ /g, "-").toLowerCase() === activeTabTitle);
 
   const sidePanel = (title: string, i: number): React.JSX.Element => <button onClick={() => handleClick(i)} id="leftBar" className="flex md:flex-col sticky top-0 z-10 bg-white dark:bg-gray3 h-14 md:h-screen md:w-16 border-y md:border-y-0 md:border-r-2  border-black dark:border-off-white hover:bg-off-white hover:cursor-pointer hover:p-1 duration-200 hover:invert dark:hover:invert-0 dark:hover:text-primary1B hover:duration-150">
     <div className="md:h-16 w-16 md:w-auto border-x md:border-x-0 md:border-b-0 border-black dark:border-off-white place-content-center ">
