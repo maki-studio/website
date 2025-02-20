@@ -1,6 +1,5 @@
 'use client'
-import React from 'react';
-import { useState } from 'react';
+import React, { useState } from 'react';
 
 // import styles from './VerticalTabs.css';
 export interface VerticalTab {
@@ -9,14 +8,17 @@ export interface VerticalTab {
 }
 
 export interface VerticalTabsProps {
-  tabs: VerticalTab[]
+  tabs: VerticalTab[],
+  activeTabTitle?: string,
 }
 
 
-export function VerticalTabs({ tabs, }: VerticalTabsProps) {
+export function VerticalTabs({ tabs, activeTabTitle = '' }: Readonly<VerticalTabsProps>) {
 
+  // get the index of the active tab
+  const activeTabIndex = tabs.findIndex(tab => tab.title.trim().replace(/ /g, "_").toLowerCase() === activeTabTitle);
 
-  const sidePanel = (title: string, i: number): React.JSX.Element => <button onClick={()=>handleClick(i)} id="leftBar" className="flex md:flex-col sticky top-0 z-10 bg-white dark:bg-gray3 h-14 md:h-screen md:w-16 border-y md:border-y-0 md:border-r-2  border-black dark:border-off-white hover:bg-off-white hover:cursor-pointer hover:p-1 duration-200 hover:invert dark:hover:invert-0 dark:hover:text-primary1B hover:duration-150">
+  const sidePanel = (title: string, i: number): React.JSX.Element => <button onClick={() => handleClick(i)} id="leftBar" className="flex md:flex-col sticky top-0 z-10 bg-white dark:bg-gray3 h-14 md:h-screen md:w-16 border-y md:border-y-0 md:border-r-2  border-black dark:border-off-white hover:bg-off-white hover:cursor-pointer hover:p-1 duration-200 hover:invert dark:hover:invert-0 dark:hover:text-primary1B hover:duration-150">
     <div className="md:h-16 w-16 md:w-auto border-x md:border-x-0 md:border-b-0 border-black dark:border-off-white place-content-center ">
       {/* <button id="triangleBtn" className="h-full w-full bg-white dark:bg-gray3 relative z-10 border-0 hover:bg-off-white hover:p-4 duration-200 hover:invert">
   <Image src={dTriangleIcon} alt="circle icon" className="h-8 dark:invert m-auto "></Image></button> */}
@@ -52,11 +54,11 @@ export function VerticalTabs({ tabs, }: VerticalTabsProps) {
   </section>;
 
 
-  const insertInitialTabs = (): React.JSX.Element[] => {
+  const insertInitialTabs = (aT: number): React.JSX.Element[] => {
     const panelList: React.JSX.Element[] = []
     const count = tabs.length;
-    const midElement = Math.ceil(count / 2);
-    tabs.map((tab, i) => {
+    const midElement = aT > -1 ? (aT + 1) : (Math.ceil(count / 2)); // check for ActiveTabTitle's index or calculate mid element
+    tabs.forEach((tab, i) => {
       if (i == (midElement - 1))
         panelList.push(midPanel(tab.element, tab.title, i))
       else
@@ -68,7 +70,7 @@ export function VerticalTabs({ tabs, }: VerticalTabsProps) {
   const insertShiftedTabs = (tabNum: number): React.JSX.Element[] => {
     const panelList: React.JSX.Element[] = []
     const midElement = tabNum;
-    tabs.map((tab, i) => {
+    tabs.forEach((tab, i) => {
       if (i == (midElement))
         panelList.push(midPanel(tab.element, tab.title, i))
       else
@@ -77,11 +79,11 @@ export function VerticalTabs({ tabs, }: VerticalTabsProps) {
     return panelList;
   };
 
-  const handleClick = (n:number) => {
+  const handleClick = (n: number) => {
     setPanels(insertShiftedTabs(n))
   }
 
-  const [panels, setPanels] = useState(insertInitialTabs())
+  const [panels, setPanels] = useState(insertInitialTabs(activeTabIndex))
 
 
 
