@@ -55,7 +55,7 @@ const contentTabs: VerticalTab[] = [
 export default function Page() {
 
   const searchParams = useSearchParams();
-  const search = searchParams.get('active')
+  const search = searchParams.get('active');
 
   return <>
     <Header activeLink='about'></Header>
