@@ -37,10 +37,11 @@ export function Footer({ fTopColor = 'bg-secondary', fBottomColor = 'bg-secondar
       </div>
       <div className={'flex items-center justify-center p-4 lg:p-1 px-8 border-t md:border-t-0 lg:border-l border-l-white dark:border-l-off-white'}>
         <ul className={'font-headlines text-headline-large uppercase space-y-1'}>
-        <li><Link href={'/'} className={'' + linkStyling}>Home</Link></li>
-          <li><Link href={'/privacy'} className={'' + linkStyling}>Privacy Policy</Link></li>
-          <li><Link href={'/terms'} className={'' + linkStyling}>Terms and Conditions</Link></li>
-          <li><Link href={'/affiliates'} className={'' + linkStyling}>Affiliate Program</Link></li>
+          <li><Link href={'/'} className={'' + linkStyling}>Home</Link></li>
+          <li><Link href={'/portfolio'} className={'' + linkStyling}>Our work</Link></li>
+          <li><Link href={'/about?active=privacy_policy'} className={'' + linkStyling}>Privacy Policy</Link></li>
+          <li><Link href={'/about?active=terms_and_conditions'} className={'' + linkStyling}>Terms and Conditions</Link></li>
+          <li><Link href={'/about?active=affiliates'} className={'' + linkStyling}>Affiliate Program</Link></li>
           <li><Link href={'/contact'} className={'' + linkStyling}>Contact</Link></li>
         </ul>
       </div>
