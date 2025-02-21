@@ -39,9 +39,9 @@ export function Footer({ fTopColor = 'bg-secondary', fBottomColor = 'bg-secondar
         <ul className={'font-headlines text-headline-large uppercase space-y-1'}>
           <li><Link href={'/'} className={'' + linkStyling}>Home</Link></li>
           <li><Link href={'/portfolio'} className={'' + linkStyling}>Our work</Link></li>
-          <li><Link href={'/about?active=privacy_policy'} className={'' + linkStyling}>Privacy Policy</Link></li>
-          <li><Link href={'/about?active=terms_and_conditions'} className={'' + linkStyling}>Terms and Conditions</Link></li>
-          <li><Link href={'/about?active=affiliates'} className={'' + linkStyling}>Affiliate Program</Link></li>
+          <li><Link href={'/about/privacy-policy'} className={'' + linkStyling}>Privacy Policy</Link></li>
+          <li><Link href={'/about/terms-and-conditions'} className={'' + linkStyling}>Terms and Conditions</Link></li>
+          <li><Link href={'/about/affiliates'} className={'' + linkStyling}>Affiliate Program</Link></li>
           <li><Link href={'/contact'} className={'' + linkStyling}>Contact</Link></li>
         </ul>
       </div>
