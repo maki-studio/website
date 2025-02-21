@@ -8,7 +8,6 @@ import { Header, Footer } from "@/app/components";
 // import phoneIcon from '@/app/icons/ui/phone.svg'
 // import mailIcon from '@/app/icons/ui/mail.svg'
 import React from 'react';
-import { VerticalTab } from "@/app/components/VerticalTabs";
 
 import BusinessSection from "@/app/about/sections/business";
 import StorySection from "@/app/about/sections/story";
@@ -22,31 +21,31 @@ import { notFound } from "next/navigation";
 const contentTabs = [ //VerticalTab[] = [
   {
     title: "Our Story",
-    // element: StorySection(),
+    element: <StorySection></StorySection>,
   },
   {
     title: "The Business",
-    // element: BusinessSection(),
+    element: <BusinessSection></BusinessSection>,
   },
   {
     title: "Design For Social Good",
-    // element: GoodSection(),
+    element: <GoodSection></GoodSection>,
   },
   {
     title: "Our Team",
-    // element: TeamSection(),
+    element: <TeamSection></TeamSection>,
   },
   {
     title: "Affiliates",
-    // element: AffiliateSection(),
+    element: <AffiliateSection/>,
   },
   {
     title: "Terms and Conditions",
-    // element: TermsSection()
+    element: <TermsSection/>,
   },
   {
     title: "Privacy Policy",
-    // element: PrivacySection()
+    element: <PrivacySection/>,
   },
 ];
 
@@ -84,7 +83,7 @@ export default async function Page({ params, }: Readonly<{ params: Promise<{ slu
 
         </div>
         <div>
-          {"aboutSectionData[0].element--"+slug }
+          {aboutSectionData.element}
         </div>
       </section>;
     </main>
