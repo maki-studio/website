@@ -1,5 +1,8 @@
 'use client'
+import Link from 'next/link';
+import Image from 'next/image';
 import React, { useState } from 'react';
+import closeTabIcon from '@/app/icons/ui/closeTab.svg'
 
 // import styles from './VerticalTabs.css';
 export interface VerticalTab {
@@ -43,7 +46,13 @@ export function VerticalTabs({ tabs, activeTabTitle = '' }: Readonly<VerticalTab
     <div className="flex place-content-center md:h-16 border-b-2 border-black dark:border-off-white">
       <div className=" w-full flex-1 inline-flex flex-nowrap overflow-hidden bg-black text-off-white1B ">
         <div className="flex flex-1 items-center justify-center md:justify-start font-display text-display-medium text-nowrap capitalize animate-infinite-scroll md:animate-none">
-          <span className=' w-16 border-r-2 border-dashed border-primary1B dark:border-off-white flex justify-center '>0{index + 1}</span><p className="flex-1 px-8 mx-auto flex justify-center">{title}</p>
+          <span className=' w-16 border-r-2 border-dashed border-primary1B dark:border-off-white flex justify-center '>0{index + 1}</span>
+          <p className="flex-1 px-8 mx-auto flex justify-center">{title}</p>
+          <span className=' w-16 border-l-2 border-dashed border-primary1B dark:border-off-white flex justify-center '>
+            <Link className="flex justify-center" href={"/about/" + title.trim().replaceAll(/ /g, '-').toLowerCase()}>
+              <Image src={closeTabIcon} alt="open tab icon" className="h-6 w-6 invert hover:invert-0 hover:bg-white mr-4 hover:rounded hover:p-0.5 duration-200"></Image>
+            </Link>
+          </span>
         </div>
       </div>
 
