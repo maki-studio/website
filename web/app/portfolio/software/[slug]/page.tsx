@@ -30,7 +30,9 @@ export async function generateStaticParams() {
 export default async function Page({ params, }: Readonly<{ params: Promise<{ slug: string }> }>) {
     const { slug } = await params
 
-    const projectData = softwareProjects.map((proj) => { if (proj.name.trim().replaceAll(/ /g, '-').toLowerCase() == slug) { return proj; } else notFound() });
+    const projectData = softwareProjects.filter((project) => project.name.trim().replaceAll(/ /g, '-').toLowerCase() === slug);
+    //check if there's no value
+    if (projectData[0] == null) { return notFound() };
 
 
     const resultsLi = (): React.JSX.Element[] => {
