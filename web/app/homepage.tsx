@@ -155,9 +155,9 @@ export default function HomePage() {
               <div className="grid grid-cols-1 md:grid-cols-2 ">
                 <h2 className="h2 font-display text-5xl p-8 border-r border-r-black dark:border-r-off-white">Using simple steps to a stunning design</h2>
                 <div>
-                  <div className="h-48 mx-auto overflow-hidden relative bg-[#D5DCE4] ">
+                  <div className="h-48 mx-auto overflow-hidden relative bg-gray-300 bg-opacity-40 ">
                     <div
-                      className="w-full h-97 absolute animate-[scroll_13s_linear_infinite] ease-in-out bg-cover bg-center"
+                      className="w-full h-97 absolute animate-[scroll_10s_linear_infinite] ease-in-out bg-cover bg-center mix-blend-luminosity"
                       style={{
                         backgroundImage: `url('/images/site/waves-abstract.png')`,
                       }}
@@ -169,8 +169,8 @@ export default function HomePage() {
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 border-t border-t-black dark:border-t-off-white">
                 <div className="border-r border-r-black dark:border-r-off-white">
                   <div className="p-8 h-8"></div>
-                  <div className={"relative h-96  border-y border-y-black dark:border-y-off-white"}>
-                    <Image src={"/images/site/telephone.png"} alt={"telephone image"} layout="fill" className="bg-gray-300 bg-opacity-40 object-cover"></Image>
+                  <div className={"relative h-96  border-y border-y-black dark:border-y-off-white duration-1000 ease-in-out hover:bg-radial-[at_25%_25%] from-sky-200 via-accent3/50 to-accent2/50 to-90%"}>
+                    <Image src={"/images/site/telephone.png"} alt={"telephone image"} layout="fill" className="bg-gray-3300 bg-opacity-40 mix-blend-luminosity object-cover"></Image>
                   </div>
                   <div className="p-8">
                     <p className="text-title-large font-bold mb-6">1. Discovery Call </p>
@@ -182,8 +182,8 @@ export default function HomePage() {
 
                 <div className="border-r border-r-black dark:border-r-off-white">
                   <div className="p-8 h-8"></div>
-                  <div className={"relative h-96  border-y border-y-black dark:border-y-off-white"}>
-                    <Image src={"/images/site/arrow.png"} alt={"arrow image"} layout="fill" className="bg-gray-300 bg-opacity-40 object-cover"></Image>
+                  <div className={"relative h-96  border-y border-y-black dark:border-y-off-white duration-1000 ease-in-out hover:bg-radial-[at_25%_25%] from-sky-200 via-accent3/50 to-accent2/50 to-90%"}>
+                    <Image src={"/images/site/arrow.png"} alt={"arrow image"} layout="fill" className="bg-gray-300 bg-opacity-40 mix-blend-luminosity object-cover"></Image>
                   </div>
                   <div className="p-8">
                     <p className="text-title-large font-bold mb-6">2. Strategy & Planning </p>
@@ -193,8 +193,8 @@ export default function HomePage() {
 
                 <div className="border-r border-r-black dark:border-r-off-white">
                   <div className="p-8 h-8"></div>
-                  <div className={"relative h-96  border-y border-y-black dark:border-y-off-white"}>
-                    <Image src={"/images/site/cards.png"} alt={"cutout cards image"} layout="fill" className="bg-gray-300 bg-opacity-40 object-cover"></Image>
+                  <div className={"relative h-96  border-y border-y-black dark:border-y-off-white duration-1000 ease-in-out hover:bg-radial-[at_25%_25%] from-sky-200 via-accent3/50 to-accent2/50 to-90%"}>
+                    <Image src={"/images/site/cards.png"} alt={"cutout cards image"} layout="fill" className="bg-gray-300 bg-opacity-40  mix-blend-luminosity object-cover"></Image>
                   </div>
                   <div className="p-8">
                     <p className="text-title-large font-bold mb-6">3. Design & Revisions </p>
@@ -204,8 +204,8 @@ export default function HomePage() {
 
                 <div className="border-r border-r-black dark:border-r-off-white">
                   <div className="p-8 h-8"></div>
-                  <div className={"relative h-96  border-y border-y-black dark:border-y-off-white"}>
-                    <Image src={"/images/site/handshake.png"} alt={"handshake neon sign"} layout="fill" className="bg-gray-300 bg-opacity-40 object-cover"></Image>
+                  <div className={"relative h-96  border-y border-y-black dark:border-y-off-white duration-1000 ease-in-out hover:bg-radial-[at_25%_25%] from-sky-200 via-accent3/50 to-accent2/50 to-90%"}>
+                    <Image src={"/images/site/handshake.png"} alt={"handshake neon sign"} layout="fill" className="bg-gray-300 bg-opacity-40 mix-blend-luminosity object-cover"></Image>
                   </div>
                   <div className="p-8">
                     <p className="text-title-large font-bold mb-6">4. Launch & Support </p>
@@ -224,8 +224,8 @@ export default function HomePage() {
 
           </section>
           <section id="benefits" className={"pt-12"}>
-            <div className="p-8 pb-16 bg-radial-[at_25%_25%] from-sky-200 via-accent3/50 to-accent2/50 to-90%">
-              <h2 className="h2 font-display text-secondary font-bold text-5xl mb-4 md:mb-8 mt-12">Why choose us?</h2>
+            <div className="p-8 pb-16 bg-radial-[at_25%_25%] from-sky-200 via-accent3/50 to-primary1B/50 to-90% bg-blur">
+              <h2 className="h2 font-display text-secondary font-medium text-5xl mb-4 md:mb-8 mt-12">Should you have us,— for <br/> your design partner ?</h2>
               <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
                 <div className="bg-off-white1B p-8 flex flex-col justify-between">
                   <div>
@@ -292,7 +292,7 @@ export default function HomePage() {
             <hr className="border-black dark:border-off-white1B" />
           </section>
           <section id="testimonials" className={"pt-12"}>
-            <h2 className="h2 font-display text-secondary-regal font-bold text-5xl px-8 mb-4 md:mb-8 mt-12">Here’s what others are saying
+            <h2 className="h2 font-display text-secondary-regal font-medium text-5xl px-8 mb-4 md:mb-8 mt-12">Here’s what others are saying
               <br />about us</h2>
             <div className={"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 border-y border-y-black dark:border-y-off-white1B"}>
               <div className={"border-r border-r-black dark:border-r-off-white1B"}></div>
