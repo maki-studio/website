@@ -27,11 +27,11 @@ export default function HomePage() {
           <section id="hero" className={""}>
             <div className="md:p-8">
               <div className="relative h-[70vh] md:h-[90vh] w-full ">
-                <div className="bg-black md:bg-gray-300 md:rounded-[90px] bg-cover bg-[url(/images/site/perfect-hero.png)] h-full w-full overflow-hidden">
+                <div className="bg-black md:bg-gray-300 bg-cover bg-[url(/images/site/perfect-hero.png)] h-full w-full overflow-hidden">
                   <div className="w-full h-full bg-black/40  flex items-center justify-center md:justify-normal p-4 md:p-12 lg:p-[10rem]">
                     <div className=" text-off-white1B">
                       <p className="text-body-medium mb-2 hidden">Trusted by brands who love what they do</p>
-                      <h2 className="font-display text-display-small md:text-display-large mb-12 lg:w-[40vw]">A Design studio for designs that give you 
+                      <h2 className="font-display text-display-small md:text-display-large mb-12 lg:w-[40vw]">A Design studio for designs that give you
                         confidence with your customers</h2>
                       <p className="mb-4 hidden">
                         Connect more with your customers
@@ -57,12 +57,12 @@ export default function HomePage() {
             <hr className="border-black dark:border-off-white1B" />
             <h1 className="h2 font-headline font-bold text-5xl my-4 md:my-8 pl-8 uppercase mx-auto">Maki Creative Studio</h1>
             <hr className="border-black dark:border-off-white1B" />
-            <div className={"flex justify-center my-12"}>
-              <div className="flex flex-wrap justify-center items-center px-8">
+            <div className={"flex justify-center my-12 "}>
+              <div className="flex flex-wrap justify-center items-center px-8 ">
                 <span className="relative h-28 w-24 ">
                   <Image src={"/images/site/thomas-watson-ibm.png"} alt={"thomas watson portrait"} layout="fill" className="bg-gray-300 bg-opacity-40 object-cover rounded-[180px]"></Image>
                 </span>
-                <div className=" p-8">
+                <div className=" p-8 ">
                   <span className=" font-normal font-body leading-tight">&ldquo;<b>Good design is good business.</b>&rdquo;
                     <br />
                   </span>
@@ -73,8 +73,8 @@ export default function HomePage() {
             </div>
             <hr className="border-black dark:border-off-white1B mb-12" />
           </section>
-          <section id="features" className={"border-t border-t-black dark:border-t-off-white bg-[#228B22]/20"}>
-            <h2 className="h2 font-display text-5xl text-primary mb-4 md:mb-8 p-8">It&apos;s the design services that grow —<br /> with your business</h2>
+          <section id="features" className={"border-t border-t-black dark:border-t-off-white bg-[#228B22]/10"}>
+            <h2 className="h2 font-display text-display-medium md:text-5xl text-primary mb-4 md:mb-8 p-8">It&apos;s the design services that grow —<br /> with your business</h2>
             <div className="grid grid-cols-1 gap-6 md:grid-cols-3 lg:grid-cols-5 lg:gap-2 p-8">
               <div className="bg-off-white1B p-8 flex flex-col justify-between">
                 <div>
@@ -83,7 +83,7 @@ export default function HomePage() {
                   <p className="text-body-medium font-body mb-4">From engaging homepages to conversion-focused layouts that turn visitors into customers.</p>
                 </div>
                 <div className="relative h-80 w-full mx-auto ">
-                  <div className="bg-gray-300 rounded-[180px] bg-cover bg-[url(/images/site/web-design-abstract.png)] flex items-center justify-center h-full w-full">
+                  <div className="bg-gray-300 rounded-md bg-cover bg-[url(/images/site/web-design-abstract.png)] flex items-center justify-center h-full w-full">
                     <Image src={webIcon} width={320} alt='web icon' className={'h-24 opacity-80'} />
                   </div>
                 </div>
@@ -96,7 +96,7 @@ export default function HomePage() {
                   <p className="text-body-medium font-body mb-4">User-friendly interfaces that keep your customers coming back for more.</p>
                 </div>
                 <div className="relative h-80 w-full mx-auto ">
-                  <div className="bg-gray-300 rounded-[180px] bg-cover bg-[url(/images/site/uiux-design-abstract.png)] flex items-center justify-center h-full w-full">
+                  <div className="bg-gray-300 rounded-md bg-cover bg-[url(/images/site/uiux-design-abstract.png)] flex items-center justify-center h-full w-full">
                     <Image src={devicesAppsIcon} width={320} alt='uI/ux icon' className={'h-24 opacity-80'} />
                   </div>
                 </div>
@@ -109,7 +109,7 @@ export default function HomePage() {
                   <p className="text-body-medium font-body mb-4">We build SEO right into your design, helping your business climb search rankings naturally.</p>
                 </div>
                 <div className="relative h-80 w-full mx-auto ">
-                  <div className="bg-gray-300 rounded-[180px] bg-cover bg-[url(/images/site/seo-abstract.png)] flex items-center justify-center h-full w-full">
+                  <div className="bg-gray-300 rounded-md bg-cover bg-[url(/images/site/seo-abstract.png)] flex items-center justify-center h-full w-full">
                     <Image src={searchAdvIcon} width={320} alt='search advanced icon' className={'h-24 opacity-80'} />
                   </div>
                 </div>
@@ -122,7 +122,7 @@ export default function HomePage() {
                   <p className="text-body-medium font-body mb-4">Clear, compelling, and crafted for your specific audience.</p>
                 </div>
                 <div className="relative h-80 w-full mx-auto ">
-                  <div className="bg-gray-300 rounded-[180px] bg-cover bg-[url(/images/site/landing-pages-abstract.png)] flex items-center justify-center h-full w-full">
+                  <div className="bg-gray-300 rounded-md bg-cover bg-[url(/images/site/landing-pages-abstract.png)] flex items-center justify-center h-full w-full">
                     <Image src={docSentimentIcon} width={320} alt='document sentiment icon' className={'h-24 opacity-80'} />
                   </div>
                 </div>
@@ -142,7 +142,7 @@ export default function HomePage() {
                   </p>
                 </div>
                 <div className="relative h-80 w-full mx-auto ">
-                  <div className="bg-gray-300 rounded-[180px] bg-cover bg-[url(/images/site/extra-services-abstract.png)] flex items-center justify-center h-full w-full">
+                  <div className="bg-gray-300 rounded-md bg-cover bg-[url(/images/site/extra-services-abstract.png)] flex items-center justify-center h-full w-full">
                     <Image src={taskAddIcon} width={320} alt='task add icon' className={'h-24 opacity-80'} />
                   </div>
                 </div>
@@ -153,7 +153,7 @@ export default function HomePage() {
           <section id="process" className={""}>
             <div className="border-y border-y-black dark:border-y-off-white  mb-4 md:mb-8 ">
               <div className="grid grid-cols-1 md:grid-cols-2 ">
-                <h2 className="h2 font-display text-5xl p-8 border-r border-r-black dark:border-r-off-white">Using simple steps to a stunning design</h2>
+                <h2 className="h2 font-display  text-display-medium md:text-5xl p-8 border-r border-r-black dark:border-r-off-white">Using simple steps to a stunning design</h2>
                 <div>
                   <div className="h-48 mx-auto overflow-hidden relative bg-gray-300 bg-opacity-40 ">
                     <div
@@ -224,8 +224,12 @@ export default function HomePage() {
 
           </section>
           <section id="benefits" className={"pt-12"}>
-            <div className="p-8 pb-16 bg-radial-[at_25%_25%] from-sky-200 via-accent3/50 to-primary1B/50 to-90% bg-blur">
-              <h2 className="h2 font-display text-secondary font-medium text-5xl mb-4 md:mb-8 mt-12">Should you have us,— for <br/> your design partner ?</h2>
+            <div className="p-8 pb-16 bg-radial-[at_25%_25%] from-sky-200/30 via-accent3/30 to-primary1B/10 to-90% backdrop-blur-3xl">
+              <h2 className="h2 font-display text-secondary font-medium  text-display-medium md:text-5xl mb-4 md:mb-8 mt-12 space-y-8">
+                <span className="text-xl font-headlines font-medium">Should you have us,— for your design partner ?</span>     
+                <p className="">Here&apos;s what you&apos;ll get </p>
+
+              </h2>
               <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
                 <div className="bg-off-white1B p-8 flex flex-col justify-between">
                   <div>
@@ -233,7 +237,7 @@ export default function HomePage() {
                     <p className="text-body-large font-body mb-4">Work with us from anywhere, anytime. Our remote setup means we&apos;re always just a message away.</p>
                   </div>
                   <div className="relative h-80 w-64 mx-auto ">
-                    <div className="bg-gray-300 rounded-[180px] bg-cover bg-[url(/images/site/collaboration-abstract.png)] flex items-center justify-center h-full w-full">
+                    <div className="bg-gray-300 rounded-md bg-cover bg-[url(/images/site/collaboration-abstract.png)] flex items-center justify-center h-full w-full">
                       <Image src={shareKnowledgeIcon} width={320} alt='share knowledge icon' className={'h-24 opacity-80'} />
                     </div>
                   </div>
@@ -244,7 +248,7 @@ export default function HomePage() {
                     <p className="text-body-large font-body mb-4">We grow together. Get a dedicated design partner who understands your business goals and vision.</p>
                   </div>
                   <div className="relative h-80 w-64 mx-auto ">
-                    <div className="bg-gray-300 rounded-[180px] bg-cover bg-[url(/images/site/partnership-abstract.png)] flex items-center justify-center h-full w-full">
+                    <div className="bg-gray-300 rounded-md bg-cover bg-[url(/images/site/partnership-abstract.png)] flex items-center justify-center h-full w-full">
                       <Image src={partnershipIcon} width={320} alt='partnership icon' className={'h-24 opacity-80'} />
                     </div>
                   </div>
@@ -255,7 +259,7 @@ export default function HomePage() {
                     <p className="text-body-large font-body mb-4">We understand your speed. Get your designs when you need them, not weeks later.</p>
                   </div>
                   <div className="relative h-80 w-64 mx-auto ">
-                    <div className="bg-gray-300 rounded-[180px] bg-cover bg-[url(/images/site/turnaround-abstract.png)] flex items-center justify-center h-full w-full">
+                    <div className="bg-gray-300 rounded-md bg-cover bg-[url(/images/site/turnaround-abstract.png)] flex items-center justify-center h-full w-full">
                       <Image src={turnaroundIcon} width={320} alt='turnaround icon' className={'h-24 opacity-80'} />
                     </div>
                   </div>
@@ -266,7 +270,7 @@ export default function HomePage() {
                     <p className="text-body-large font-body mb-4">Scalable solutions that grow with your business. No need to start from scratch as you expand.</p>
                   </div>
                   <div className="relative h-80 w-64 mx-auto ">
-                    <div className="bg-gray-300 rounded-[180px] bg-cover bg-[url(/images/site/future-designs-abstract.png)] flex items-center justify-center h-full w-full">
+                    <div className="bg-gray-300 rounded-md bg-cover bg-[url(/images/site/future-designs-abstract.png)] flex items-center justify-center h-full w-full">
                       <Image src={futureDesignsIcon} width={320} alt='future designs icon' className={'h-24 opacity-80'} />
                     </div>
                   </div>
@@ -305,7 +309,7 @@ export default function HomePage() {
                   <span className=" font-normal font-body leading-tight">&ldquo;Finally, a design studio that understands what startups need. Their work consistently shows that good design isn&apos;t about fancy tricks - it&apos;s about <b>solving real business problems.</b>&rdquo;
                     <br /><br />
                   </span>
-                  <span className="text-title-medium font-medium font-title">— Pete, <br/>Marketing Manager
+                  <span className="text-title-medium font-medium font-title">— Mc Samuel, <br />Marketing Manager
                   </span>
                 </div>
               </div>
