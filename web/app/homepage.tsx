@@ -216,7 +216,7 @@ export default function HomePage() {
             </div>
 
             <div className={"bg-black flex justify-center my-12"}>
-              <Link href={"/form"} className="p-3 px-20 uppercase font-headlines font-bold text-headline-large bg-linear-to-r bg-opacity-[26] from-[#e79ae7] via-[#ecd179]  to-[#80e8ec] border border-black hover:text-gray1 hover:transition-500 hover:bg-linear-to-r bg-opacity-[26] hover:from-[#7fecf0] hover:via-[#ecd179]  hover:to-[#85eca6] hover:shadow-sm">
+              <Link href={"/form"} className="p-3 px-20 uppercase font-headlines font-bold text-headline-large text-center bg-linear-to-r bg-opacity-[26] from-[#e79ae7] via-[#ecd179]  to-[#80e8ec] border border-black hover:text-gray1 hover:transition-500 hover:bg-linear-to-r bg-opacity-[26] hover:from-[#7fecf0] hover:via-[#ecd179]  hover:to-[#85eca6] hover:shadow-sm">
                 lets discuss your vision
               </Link>
             </div>
@@ -325,7 +325,7 @@ export default function HomePage() {
               <div className={"border-r border-r-black dark:border-r-off-white1B"}></div>
             </div>
             <div className={"bg-black flex justify-center my-12"}>
-              <Link href={"/form"} className="p-3 px-20 uppercase font-headlines font-bold text-headline-large bg-linear-to-r bg-opacity-[26] from-[#e79ae7] via-[#ecd179]  to-[#80e8ec] border border-black hover:text-gray1 hover:transition-500 hover:bg-linear-to-r bg-opacity-[26] hover:from-[#7fecf0] hover:via-[#ecd179]  hover:to-[#85eca6] hover:shadow-sm">
+              <Link href={"/form"} className="p-3 px-20 uppercase font-headlines font-bold text-center text-headline-large bg-linear-to-r bg-opacity-[26] from-[#e79ae7] via-[#ecd179]  to-[#80e8ec] border border-black hover:text-gray1 hover:transition-500 hover:bg-linear-to-r bg-opacity-[26] hover:from-[#7fecf0] hover:via-[#ecd179]  hover:to-[#85eca6] hover:shadow-sm">
                 lets discuss your vision
               </Link>
             </div>
