@@ -74,9 +74,9 @@ export default async function Page({ params, }: Readonly<{ params: Promise<{ slu
     <Header activeLink='about'></Header>
     <main>
       <section id="midPanel" className="flex-1 flex flex-col md:border-r-2  border-black dark:border-off-white">
-        <div className="flex place-content-center md:h-16 border-b-2 border-black dark:border-off-white">
+        <div className="flex place-content-center h-12 md:h-16 border-b-2 border-black dark:border-off-white">
           <div className="sticky w-full flex-1 inline-flex flex-nowrap overflow-hidden bg-black text-off-white1B ">
-            <div className="flex flex-1 items-center justify-center md:justify-start font-display text-display-medium text-nowrap capitalize ">
+            <div className="flex flex-1 items-center justify-center md:justify-start font-display text-display-small md:text-display-medium text-nowrap capitalize ">
               <span className=' w-16 border-r-2 border-dashed border-primary1B dark:border-off-white flex justify-center '>
                 <Link title="view as Tabs" className="flex justify-center" href={"/about?active=" + slug.trim().replaceAll(/-/g, '_').toLowerCase()}>
                   <Image src={openTabIcon} alt="open tab icon" className="h-6 w-6 invert hover:invert-0 hover:bg-white mr-4 hover:rounded-full hover:p-[16px] duration-200"></Image>
@@ -87,7 +87,7 @@ export default async function Page({ params, }: Readonly<{ params: Promise<{ slu
 
         </div>
       </section>
-      <div className="mx-16 border-x-2 border-dashed border-black dark:border-off-white">
+      <div className="md:mx-16 md:border-x-2 border-dashed border-black dark:border-off-white">
         {aboutSectionData.element}
       </div>
     </main>
