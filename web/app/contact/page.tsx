@@ -58,7 +58,7 @@ export default function Page() {
               <h4 className="font-headlines text-headline-large uppercase mb-5">Direct Lines</h4>
               <ul className="space-y-1">
                 <li className="flex">
-                  <Image src={mailIcon} alt="circle icon" className="h-6 w-6 dark:invert mr-4 "></Image> <span>info@makistudio.online</span>
+                  <Image src={mailIcon} alt="circle icon" className="h-6 w-6 dark:invert mr-4 "></Image> <span>hello@makistudio.online</span>
                 </li>
                 <li className="flex hidden">
                   <Image src={phoneIcon} alt="circle icon" className="h-6 w-6 dark:invert mr-4 "></Image> <span className="">+000 0000 000</span>
