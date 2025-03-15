@@ -9,6 +9,7 @@ import triangleIcon from '@/app/icons/ui/triangle.svg'
 import squareIcon from '@/app/icons/ui/square.svg'
 import starIcon from '@/app/icons/ui/star.svg'
 import { notFound } from 'next/navigation';
+import { Metadata } from 'next';
 
 
 
@@ -20,6 +21,35 @@ export async function generateStaticParams() {
     }))
 }
 
+
+
+type Props = {
+    params: Promise<{ slug: string }>
+    // searchParams: Promise<{ [key: string]: string | string[] | undefined }>
+}
+
+export async function generateMetadata(
+    { params }: Props,
+    // parent: ResolvingMetadata
+): Promise<Metadata> {
+    // read route params
+    const { slug } = await params
+
+    // fetch data
+    const post = designProjects.find(post => post.name.trim().replaceAll(/ /g, '-').toLowerCase() === slug)
+
+    // optionally access and extend (rather than replace) parent metadata
+    // const previousImages = (await parent).openGraph?.images || []
+
+    return {
+        title: post?.name,            // Dynamic title for the post
+        description: post?.description ?? 'Design portfolio project',  // Dynamic description
+        keywords: post?.tags.join(', ') ?? 'Design, portfolio',  // Optional dynamic keywords
+        openGraph: {
+            images: [post?.images.mainImage??'',],
+        },
+    }
+}
 
 
 

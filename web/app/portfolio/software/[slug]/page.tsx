@@ -2,6 +2,7 @@ import softwareProjects from '@/app/projects/software.json';
 import { Header, Footer } from "@/app/components";
 import Image from 'next/image';
 import Link from "next/link";
+import type { Metadata } from 'next'
 
 import circleIcon from '@/app/icons/ui/circle.svg'
 import dTriangleIcon from '@/app/icons/ui/down-triangle.svg'
@@ -9,7 +10,6 @@ import triangleIcon from '@/app/icons/ui/triangle.svg'
 import squareIcon from '@/app/icons/ui/square.svg'
 import starIcon from '@/app/icons/ui/star.svg'
 import { notFound } from 'next/navigation';
-
 
 
 export async function generateStaticParams() {
@@ -21,7 +21,33 @@ export async function generateStaticParams() {
 }
 
 
+type Props = {
+    params: Promise<{ slug: string }>
+    // searchParams: Promise<{ [key: string]: string | string[] | undefined }>
+}
 
+export async function generateMetadata(
+    { params }: Props,
+    // parent: ResolvingMetadata
+): Promise<Metadata> {
+    // read route params
+    const { slug } = await params
+
+    // fetch data
+    const post = softwareProjects.find(post => post.name.trim().replaceAll(/ /g, '-').toLowerCase() === slug)
+
+    // optionally access and extend (rather than replace) parent metadata
+    // const previousImages = (await parent).openGraph?.images || []
+
+    return {
+        title: post?.name,            // Dynamic title for the post
+        description: post?.description ?? 'Software portfolio project',  // Dynamic description
+        keywords: post?.tags.join(', ') ?? 'software, portfolio',  // Optional dynamic keywords
+        openGraph: {
+            images: [post?.images.mainImage??'',],
+        },
+    }
+}
 
 
 
